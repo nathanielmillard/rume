@@ -1,6 +1,6 @@
 import './App.scss';
 import {Component} from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, NavLink} from 'react-router-dom';
 import Lobby from '../Lobby/Lobby.js';
 import ReflectionForm from '../ReflectionForm/ReflectionForm.js';
 import FeelingRoom from '../FeelingRoom/FeelingRoom.js';
@@ -33,13 +33,15 @@ class App extends Component {
           </Route>
           </Switch>
           <footer>
-            <img
-              className="homeButton"
-              data-test="homeButton"
-              title="Return To Lobby"
-              src={emptyLogo}
-              alt="Navigate back to home page"
-            />
+            <NavLink to='/'>
+              <img
+                className="homeButton"
+                data-test="homeButton"
+                title="Return To Lobby"
+                src={emptyLogo}
+                alt="Navigate back to home page"
+              />
+            </NavLink>
             <p>Quote of the day</p>
           </footer>
         </main>

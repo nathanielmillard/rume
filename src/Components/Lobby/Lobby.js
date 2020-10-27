@@ -11,10 +11,10 @@ class Lobby extends Component {
   }
   render() {
     return (
-      <section>
+      <section className='Lobby'>
         <h1>Welcome Back, it's TODAY!</h1>
         <h2>How are you feeling today?</h2>
-        <section>
+        <section className='moodContainer'>
           <button className='moodButton'>Sad</button>
           <button className='moodButton'>Angry</button>
           <button className='moodButton'>Anxious</button>

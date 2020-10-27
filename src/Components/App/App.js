@@ -33,7 +33,7 @@ class App extends Component {
           <Route path='/breathing'>
             <BreathingRoom />
           </Route>
-          <Route path='/home'>
+          <Route path='/lobby'>
           <Lobby />
           </Route>
           <Route path='/'>
@@ -41,7 +41,7 @@ class App extends Component {
           </Route>
           </Switch>
           <footer>
-            <NavLink activeClassName="activeHomeButton" to='/home'>
+            <NavLink activeClassName="activeHomeButton" to='/lobby'>
               <img
                 className="homeButton"
                 data-test="homeButton"

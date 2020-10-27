@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Lobby.scss';
 
 
@@ -22,9 +23,15 @@ class Lobby extends Component {
         </section>
         <h2>What do you want do do about it?</h2>
         <nav>
-          <button className='roomButton'>Reflect</button>
-          <button className='roomButton'>Feel</button>
-          <button className='roomButton'>Breathe</button>
+          <Link to='/reflecting'>
+            <button className='roomButton'>Reflect</button>
+          </Link>
+          <Link to='/feeling'>
+            <button className='roomButton'>Feel</button>
+          </Link>
+          <Link to='/breathing'>
+            <button className='roomButton'>Breathe</button>
+          </Link>
         </nav>
       </section>
     )

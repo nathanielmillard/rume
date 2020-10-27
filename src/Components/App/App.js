@@ -5,7 +5,7 @@ import Lobby from '../Lobby/Lobby.js';
 import ReflectionForm from '../ReflectionForm/ReflectionForm.js';
 import FeelingRoom from '../FeelingRoom/FeelingRoom.js';
 import BreathingRoom from '../BreathingRoom/BreathingRoom.js';
-import emptyLogo from '../../Assets/emptyLogo.svg';
+import fullLogo from '../../Assets/emptyLogo.svg';
 
 class App extends Component {
   constructor(props){
@@ -28,17 +28,17 @@ class App extends Component {
           <Route path='/breathing'>
             <BreathingRoom />
           </Route>
-          <Route path='/'>
+          <Route path='/home'>
           <Lobby />
           </Route>
           </Switch>
           <footer>
-            <NavLink to='/'>
+            <NavLink activeClassName="activeHomeButton" to='/home'>
               <img
                 className="homeButton"
                 data-test="homeButton"
                 title="Return To Lobby"
-                src={emptyLogo}
+                src={fullLogo}
                 alt="Navigate back to home page"
               />
             </NavLink>

@@ -1,0 +1,15 @@
+.Lobby {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  height: 80vh;
+  width: 80vw;
+}
+.moodButton {
+  border-radius: 100px;
+  margin:1vh;
+  width: 15vh;
+  height: 15vh;
+}

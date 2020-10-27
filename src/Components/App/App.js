@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {Component} from 'react'
 import {BrowserRouter} from 'react-router-dom'
 import Lobby from '../Lobby/Lobby.js'
@@ -16,7 +16,13 @@ class App extends Component {
       <main className="App">
         <Lobby />
         <footer>
-          <img className="homeButton" src={emptyLogo} alt="Navigate back to home page"/>
+          <img
+            className="homeButton"
+            data-test="homeButton"
+            title="Return To Lobby"
+            src={emptyLogo}
+            alt="Navigate back to home page"
+          />
           <p>Quote of the day</p>
         </footer>
       </main>

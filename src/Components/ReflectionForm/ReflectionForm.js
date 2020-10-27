@@ -1,10 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ReflectionForm.scss';
 
 const ReflectionForm = () => {
 
   return (
-    <h1>Reflection Form</h1>
+    <section>
+      <h1>Reflection Form</h1>
+      <Link to='/myreflections'>
+        <button>When Will My Reflection Show Who I Am Inside?</button>
+      </Link>
+    </section>
   )
 }
 

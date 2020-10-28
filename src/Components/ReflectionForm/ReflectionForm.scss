@@ -15,3 +15,11 @@ textArea {
   width: 85vw;
   resize: none;
 }
+
+.cardArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 90vh;
+  overflow: scroll;
+}

@@ -2,11 +2,11 @@
 
 export const postAReflection = (reflection, date, mood) => {
   fetch("http://localhost:3001/api/v1/reflections", {
-    method: POST,
+    method: 'POST',
     headers: {
 			'Content-Type': 'application/json',
 		},
-    body: JSONStrinify({
+    body: JSON.stringify({
       "reflection": reflection,
       "date": date,
       "mood": mood
@@ -14,7 +14,8 @@ export const postAReflection = (reflection, date, mood) => {
   })
   .then(response => {
     if(response.ok){
-      return response.json()
+      console.log(response)
+      return response
     } else {
       throw Error
     }

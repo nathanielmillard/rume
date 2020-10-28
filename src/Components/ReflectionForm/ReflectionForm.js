@@ -7,7 +7,7 @@ const ReflectionForm = () => {
   return (
     <section>
       <h1>Reflection Form</h1>
-      <Link to='/myreflections'>
+      <Link to='/myreflections' data-testid='linkToAllReflections'>
         <button>When Will My Reflection Show Who I Am Inside?</button>
       </Link>
     </section>

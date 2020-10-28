@@ -12,9 +12,12 @@ import fullLogo from '../../Assets/emptyLogo.svg';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state= {
-
+    this.state = {
     }
+  }
+  setMood = (e) => {
+    let mood = e.target.innerText
+    this.setState({mood: mood})
   }
   render () {
     return (
@@ -22,7 +25,7 @@ class App extends Component {
         <main className="App">
           <Switch >
           <Route path='/reflecting'>
-            <ReflectionForm />
+            <ReflectionForm mood={this.state.mood} />
           </Route>
           <Route path='/myreflections'>
             <ReflectionList />
@@ -34,7 +37,7 @@ class App extends Component {
             <BreathingRoom />
           </Route>
           <Route path='/lobby'>
-          <Lobby />
+          <Lobby setMood={this.setMood} />
           </Route>
           <Route path='/'>
            <WelcomePage />

@@ -1,5 +1,3 @@
-
-
 export const postAReflection = (reflection, date, mood) => {
   fetch("http://localhost:3001/api/v1/reflections", {
     method: 'POST',
@@ -22,5 +20,22 @@ export const postAReflection = (reflection, date, mood) => {
   })
   .catch(error => {
     console.log(error)
+  })
+}
+export const getReflections = () => {
+  return fetch("http://localhost:3001/api/v1/reflections")
+  .then(response => {
+    if(response.ok) {
+      return response.json()
+    } else {
+      throw Error
+    }
+  })
+  .then(response => {
+    return {reflections: response.reflections}
+  })
+  .catch(error => {
+    console.log(error);
+    return { errorMessage:'We encountered an error, please reload' }
   })
 }

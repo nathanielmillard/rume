@@ -14,7 +14,7 @@ class Lobby extends Component {
   render() {
     return (
       <section className='Lobby'>
-        <h1>Welcome Back, it's TODAY!</h1>
+        <h1>Welcome Back, it's {new Date().toDateString()}</h1>
         <h2>How are you feeling today?</h2>
         <section className='moodContainer'>
           <button className='moodButton' onClick={this.props.setMood}>Sad</button>

@@ -22,26 +22,31 @@ class ReflectionForm extends Component {
    document.getElementById("textArea").value = ''
  }
   render() {
+
     return (
       <section className='ReflectionForm'>
-      <form data-testid='reflectionForm'>
-      <h2  className='reflectionPrompt' data-testid='reflectionPrompt'> You're feeling fine, what went well today? </h2>
-      <label>
-      Write your reflection here:
-      <textarea
-      id='textArea'
-      data-testid='reflectionArea'
-      rows='150'
-      cols='45'
-      onChange={this.keepReflection}
-      >
-      </textarea>
-      <button onClick={this.submitReflection}>Save This Reflection</button>
-      </label>
-      </form>
-      <Link to='/myreflections'>
-      <button>Show All Reflections</button>
-      </Link>
+        <form data-testid='reflectionForm'>
+          <h2  className='reflectionPrompt' data-testid='reflectionPrompt'> You're feeling fine, what went well today? </h2>
+          <section className='formWrap'>
+            <label>
+              Write your reflection here:
+              <textarea
+              id='textArea'
+              data-testid='reflectionArea'
+              rows='150'
+              cols='45'
+              onChange={this.keepReflection}
+              >
+              </textarea>
+            </label>
+          </section>
+        </form>
+        <section className="buttons">
+          <button className="actionButton" onClick={this.submitReflection}>Save This Reflection</button>
+          <Link to='/myreflections'>
+            <button className="actionButton">Show All Reflections</button>
+          </Link>
+        </section>
       </section>
     )
   }

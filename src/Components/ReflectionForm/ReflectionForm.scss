@@ -9,17 +9,25 @@ form {
   flex-direction: column;
   text-align: center;
 }
-
-textArea {
-  height: 75vh;
-  width: 85vw;
-  resize: none;
+.formWrap{
+  height: 70vh;
+  width: 100vw;
+  background-image: url('../../Assets/NotebookBackground.jpg');
+  background-size: cover;
+  background-position: center fixed;
+  padding-top: 5%;
+  overflow: scroll;
+}
+label {
+  background: none;
 }
 
-.cardArea {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 90vh;
-  overflow: scroll;
+textArea {
+  height: 60vh;
+  width: 80vw;
+  resize: none;
+  margin: 5% 5% 0% 8%;
+  font-size: 1.5em;
+  border: none;
+  background-color: rgb(255, 255, 255, .5);
 }

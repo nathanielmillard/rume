@@ -12,6 +12,17 @@ const MoodButton = styled.button`
   font-size: 1.5rem;
   color: #121316;
   border: .5px solid #121316;
+  background-color: ${props => {
+    if (props.mood === 'fine') {
+      return `rgb(157, 211, 156, .25);`
+    } else if (props.mood === 'anxious') {
+      return `rgb(180, 154, 49, .25);`
+    } else if (props.mood === 'sad') {
+      return `rgb(132, 173, 189, .25);`
+    } else {
+      return `rgb(100, 27, 65, .25);`
+    }
+  } }
 `
 
 class Lobby extends Component {
@@ -28,10 +39,10 @@ class Lobby extends Component {
         <h1>Welcome Back, it's {new Date().toDateString()}</h1>
         <h2>How are you feeling today?</h2>
         <section className='moodContainer'>
-          <MoodButton className='fine' onClick={this.props.setMood}>Fine</MoodButton>
-          <MoodButton className='anxious' onClick={this.props.setMood}>Anxious</MoodButton>
-          <MoodButton className='sad' onClick={this.props.setMood}>Sad</MoodButton>
-          <MoodButton className='angry' onClick={this.props.setMood}>Angry</MoodButton>
+          <MoodButton mood='fine' onClick={this.props.setMood}>Fine</MoodButton>
+          <MoodButton mood='anxious' onClick={this.props.setMood}>Anxious</MoodButton>
+          <MoodButton mood='sad' onClick={this.props.setMood}>Sad</MoodButton>
+          <MoodButton mood='angry' onClick={this.props.setMood}>Angry</MoodButton>
         </section>
         <h2>What do you want do do about it?</h2>
         <nav>

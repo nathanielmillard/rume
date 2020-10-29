@@ -38,3 +38,33 @@ export const MoodButton = styled.button`
     } }
   }
 `;
+
+export const FormWrap = styled.section`
+  height: 70vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center fixed;
+  padding-top: 5%;
+  overflow: scroll;
+  background-image: ${props => {
+    if(props.mood === 'Sad') {
+      return `url(${sadJournal})`
+    } else if(props.mood === 'Angry') {
+      return `url(${angryJournal})`
+    } else if(props.mood === 'Anxious') {
+      return `url(${anxiousJournal})`
+    } else {
+      return `url(${fineJournal})`
+    }
+  } };
+  .formLabel {
+    font-size: 1.25em;
+    color: ${props => {
+      if(props.mood === 'Angry') {
+        return `#f3f5f6`
+      } else {
+        return `#121316`
+      }
+    }};
+  }
+`;

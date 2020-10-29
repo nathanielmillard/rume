@@ -1,3 +1,7 @@
+import angryJournal from './Assets/AngryJournal.jpg'
+import fineJournal from './Assets/FineJournal.jpg'
+import anxiousJournal from './Assets/AnxiousJournal.jpg'
+import sadJournal from './Assets/SadJournal.jpg'
 import styled from "styled-components";
 
 export const MoodButton = styled.button`

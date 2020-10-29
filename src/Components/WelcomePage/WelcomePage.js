@@ -12,8 +12,3 @@ const WelcomePage = () => {
 }
 
 export default WelcomePage
-
-
-// <Link to='/lobby'>
-// <button>Door To Lobby</button>
-// </Link>

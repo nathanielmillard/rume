@@ -2,7 +2,6 @@ import React from 'react'
 import './ReflectionCard.scss'
 
 const ReflectionCard = (props) => {
-  console.log(props)
   return (
     <section id={props.id} className="refCard">
       <h1>{new Date(props.date).toDateString()}</h1>

@@ -13,6 +13,33 @@
   width: 15vh;
   height: 15vh;
   font-size: 1.5rem;
+  color: #121316;
+  border: .5px solid #121316;
+}
+.fine {
+  background-color: rgb(157, 211, 156, .25);
+}
+.fine:focus {
+  background-color: rgb(157, 211, 156);
+}
+.anxious {
+  background-color: rgb(180, 154, 49, .25);
+}
+.anxious:focus {
+  background-color: rgb(180, 154, 49);
+}
+.sad {
+  background-color: rgb(132, 173, 189, .25);
+}
+.sad:focus {
+  background-color: rgb(132, 173, 189);
+}
+.angry {
+  background-color: rgb(100, 27, 65, .25);
+}
+.angry:focus {
+  background-color: rgb(100, 27, 65);
+  color: #f3f5f6;
 }
 .roomButton {
   margin: 1vh;

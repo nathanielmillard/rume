@@ -17,10 +17,10 @@ class Lobby extends Component {
         <h1>Welcome Back, it's {new Date().toDateString()}</h1>
         <h2>How are you feeling today?</h2>
         <section className='moodContainer'>
-          <button className='moodButton' onClick={this.props.setMood}>Sad</button>
-          <button className='moodButton' onClick={this.props.setMood}>Angry</button>
-          <button className='moodButton' onClick={this.props.setMood}>Anxious</button>
-          <button className='moodButton' onClick={this.props.setMood}>Fine</button>
+          <button className='moodButton fine' onClick={this.props.setMood}>Fine</button>
+          <button className='moodButton anxious' onClick={this.props.setMood}>Anxious</button>
+          <button className='moodButton sad' onClick={this.props.setMood}>Sad</button>
+          <button className='moodButton angry' onClick={this.props.setMood}>Angry</button>
         </section>
         <h2>What do you want do do about it?</h2>
         <nav>

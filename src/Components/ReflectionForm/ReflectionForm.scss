@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+}
+.buttons {
+  display: inline-flex;
+  flex-flow: wrap;
+}
+.actionButton {
+  width: 20vw;
+  margin: 10px;
 }
 
 form {

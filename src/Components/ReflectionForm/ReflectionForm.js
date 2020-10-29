@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types'
 import { postAReflection } from '../../apiCalls.js'
 import './ReflectionForm.scss';
+import { FormWrap } from '../../StyledComponents.js'
 
 class ReflectionForm extends Component {
  constructor(props){
@@ -27,8 +28,8 @@ class ReflectionForm extends Component {
       <section className='ReflectionForm'>
         <form data-testid='reflectionForm'>
           <h2  className='reflectionPrompt' data-testid='reflectionPrompt'> You're feeling fine, what went well today? </h2>
-          <section className='formWrap'>
-            <label>
+          <FormWrap mood={this.props.mood}>
+            <label className="formLabel">
               Write your reflection here:
               <textarea
               id='textArea'
@@ -39,7 +40,7 @@ class ReflectionForm extends Component {
               >
               </textarea>
             </label>
-          </section>
+          </FormWrap>
         </form>
         <section className="buttons">
           <button className="actionButton" onClick={this.submitReflection}>Save This Reflection</button>

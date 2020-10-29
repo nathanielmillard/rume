@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route, NavLink} from 'react-router-dom';
 import WelcomePage from '../WelcomePage/WelcomePage.js';
 import Lobby from '../Lobby/Lobby.js';
 import ReflectionForm from '../ReflectionForm/ReflectionForm.js';
-import ReflectionList from '../ReflectionList/ReflectionList.js';
+import ReflectionLibrary from '../ReflectionLibrary/ReflectionLibrary.js';
 import FeelingRoom from '../FeelingRoom/FeelingRoom.js';
 import BreathingRoom from '../BreathingRoom/BreathingRoom.js';
 import fullLogo from '../../Assets/emptyLogo.svg';
@@ -28,7 +28,7 @@ class App extends Component {
             <ReflectionForm mood={this.state.mood} />
           </Route>
           <Route path='/myreflections'>
-            <ReflectionList />
+            <ReflectionLibrary />
           </Route>
           <Route path='/feeling'>
             <FeelingRoom />

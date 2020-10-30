@@ -12,7 +12,16 @@ describe('App', ()=>{
       expect(randomQuote).toBeInTheDocument();
     });
 
+    test('Should see a random quote generated in the footer', () => {
+      render (<App />);
+      const randomQuote = screen.getByTestId("randomQuote");
+      expect(randomQuote).toBeInTheDocument();
+    });
+
+    test('Should see the open door icon generated in the footer', () => {
+      render (<App />);
+      const homeButton = screen.getByTestId("homeButton");
+      expect(homeButton).toBeInTheDocument();
+    });
   })
 })
-
-// A user sees the quote of the day and the emptyLogo

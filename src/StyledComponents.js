@@ -40,7 +40,7 @@ export const MoodButton = styled.button`
 `;
 
 export const FormWrap = styled.section`
-  height: 70vh;
+  height: 65vh;
   width: 100vw;
   background: fixed;
   background-size: cover;
@@ -59,13 +59,57 @@ export const FormWrap = styled.section`
     }
   } };
   .formLabel {
-    font-size: 1.25em;
+    font-size: 1.75rem;
     color: ${props => {
       if(props.mood === 'Angry') {
-        return `#f3f5f6`
+        return `#f3f5f6;`
       } else {
-        return `#121316`
+        return `#121316;`
       }
     }};
+    -webkit-text-stroke: ${props => {
+      if (props.mood === 'Angry') {
+        return `#121316 1px;`
+      } else {
+        return `none`
+      }
+    }}
   }
+`;
+
+export const RefCard = styled.section`
+  height: 27vh;
+  width: 27.95vw;
+  margin: 1.5vw;
+  overflow: scroll;
+  border: dotted 2px #121316;
+  padding: 1%;
+  background: ${props => {
+    if (props.mood === 'Angry') {
+      return `rgb(100, 27, 65, .25);`
+    } else if (props.mood === 'Anxious') {
+      return `rgb(180, 154, 49, .25);`
+    } else if (props.mood === 'Sad') {
+      return `rgb(132, 173, 189, .25);`
+    } else {
+      return `rgb(157, 211, 156, .25);`
+    }
+  }}
+`;
+
+export const RefPrompt = styled.h2`
+  font-size: 2.5rem;
+  -webkit-text-stroke: #121316 1.25px;
+  margin: 0px 0px 0px 7px;
+  color: ${props => {
+    if(props.mood === 'Angry') {
+      return `#641841;`
+    } else if(props.mood === 'Anxious') {
+      return `#B49A31;`
+    } else if(props.mood === 'Sad') {
+      return `#84ADBD;`
+    } else {
+      return `#9DD39C;`
+    }
+  }}
 `;

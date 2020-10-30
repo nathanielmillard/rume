@@ -42,8 +42,9 @@ export const MoodButton = styled.button`
 export const FormWrap = styled.section`
   height: 70vh;
   width: 100vw;
+  background: fixed;
   background-size: cover;
-  background-position: center fixed;
+  background-position: center;
   padding-top: 5%;
   overflow: scroll;
   background-image: ${props => {

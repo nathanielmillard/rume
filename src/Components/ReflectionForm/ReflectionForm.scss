@@ -24,11 +24,16 @@ label {
 }
 
 textArea {
+  padding: 2%;
   height: 60vh;
   width: 80vw;
   resize: none;
-  margin: 5% 5% 0% 8%;
+  margin: 3% 5% 0% 5%;
   font-size: 1.5em;
   border: none;
   background-color: rgb(255, 255, 255, .5);
+}
+.reflectionPrompt {
+  font-size: 2.5rem;
+  display: inline-flex;
 }

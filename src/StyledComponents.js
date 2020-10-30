@@ -67,11 +67,11 @@ export const FormWrap = styled.section`
         return `#121316;`
       }
     }};
-    -webkit-text-stroke: ${props => {
+    background-color: ${props => {
       if (props.mood === 'Angry') {
-        return `#121316 1px;`
+        return `#121316;`
       } else {
-        return `none`
+        return `#f3f5f6`
       }
     }}
   }

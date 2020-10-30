@@ -1,0 +1,25 @@
+.ReflectionForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+textArea {
+  height: 75vh;
+  width: 85vw;
+  resize: none;
+}
+
+.cardArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 90vh;
+  overflow: scroll;
+}

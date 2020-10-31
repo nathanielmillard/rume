@@ -2,6 +2,8 @@ import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Lobby.scss';
 import PropTypes from 'prop-types'
+import { MoodButton } from '../../StyledComponents.js'
+import styled from "styled-components";
 
 class Lobby extends Component {
   constructor(props) {
@@ -17,10 +19,10 @@ class Lobby extends Component {
         <h1>Welcome Back, it's {new Date().toDateString()}</h1>
         <h2>How are you feeling today?</h2>
         <section className='moodContainer'>
-          <button className='moodButton' onClick={this.props.setMood}>Sad</button>
-          <button className='moodButton' onClick={this.props.setMood}>Angry</button>
-          <button className='moodButton' onClick={this.props.setMood}>Anxious</button>
-          <button className='moodButton' onClick={this.props.setMood}>Fine</button>
+          <MoodButton mood='fine' onClick={this.props.setMood}>Fine</MoodButton>
+          <MoodButton mood='anxious' onClick={this.props.setMood}>Anxious</MoodButton>
+          <MoodButton mood='sad' onClick={this.props.setMood}>Sad</MoodButton>
+          <MoodButton mood='angry' onClick={this.props.setMood}>Angry</MoodButton>
         </section>
         <h2 data-testid='actionPrompt'>What do you want do do about it?</h2>
         <nav>

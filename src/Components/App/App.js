@@ -7,7 +7,7 @@ import ReflectionForm from '../ReflectionForm/ReflectionForm.js';
 import ReflectionLibrary from '../ReflectionLibrary/ReflectionLibrary.js';
 import FeelingRoom from '../FeelingRoom/FeelingRoom.js';
 import BreathingRoom from '../BreathingRoom/BreathingRoom.js';
-import fullLogo from '../../Assets/emptyLogo.svg';
+import openLogo from '../../Assets/openLogo.svg';
 
 class App extends Component {
   constructor(props){
@@ -49,7 +49,7 @@ class App extends Component {
                 className="homeButton"
                 data-test="homeButton"
                 title="Return To Lobby"
-                src={fullLogo}
+                src={openLogo}
                 alt="Navigate back to home page"
               />
             </NavLink>

@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+}
+.buttons {
+  display: inline-flex;
+  flex-flow: wrap;
+}
+.actionButton {
+  width: 20vw;
+  margin: 10px;
 }
 
 form {
@@ -10,16 +19,21 @@ form {
   text-align: center;
 }
 
-textArea {
-  height: 75vh;
-  width: 85vw;
-  resize: none;
+label {
+  background: none;
 }
 
-.cardArea {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 90vh;
-  overflow: scroll;
+textArea {
+  padding: 2%;
+  height: 60vh;
+  width: 80vw;
+  resize: none;
+  margin: 3% 5% 0% 5%;
+  font-size: 1.5em;
+  border: none;
+  background-color: rgb(255, 255, 255, .5);
+}
+.reflectionPrompt {
+  font-size: 2.5rem;
+  display: inline-flex;
 }

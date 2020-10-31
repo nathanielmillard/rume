@@ -9,7 +9,7 @@ class Lobby extends Component {
   constructor(props) {
     super(props)
     this.state = {
-    hasAMood: false
+    hasAMood: false,
     }
   }
 
@@ -32,19 +32,19 @@ class Lobby extends Component {
         </section>
         <h2>What do you want do do about it?</h2>
         <nav>
-          <Link to='/reflecting'>
+          <Link to={`/reflecting/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
             className='roomButton'>
             Reflect
             </button>
           </Link>
-          <Link to='/feeling'>
+          <Link to={`/feeling/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
             className='roomButton'>
             Feel
             </button>
           </Link>
-          <Link to='/breathing'>
+          <Link to={`/breathing/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
             className='roomButton'>
             Breathe
@@ -58,5 +58,6 @@ class Lobby extends Component {
 export default Lobby;
 
 Lobby.propTypes = {
+  mood: PropTypes.string,
   setMood: PropTypes.func.isRequired
 }

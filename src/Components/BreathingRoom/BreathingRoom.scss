@@ -5,9 +5,30 @@ section{
   justify-content: center;
 }
 .shape {
-  height: 150px;
-  width: 150px;
-  background-color: black;
+  height: 100px;
+  width: 100px;
+  background-color: hsl(0, 0%, 8%);
   border-radius: 100%;
   align-self: center;
+  position: absolute;
+}
+
+#five{
+  z-index: 1;
+}
+
+#four{
+  z-index: 2;
+}
+
+#three {
+  z-index: 3;
+}
+
+#two {
+  z-index: 4;
+}
+
+#one {
+  z-index: 5;
 }

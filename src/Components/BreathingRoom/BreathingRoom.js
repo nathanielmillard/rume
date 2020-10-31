@@ -11,39 +11,61 @@ class BreathingRoom extends Component {
     }
   }
   inhaleExhale() {
-    // var tl1 = gsap.timeline({repeat: 5, yoyo: true});
-    // tl.to(".1", {
-    //     duration: 5,
-    //     scale: 12,
-    //     backgroundColor:'grey',
-    // })
-    // .to(".1", {
-    //     duration: 5,
-    //     scale: 1,
-    //     backgroundColor:'grey',
-    // })
-    // var tl2 = gsap.timeline({repeat: 5, yoyo: true});
-    // tl.to(".2", {
-    //     duration: 5,
-    //     scale: 22,
-    //     backgroundColor:'light-grey',
-    // })
-    // .to(".2", {
-    //     duration: 5,
-    //     scale: 1,
-    //     backgroundColor:'light-grey',
-    // })
-    // var tl3 = gsap.timeline({repeat: 5, yoyo: true});
-    // tl.to(".3", {
-    //     duration: 5,
-    //     scale: 32,
-    //     backgroundColor:'grey',
-    // })
-    // .to(".3", {
-    //     duration: 5,
-    //     scale: 1,
-    //     backgroundColor:'grey',
-    // })
+    var tl1 = gsap.timeline({repeat: 5, yoyo: true});
+    tl1.to("#one", {
+        duration: 5,
+        scale: 2,
+        backgroundColor:'hsl(128, 29%, 90%)',
+    })
+    .to("#one", {
+        duration: 5,
+        scale: 1,
+        backgroundColor:'hsl(200, 14%, 96%)',
+    })
+    var tl2 = gsap.timeline({repeat: 5, yoyo: true});
+    tl2.to("#two", {
+        duration: 5,
+        scale: 4,
+        backgroundColor:'hsl(119, 38%, 72%)',
+    })
+    .to("#two", {
+        duration: 5,
+        scale: 1,
+        backgroundColor:'hsl(200, 14%, 96%)',
+    })
+    var tl3 = gsap.timeline({repeat: 5, yoyo: true});
+    tl3.to("#three", {
+        duration: 5,
+        scale: 6,
+        backgroundColor:'hsl(120, 18%, 56%)',
+    })
+    .to("#three", {
+        duration: 5,
+        scale: 1,
+        backgroundColor:'hsl(200, 14%, 96%)',
+    })
+    var tl4 = gsap.timeline({repeat: 5, yoyo: true});
+    tl4.to("#four", {
+        duration: 5,
+        scale: 9,
+        backgroundColor:'hsl(124, 11%, 24%)',
+    })
+    .to("#four", {
+        duration: 5,
+        scale: 1,
+        backgroundColor:'hsl(200, 14%, 96%)',
+    })
+    var tl5 = gsap.timeline({repeat: 5, yoyo: true});
+    tl5.to("#five", {
+        duration: 5,
+        scale: 12,
+        backgroundColor:'hsl(0, 0%, 8%)',
+    })
+    .to("#five", {
+        duration: 5,
+        scale: 1,
+        backgroundColor:'hsl(200, 14%, 96%)',
+    })
   }
 
   componentDidMount(){
@@ -52,9 +74,11 @@ class BreathingRoom extends Component {
   render(){
     return (
       <section>
-        <div className="shape 1"></div>
-        <div className="shape 2"></div>
-        <div className="shape 3"></div>
+        <div className="shape" id="one"></div>
+        <div className="shape" id="two"></div>
+        <div className="shape" id="three"></div>
+        <div className="shape" id="four"></div>
+        <div className="shape" id="five"></div>
       </section>
     )
   }

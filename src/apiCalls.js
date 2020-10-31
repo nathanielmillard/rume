@@ -8,7 +8,7 @@ export const getQuote = () => {
     }
   })
   .catch(error => {
-    return "Advise didn't load, myabe maybe go drink some water?"
+    return "Advice didn't load, maybe maybe go drink some water?"
   })
 }
 

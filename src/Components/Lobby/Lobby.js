@@ -9,31 +9,46 @@ class Lobby extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
+    hasAMood: false
     }
   }
 
+  clickHandler = (e) => {
+    this.props.setMood(e)
+    this.setState({hasAMood: true})
+  }
+
   render() {
+
     return (
       <section className='Lobby'>
         <h1>Welcome Back, it's {new Date().toDateString()}</h1>
         <h2>How are you feeling today?</h2>
         <section className='moodContainer'>
-          <MoodButton mood='fine' onClick={this.props.setMood}>Fine</MoodButton>
-          <MoodButton mood='anxious' onClick={this.props.setMood}>Anxious</MoodButton>
-          <MoodButton mood='sad' onClick={this.props.setMood}>Sad</MoodButton>
-          <MoodButton mood='angry' onClick={this.props.setMood}>Angry</MoodButton>
+          <MoodButton mood='fine' onClick={this.clickHandler}>Fine</MoodButton>
+          <MoodButton mood='anxious' onClick={this.clickHandler}>Anxious</MoodButton>
+          <MoodButton mood='sad' onClick={this.clickHandler}>Sad</MoodButton>
+          <MoodButton mood='angry' onClick={this.clickHandler}>Angry</MoodButton>
         </section>
         <h2>What do you want do do about it?</h2>
         <nav>
           <Link to='/reflecting'>
-            <button className='roomButton'>Reflect</button>
+            <button disabled={!this.state.hasAMood}
+            className='roomButton'>
+            Reflect
+            </button>
           </Link>
           <Link to='/feeling'>
-            <button className='roomButton'>Feel</button>
+            <button disabled={!this.state.hasAMood}
+            className='roomButton'>
+            Feel
+            </button>
           </Link>
           <Link to='/breathing'>
-            <button className='roomButton'>Breathe</button>
+            <button disabled={!this.state.hasAMood}
+            className='roomButton'>
+            Breathe
+            </button>
           </Link>
         </nav>
       </section>

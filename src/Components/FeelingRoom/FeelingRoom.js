@@ -37,7 +37,6 @@ class FeelingRoom extends Component {
       //elements to animate go here
     )
   }
-
   chooseRoomMood = () => {
     if(this.props.mood === 'angry') {
       return this.createAngryRoom()
@@ -49,18 +48,24 @@ class FeelingRoom extends Component {
       return this.createFineRoom()
     }
   }
+  startFeeling = () => {
+    this.setState({isFeeling: true})
+  }
   render(){
+    let instructions = (
+      <section className='Directions'>
+        <h1> Welcome to the feeling room </h1>
+        <p>
+          First pick a kind of sound you want to listen to.
+          Then feel free to pause and play sound as you see fit.
+          Enjoy the sights and sounds of your feeling space.
+        </p>
+        <button onClick={this.startFeeling}> Get Started </button>
+      </section>
+    )
     return (
       <section className='FeelingRoom'>
-        <section className='Directions'>
-          <h1> Welcome to the feeling room </h1>
-          <p>
-            First pick a kind of sound you want to listen to.
-            Then feel free to pause and play sound as you see fit.
-            Enjoy the sights and sounds of your feeling space.
-          </p>
-          <button> Get Started </button>
-        </section>
+        {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
           <button>Nature Sound Svg</button>
           <button>Ambient Sound Svg</button>

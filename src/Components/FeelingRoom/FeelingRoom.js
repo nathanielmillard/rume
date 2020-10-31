@@ -1,47 +1,77 @@
 import React from 'react';
 import './FeelingRoom.scss';
+import {Component} from 'react'
 
-const FeelingRoom = (props) => {
-  const createFineRoom = () => {
-    //functions to animate go here
-    return (
-      //elements to animate go here
-    )
-  }
-  const createAnxiousRoom = () => {
-    //functions to animate go here
-    return (
-      //elements to animate go here
-    )
-  }
-  const createSadRoom = () => {
-    //functions to animate go here
-    return (
-      //elements to animate go here
-    )
-  }
-  const createAngryRoom = () => {
-    //functions to animate go here
-    return (
-      //elements to animate go here
-    )
-  }
-
-  const chooseRoomMood = () => {
-    if(props.mood === angry) {
-      createAngryRoom()
-    } else if(props.mood === sad) {
-      createSadRoom()
-    } else if(props.mood === anxious){
-      createAnxiousRoom()
-    } else {
-      createFineRoom()
+class FeelingRoom extends Component {
+  constructor(props){
+    super(props)
+    this.state= {
+      isFeeling: false
     }
   }
+  createFineRoom = () => {
+    //functions to animate go here
+    return (
+      console.log('Fine')
+      //elements to animate go here
+    )
+  }
+  createAnxiousRoom = () => {
+    //functions to animate go here
+    return (
+      console.log('ANXIOUS')
+      //elements to animate go here
+    )
+  }
+  createSadRoom = () => {
+    //functions to animate go here
+    return (
+      console.log('SAD')
+      //elements to animate go here
+    )
+  }
+  createAngryRoom = () => {
+    //functions to animate go here
+    return (
+      console.log('ANGRY')
+      //elements to animate go here
+    )
+  }
 
-  return (
-    chooseRoomMood()
-  )
+  chooseRoomMood = () => {
+    if(this.props.mood === 'angry') {
+      return this.createAngryRoom()
+    } else if(this.props.mood === 'sad') {
+      return this.createSadRoom()
+    } else if(this.props.mood === 'anxious'){
+      return this.createAnxiousRoom()
+    } else {
+      return this.createFineRoom()
+    }
+  }
+  render(){
+    return (
+      <section className='FeelingRoom'>
+        <section className='Directions'>
+          <h1> Welcome to the feeling room </h1>
+          <p>
+            First pick a kind of sound you want to listen to.
+            Then feel free to pause and play sound as you see fit.
+            Enjoy the sights and sounds of your feeling space.
+          </p>
+          <button> Get Started </button>
+        </section>
+        <section className="soundControlPanel">
+          <button>Nature Sound Svg</button>
+          <button>Ambient Sound Svg</button>
+          <button>Music Sound Svg</button>
+          <button> Play </button>
+          <button> Pause </button>
+        </section>
+        {this.chooseRoomMood()}
+      </section>
+    )
+  }
 }
 
 export default FeelingRoom

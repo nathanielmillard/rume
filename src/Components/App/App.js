@@ -14,12 +14,12 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      quote: ''
+      quote: '',
+      mood: ''
     }
   }
   async componentDidMount() {
     let quote = await getQuote()
-    console.log(quote.slip.advice)
     this.setState({quote: quote.slip.advice})
   }
   setMood = (e) => {
@@ -38,13 +38,16 @@ class App extends Component {
             <ReflectionLibrary />
           </Route>
           <Route path='/feeling'>
-            <FeelingRoom />
+            <FeelingRoom mood={this.state.mood}/>
           </Route>
           <Route path='/breathing'>
             <BreathingRoom />
           </Route>
           <Route path='/lobby'>
-          <Lobby setMood={this.setMood} />
+          <Lobby
+            setMood={this.setMood}
+            mood={this.state.mood}
+          />
           </Route>
           <Route path='/'>
            <WelcomePage />

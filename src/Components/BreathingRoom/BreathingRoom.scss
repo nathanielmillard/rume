@@ -1,16 +1,22 @@
-section{
+.BreathingRoom{
   display: flex;
   height: 90vh;
   height: 90vw;
-  justify-content: center;
+  // justify-content: center;
+}
+.directions{
+  position: fixed;
+  align-self: flex-start;
 }
 .shape {
-  height: 100px;
-  width: 100px;
+  height: 10vw;
+  width: 10vw;
   background-color: hsl(0, 0%, 8%);
   border-radius: 100%;
   align-self: center;
   position: absolute;
+  margin-left: 45vw;
+  margin-right: 45vw;
 }
 
 #five{
@@ -31,4 +37,8 @@ section{
 
 #one {
   z-index: 5;
+}
+
+.hidden{
+  display: none;
 }

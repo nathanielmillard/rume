@@ -1,84 +1,38 @@
 import React from 'react';
 import {Component} from 'react'
 import './BreathingRoom.scss';
-import gsap from 'gsap'
+
+import {inhaleExhale} from './BreathingRoomAnimation.js'
 
 class BreathingRoom extends Component {
   constructor(props){
     super(props)
-    this.state={
-
+    this.state ={
+      isBreathing: false
     }
   }
-  inhaleExhale() {
-    var tl1 = gsap.timeline({repeat: 5, yoyo: true});
-    tl1.to("#one", {
-        duration: 5,
-        scale: 2,
-        backgroundColor:'hsl(128, 29%, 90%)',
-    })
-    .to("#one", {
-        duration: 5,
-        scale: 1,
-        backgroundColor:'hsl(200, 14%, 96%)',
-    })
-    var tl2 = gsap.timeline({repeat: 5, yoyo: true});
-    tl2.to("#two", {
-        duration: 5,
-        scale: 4,
-        backgroundColor:'hsl(119, 38%, 72%)',
-    })
-    .to("#two", {
-        duration: 5,
-        scale: 1,
-        backgroundColor:'hsl(200, 14%, 96%)',
-    })
-    var tl3 = gsap.timeline({repeat: 5, yoyo: true});
-    tl3.to("#three", {
-        duration: 5,
-        scale: 6,
-        backgroundColor:'hsl(120, 18%, 56%)',
-    })
-    .to("#three", {
-        duration: 5,
-        scale: 1,
-        backgroundColor:'hsl(200, 14%, 96%)',
-    })
-    var tl4 = gsap.timeline({repeat: 5, yoyo: true});
-    tl4.to("#four", {
-        duration: 5,
-        scale: 9,
-        backgroundColor:'hsl(124, 11%, 24%)',
-    })
-    .to("#four", {
-        duration: 5,
-        scale: 1,
-        backgroundColor:'hsl(200, 14%, 96%)',
-    })
-    var tl5 = gsap.timeline({repeat: 5, yoyo: true});
-    tl5.to("#five", {
-        duration: 5,
-        scale: 12,
-        backgroundColor:'hsl(0, 0%, 8%)',
-    })
-    .to("#five", {
-        duration: 5,
-        scale: 1,
-        backgroundColor:'hsl(200, 14%, 96%)',
-    })
+  clickHandler = () => {
+    this.setState({isBreathing: true})
+    inhaleExhale()
   }
 
-  componentDidMount(){
-    this.inhaleExhale()
-  }
   render(){
+    let instructions = (
+      <section className='directions'>
+      <h1>Time to Take Breathe</h1>
+      <p>Follow the animation, breathe in as it expands
+      and breathe out as it contracts.</p>
+      <button onClick={this.clickHandler}> Start</button>
+    </section>
+  )
     return (
-      <section>
-        <div className="shape" id="one"></div>
-        <div className="shape" id="two"></div>
-        <div className="shape" id="three"></div>
-        <div className="shape" id="four"></div>
-        <div className="shape" id="five"></div>
+      <section className='BreathingRoom'>
+      {!this.state.isBreathing && instructions}
+        <div className='shape' id='one'></div>
+        <div className='shape' id='two'></div>
+        <div className='shape' id='three'></div>
+        <div className='shape' id='four'></div>
+        <div className='shape' id='five'></div>
       </section>
     )
   }

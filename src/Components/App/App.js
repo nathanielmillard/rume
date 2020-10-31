@@ -20,7 +20,7 @@ class App extends Component {
   }
   async componentDidMount() {
     let quote = await getQuote()
-    this.setState({quote: quote.slip.advice})
+    this.setState({quote: quote.content})
   }
   setMood = (e) => {
     let mood = e.target.innerText

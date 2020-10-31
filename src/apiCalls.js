@@ -1,5 +1,5 @@
 export const getQuote = () => {
- return fetch("https://api.adviceslip.com/advice")
+ return fetch("https://api.quotable.io/random")
   .then(response => {
     if (response.ok){
       return response.json()

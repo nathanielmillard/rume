@@ -8,7 +8,7 @@ export const getQuote = () => {
     }
   })
   .catch(error => {
-    return "Advice didn't load, maybe maybe go drink some water?"
+    return "Your limitation is only your imagination."
   })
 }
 

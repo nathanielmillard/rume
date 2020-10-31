@@ -1,0 +1,13 @@
+section{
+  display: flex;
+  height: 90vh;
+  height: 90vw;
+  justify-content: center;
+}
+.shape {
+  height: 150px;
+  width: 150px;
+  background-color: black;
+  border-radius: 100%;
+  align-self: center;
+}

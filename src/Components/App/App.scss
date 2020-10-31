@@ -3,11 +3,26 @@
   margin: 0;
 };
 
+button {
+  border-radius: 10%;
+  color: #f3f5f6;
+  height: 3vh;
+  border: solid 1px #121316;
+  background-color: #121316;
+  width: 20vw;
+  margin: 1%;
+}
+
+:focus{
+  outline: none;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+  background-color: #F3F5F6;
 };
 
 footer {
@@ -24,6 +39,8 @@ footer {
 };
 
 .activeHomeButton {
-  content: url('../../Assets/fullLogo.svg');
+  margin: 2vh;
+  height: 5vh;
+  content: url('../../Assets/closedLogo.svg');
   // border: 3px solid red;
 }

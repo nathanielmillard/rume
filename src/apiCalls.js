@@ -1,3 +1,17 @@
+export const getQuote = () => {
+ return fetch("https://api.adviceslip.com/advice")
+  .then(response => {
+    if (response.ok){
+      return response.json()
+    } else {
+      throw Error
+    }
+  })
+  .catch(error => {
+    return "Advise didn't load, myabe maybe go drink some water?"
+  })
+}
+
 export const postAReflection = (reflection, date, mood) => {
   fetch("http://localhost:3001/api/v1/reflections", {
     method: 'POST',

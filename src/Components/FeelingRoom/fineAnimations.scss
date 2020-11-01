@@ -1,34 +1,27 @@
 
-@mixin circle($size, $background-color) {
+@mixin circle($size, $bc, $z) {
   width: $size;
   height: $size;
-  background-color: $background-color;
+  background-color: $bc;
   border-radius: 100%;
   box-shadow: 0px 0px 35px white inset;
+  position: absolute;
+  z-index: $z;
+  align-self: center;
 }
 
 .fineRoom {
+  display: flex;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
   background: linear-gradient(0deg, hsl(164, 73%, 80%) 0%, hsl(118, 32%, 64%) 50%, hsl(33, 29%, 68%) 100%);
 }
 
 #fineCircle1 {
-  @include circle(10vw, hsla(119, 38%, 72%, .5));
+  @include circle(10vw, hsla(119, 38%, 72%, .5), 1);
 }
 
 #fineCircle2 {
-  @include circle(20vw, hsla(67, 40%, 40%, .8));
-}
-
-#fineCircle3 {
-  @include circle(13vw, hsla(131, 36%, 41%, .5));
-}
-
-#fineCircle4 {
-  @include circle(3vw, hsla(151, 54%, 56%, .8));
-}
-
-#fineCircle5 {
-  @include circle(16vw, hsla(62, 69%, 90%, .5));
+  @include circle(16vw, hsla(62, 69%, 90%, .5), 2);
 }

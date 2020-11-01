@@ -8,12 +8,19 @@ import ReflectionLibrary from '../ReflectionLibrary/ReflectionLibrary.js';
 import FeelingRoom from '../FeelingRoom/FeelingRoom.js';
 import BreathingRoom from '../BreathingRoom/BreathingRoom.js';
 import openLogo from '../../Assets/openLogo.svg';
+import {getQuote} from '../../apiCalls.js'
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      quote: '',
+      mood: ''
     }
+  }
+  async componentDidMount() {
+    let quote = await getQuote()
+    this.setState({quote: quote.content})
   }
   setMood = (e) => {
     let mood = e.target.innerText
@@ -31,13 +38,16 @@ class App extends Component {
             <ReflectionLibrary />
           </Route>
           <Route path='/feeling'>
-            <FeelingRoom />
+            <FeelingRoom mood={this.state.mood}/>
           </Route>
           <Route path='/breathing'>
             <BreathingRoom />
           </Route>
           <Route path='/lobby'>
-          <Lobby setMood={this.setMood} />
+          <Lobby
+            setMood={this.setMood}
+            mood={this.state.mood}
+          />
           </Route>
           <Route path='/'>
            <WelcomePage />
@@ -53,7 +63,7 @@ class App extends Component {
                 alt="Navigate back to home page"
               />
             </NavLink>
-            <p>Quote of the day</p>
+            <p>{this.state.quote}</p>
           </footer>
         </main>
       </BrowserRouter>

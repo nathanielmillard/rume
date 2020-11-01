@@ -1,0 +1,44 @@
+.BreathingRoom{
+  display: flex;
+  height: 90vh;
+  height: 90vw;
+  // justify-content: center;
+}
+.directions{
+  position: fixed;
+  align-self: flex-start;
+}
+.shape {
+  height: 10vw;
+  width: 10vw;
+  background-color: hsl(0, 0%, 8%);
+  border-radius: 100%;
+  align-self: center;
+  position: absolute;
+  margin-left: 45vw;
+  margin-right: 45vw;
+}
+
+#five{
+  z-index: 1;
+}
+
+#four{
+  z-index: 2;
+}
+
+#three {
+  z-index: 3;
+}
+
+#two {
+  z-index: 4;
+}
+
+#one {
+  z-index: 5;
+}
+
+.hidden{
+  display: none;
+}

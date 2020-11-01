@@ -1,6 +1,7 @@
 import React from 'react';
 import './FeelingRoom.scss';
-import {Component} from 'react'
+import {Component} from 'react';
+import './fineAnimations.scss';
 
 class FeelingRoom extends Component {
   constructor(props){
@@ -12,8 +13,14 @@ class FeelingRoom extends Component {
   createFineRoom = () => {
     //functions to animate go here
     return (
-      console.log('Fine')
-      //elements to animate go here
+      // console.log('Fine')
+      <section className='fineRoom'>
+        <div className='fineCircles' id='fineCircle5'></div>
+        <div className='fineCircles' id='fineCircle1'></div>
+        <div className='fineCircles' id='fineCircle2'></div>
+        <div className='fineCircles' id='fineCircle3'></div>
+        <div className='fineCircles' id='fineCircle4'></div>
+      </section>
     )
   }
   createAnxiousRoom = () => {

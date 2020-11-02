@@ -1,0 +1,8 @@
+.sadRoom{
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  background: linear-gradient(45deg, hsl(200, 14%, 96%) 0%, hsl(198, 29%, 80%) 100%);
+}

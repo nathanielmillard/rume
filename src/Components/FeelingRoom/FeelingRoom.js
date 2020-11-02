@@ -49,11 +49,98 @@ class FeelingRoom extends Component {
     // anxiousFeeling()
     return (
       <section>
-        <div className='anxiousHexagon' id='anxiousHexagon1'></div>
-        <div className='anxiousCircle' id='anxiousCircle2'></div>
-        <div className='anxiousCircle' id='anxiousCircle3'></div>
-        <div className='anxiousCircle' id='anxiousCircle4'></div>
-        <div className='anxiousCircle' id='anxiousCircle5'></div>
+        <ul id="grid" className="clear">
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+          <li>
+            <div class="hexagon"></div>
+          </li>
+        </ul>
       </section>
     )
   }
@@ -112,5 +199,12 @@ class FeelingRoom extends Component {
     )
   }
 }
+
+// <div className='anxiousHexagon' id='anxiousHexagon1'></div>
+// <div className='anxiousHexagon' id='anxiousHexagon2'></div>
+// <div className='anxiousHexagon' id='anxiousHexagon3'></div>
+// <div className='anxiousHexagon' id='anxiousHexagon4'></div>
+// <div className='anxiousHexagon' id='anxiousHexagon5'></div>
+// <div className='anxiousHexagon' id='anxiousHexagon6'></div>
 
 export default FeelingRoom

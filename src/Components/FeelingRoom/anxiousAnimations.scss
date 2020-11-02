@@ -1,49 +1,175 @@
-.anxiousCircle {
-  height: 20vw;
-  width: 20vw;
-  border-radius: 100%;
+#grid {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0; /* Clears unordered list default of 40px */
 }
 
-#anxiousCircle2 {
-  background-color: violet;
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
-#anxiousCircle3 {
-  background-color: green;
+#grid li {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    width: 27.85714285714286%;
+    padding: 0 0 32.16760145166612% 0;
+    -o-transform: rotate(-60deg) skewY(30deg);
+    -moz-transform: rotate(-60deg) skewY(30deg);
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+    background: #fd005f;
 }
 
-#anxiousCircle4 {
-  background-color: goldenrod;
+#grid li .hexagon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fdbf00;
+    -o-transform: skewY(-30deg) rotate(60deg);
+    -moz-transform: skewY(-30deg) rotate(60deg);
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
 }
 
-#anxiousCircle5 {
-  background-color: pink;
+#grid li {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    width: 27.85714285714286%;
+    padding: 0 0 32.16760145166612% 0;
+    -o-transform: rotate(-60deg) skewY(30deg);
+    -moz-transform: rotate(-60deg) skewY(30deg);
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+    background: fd005f;
+    overflow: hidden;
 }
 
-#anxiousHexagon1 {
-  position: relative;
-  width: 51.90311418685121vw;
-  height: 29.96712802768166vw;
-  background-color: #d4c894;
-  margin: 14.982698961937716vw 0;
+#grid li {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    width: 27.85714285714286%;
+    padding: 0 0 32.16760145166612% 0;
+    -o-transform: rotate(-60deg) skewY(30deg);
+    -moz-transform: rotate(-60deg) skewY(30deg);
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+    overflow: hidden;
+    visibility: hidden;
 }
 
-#anxiousHexagon1:before,
-#anxiousHexagon1:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 25.951557093425606vw solid transparent;
-  border-right: 25.951557093425606vw solid transparent;
+#grid li * {
+    visibility: visible;
 }
 
-#anxiousHexagon1:before {
-  bottom: 100%;
-  border-bottom: 14.982698961937716vw solid #d4c894;
+#grid li .hexagon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fdbf00;
+    -o-transform: skewY(-30deg) rotate(60deg);
+    -moz-transform: skewY(-30deg) rotate(60deg);
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
+    overflow: hidden;
 }
 
-#anxiousHexagon1:after {
-  top: 100%;
-  width: 0;
-  border-top: 14.982698961937716vw solid #d4c894;
-}
+
+
+// #anxiousHexagon1 {
+//   position: relative;
+//   width: 143.5px;
+//   height: 82.85px;
+//   background-color: #d4c894;
+//   margin: 41.42px 0;
+// }
+//
+// #anxiousHexagon1:before,
+// #anxiousHexagon1:after {
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   border-left: 71.75px solid transparent;
+//   border-right: 71.75px solid transparent;
+// }
+//
+// #anxiousHexagon1:before {
+//   bottom: 100%;
+//   border-bottom: 41.42px solid #d4c894;
+// }
+//
+// #anxiousHexagon1:after {
+//   top: 100%;
+//   width: 0;
+//   border-top: 41.42px solid #d4c894;
+// }
+//
+// #anxiousHexagon2 {
+//   position: relative;
+//   width: 215.25px;
+//   height: 124.27px;
+//   background-color: #d4c894;
+//   margin: 62.14px 0;
+// }
+//
+// #anxiousHexagon2:before,
+// #anxiousHexagon2:after {
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   border-left: 107.625px solid transparent;
+//   border-right: 107.625px solid transparent;
+// }
+//
+// #anxiousHexagon2:before {
+//   bottom: 100%;
+//   border-bottom: 62.14px solid #d4c894;
+// }
+//
+// #anxiousHexagon2:after {
+//   top: 100%;
+//   width: 0;
+//   border-top: 62.14px solid #d4c894;
+// }
+//
+// #anxiousHexagon3 {
+//   position: relative;
+//   width: 287px;
+//   height: 165.70px;
+//   background-color: #d4c894;
+//   margin: 82.85px 0;
+// }
+//
+// #anxiousHexagon3:before,
+// #anxiousHexagon3:after {
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   border-left: 143.5px solid transparent;
+//   border-right: 143.5px solid transparent;
+// }
+//
+// #anxiousHexagon3:before {
+//   bottom: 100%;
+//   border-bottom: 82.85px solid #d4c894;
+// }
+//
+// #anxiousHexagon3:after {
+//   top: 100%;
+//   width: 0;
+//   border-top: 82.85px solid #d4c894;
+// }

@@ -33,69 +33,21 @@ class FeelingRoom extends Component {
     )
   }
   createAngryRoom = () => {
+    const squareNums = Array.from(Array(10).keys())
       angryFeelingAnimation()
+    const angrySquares = squareNums.map(num => {
+        return (
+          <div className={`square${num}`}>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+        )
+      })
       return (
         <section>
-          <div className='square0'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square1'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square2'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square3'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square4'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square5'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square6'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square7'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square8'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
-          <div className='square9'>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-          </div>
+          {angrySquares}
         </section>
     )
   }

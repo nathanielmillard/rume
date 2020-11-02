@@ -33,18 +33,78 @@ class FeelingRoom extends Component {
     )
   }
   createAngryRoom = () => {
-    //functions to animate go here
-    return (
-      console.log('ANGRY')
-      //elements to animate go here
+      angryFeelingAnimation()
+      return (
+        <section>
+          <div className='square0'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square1'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square2'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square3'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square4'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square5'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square6'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square7'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square8'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+          <div className='square9'>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+        </section>
     )
   }
   chooseRoomMood = () => {
-    if(this.props.mood === 'angry') {
+    if(this.props.mood === 'Angry') {
       return this.createAngryRoom()
-    } else if(this.props.mood === 'sad') {
+    } else if(this.props.mood === 'Sad') {
       return this.createSadRoom()
-    } else if(this.props.mood === 'anxious'){
+    } else if(this.props.mood === 'Anxious'){
       return this.createAnxiousRoom()
     } else {
       return this.createFineRoom()

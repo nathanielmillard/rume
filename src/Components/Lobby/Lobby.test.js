@@ -6,9 +6,12 @@ import { MemoryRouter } from 'react-router-dom'
 describe('Lobby', () => {
   describe('Unit Tests', () => {
     test('Should load messages and prompts in Lobby', () => {
+      const mockedFunction = jest.fn()
       render(
         <MemoryRouter>
-          <Lobby />
+          <Lobby
+            setMood={mockedFunction}
+          />
         </MemoryRouter>
       );
       const welcomeMessage = screen.getByTestId('welcomeMessage');
@@ -19,9 +22,12 @@ describe('Lobby', () => {
       expect(actionPrompt).toBeInTheDocument();
     });
     test('Should load actionable elements in Lobby', () => {
+      const mockedFunction = jest.fn()
       render(
         <MemoryRouter>
-          <Lobby />
+          <Lobby
+            setMood={mockedFunction}
+          />
         </MemoryRouter>
       );
       const moodButtonContainer = screen.getByTestId('moodButtonContainer');
@@ -50,7 +56,17 @@ describe('Lobby', () => {
     });
 
     test('Nav buttons should be disabled until Mood is selected', () => {
-      expect(true).toBe(true)
+      const mockedFunction = jest.fn()
+      render(
+        <MemoryRouter>
+          <Lobby
+            setMood={mockedFunction}
+          />
+        </MemoryRouter>
+      )
+      screen.debug()
+      const reflectButton = screen.getByTestId('linkToReflecting')
+      expect(reflectButton).toHaveProperty('disabled')
     })
 
 

@@ -26,8 +26,8 @@ class Lobby extends Component {
         </section>
         <h2 data-testid='actionPrompt'>What do you want do do about it?</h2>
         <nav>
-          <Link to='/reflecting' data-testid='linkToReflecting'>
-            <button className='roomButton'>Reflect</button>
+          <Link to='/reflecting'>
+            <button className='roomButton' data-testid='linkToReflecting'>Reflect</button>
           </Link>
           <Link to='/feeling' data-testid='linkToFeeling'>
             <button className='roomButton'>Feel</button>

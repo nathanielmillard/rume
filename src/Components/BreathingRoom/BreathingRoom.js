@@ -1,11 +1,41 @@
 import React from 'react';
+import {Component} from 'react'
 import './BreathingRoom.scss';
 
-const BreathingRoom = () => {
+import {inhaleExhale} from './BreathingRoomAnimation.js'
 
-  return (
-    <h1>Breathing Room</h1>
+class BreathingRoom extends Component {
+  constructor(props){
+    super(props)
+    this.state ={
+      isBreathing: false
+    }
+  }
+  clickHandler = () => {
+    this.setState({isBreathing: true})
+    inhaleExhale()
+  }
+
+  render(){
+    let instructions = (
+      <section className='directions'>
+      <h1>Time to Take Breathe</h1>
+      <p>Follow the animation, breathe in as it expands
+      and breathe out as it contracts.</p>
+      <button onClick={this.clickHandler}> Start</button>
+    </section>
   )
+    return (
+      <section className='BreathingRoom'>
+      {!this.state.isBreathing && instructions}
+        <div className='shape' id='one'></div>
+        <div className='shape' id='two'></div>
+        <div className='shape' id='three'></div>
+        <div className='shape' id='four'></div>
+        <div className='shape' id='five'></div>
+      </section>
+    )
+  }
 }
 
 export default BreathingRoom

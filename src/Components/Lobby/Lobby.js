@@ -9,11 +9,17 @@ class Lobby extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
+    hasAMood: false,
     }
   }
 
+  clickHandler = (e) => {
+    this.props.setMood(e)
+    this.setState({hasAMood: true})
+  }
+
   render() {
+
     return (
       <section className='Lobby'>
         <h1 data-testid='welcomeMessage'>Welcome Back, it's {new Date().toDateString()}</h1>
@@ -26,14 +32,23 @@ class Lobby extends Component {
         </section>
         <h2 data-testid='actionPrompt'>What do you want do do about it?</h2>
         <nav>
-          <Link to='/reflecting'>
-            <button className='roomButton' data-testid='linkToReflecting'>Reflect</button>
+          <Link to={`/reflecting/${this.props.mood}`}>
+            <button disabled={!this.state.hasAMood}
+            className='roomButton'>
+            Reflect
+            </button>
           </Link>
-          <Link to='/feeling' data-testid='linkToFeeling'>
-            <button className='roomButton'>Feel</button>
+          <Link to={`/feeling/${this.props.mood}`}>
+            <button disabled={!this.state.hasAMood}
+            className='roomButton'>
+            Feel
+            </button>
           </Link>
-          <Link to='/breathing' data-testid='linkToBreathing'>
-            <button className='roomButton'>Breathe</button>
+          <Link to={`/breathing/${this.props.mood}`}>
+            <button disabled={!this.state.hasAMood}
+            className='roomButton'>
+            Breathe
+            </button>
           </Link>
         </nav>
       </section>
@@ -43,5 +58,6 @@ class Lobby extends Component {
 export default Lobby;
 
 Lobby.propTypes = {
+  mood: PropTypes.string,
   setMood: PropTypes.func.isRequired
 }

@@ -16,9 +16,9 @@ class Lobby extends Component {
   render() {
     return (
       <section className='Lobby'>
-        <h1>Welcome Back, it's {new Date().toDateString()}</h1>
-        <h2>How are you feeling today?</h2>
-        <section className='moodContainer'>
+        <h1 data-testid='welcomeMessage'>Welcome Back, it's {new Date().toDateString()}</h1>
+        <h2 data-testid='checkInQuestion'>How are you feeling today?</h2>
+        <section data-testid='moodButtonContainer' className='moodContainer'>
           <MoodButton mood='fine' onClick={this.props.setMood}>Fine</MoodButton>
           <MoodButton mood='anxious' onClick={this.props.setMood}>Anxious</MoodButton>
           <MoodButton mood='sad' onClick={this.props.setMood}>Sad</MoodButton>

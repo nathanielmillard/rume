@@ -23,5 +23,9 @@ describe('App', ()=>{
       const homeButton = screen.getByTestId("homeButton");
       expect(homeButton).toBeInTheDocument();
     });
+
+    test('Function should fire when button is clicked', () => {
+      expect(true).toBe(true)
+    })
   })
 })

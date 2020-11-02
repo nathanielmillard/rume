@@ -31,9 +31,9 @@ describe('Lobby', () => {
         </MemoryRouter>
       );
       const moodButtonContainer = screen.getByTestId('moodButtonContainer');
-      const linkToReflecting = screen.getByTestId('linkToReflecting');
-      const linkToFeeling = screen.getByTestId('linkToFeeling');
-      const linkToBreathing = screen.getByTestId('linkToBreathing');
+      const linkToReflecting = screen.getByTestId('reflect');
+      const linkToFeeling = screen.getByTestId('feel');
+      const linkToBreathing = screen.getByTestId('breathe');
       expect(moodButtonContainer).toBeInTheDocument();
       expect(linkToReflecting).toBeInTheDocument();
       expect(linkToFeeling).toBeInTheDocument();
@@ -64,8 +64,8 @@ describe('Lobby', () => {
           />
         </MemoryRouter>
       )
-      screen.debug()
-      const reflectButton = screen.getByTestId('linkToReflecting')
+      // screen.debug()
+      const reflectButton = screen.getByTestId('reflect')
       expect(reflectButton).toHaveProperty('disabled')
     })
 

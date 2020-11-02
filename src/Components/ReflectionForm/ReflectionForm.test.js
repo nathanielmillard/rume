@@ -7,11 +7,13 @@ describe('ReflectionForm', ()=>{
     test('Should render a footer on the ReflectionForm', () => {
       render(
         <MemoryRouter>
-          <ReflectionForm />
+          <ReflectionForm
+            mood='Fine'
+          />
         </MemoryRouter>
       );
-      const link = screen.getByTestId("linkToAllReflections");
-      expect(link).toBeInTheDocument();
+      const button = screen.getByTestId("linkToAllReflections");
+      expect(button).toBeInTheDocument();
     });
 
   })

@@ -34,18 +34,21 @@ class Lobby extends Component {
         <nav>
           <Link to={`/reflecting/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
+            data-testid='reflect'
             className='roomButton'>
             Reflect
             </button>
           </Link>
           <Link to={`/feeling/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
+            data-testid='feel'
             className='roomButton'>
             Feel
             </button>
           </Link>
           <Link to={`/breathing/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
+            data-testid='breathe'
             className='roomButton'>
             Breathe
             </button>

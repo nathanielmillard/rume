@@ -7,6 +7,12 @@ import abstract from '../../Assets/abstract.svg'
 import play from '../../Assets/play.svg'
 import pause from '../../Assets/pause.svg'
 import {MusicButton} from '../../StyledComponents.js'
+
+import angryNature from '../../Assets/angryNature.wav' ;
+import anxiousNature from '../../Assets/anxiousNature.wav';
+ import fineNature from '../../Assets/fineNature.wav' ;
+import sadNature from '../../Assets/sadNature.wav' ;
+
 class FeelingRoom extends Component {
   constructor(props){
     super(props)
@@ -71,6 +77,10 @@ class FeelingRoom extends Component {
     return (
       <section className='FeelingRoom'>
         {!this.state.isFeeling && instructions}
+        <audio> 
+          <source src={fineNature} type="audio/wav"/> 
+          Your Browser Doesn't Support This Audio 
+        </audio>
         <section className="soundControlPanel">
           <div className='chooseSound'>
             <MusicButton><img src={music}/></MusicButton>

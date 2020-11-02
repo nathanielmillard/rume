@@ -1,6 +1,8 @@
 import React from 'react';
 import './FeelingRoom.scss';
+import './angryAnimations.scss';
 import {Component} from 'react'
+import {angryFeelingAnimation} from './angryAnimations.js'
 
 class FeelingRoom extends Component {
   constructor(props){

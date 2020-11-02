@@ -2,9 +2,8 @@ import { render, screen } from '@testing-library/react';
 import ReflectionCard from './ReflectionCard';
 import { MemoryRouter } from 'react-router-dom'
 
-
-describe('ReflectionCard', ()=>{
-  describe('Unit Tests', ()=>{
+describe('ReflectionCard', () => {
+  describe('Unit Tests', () => {
     test('Should render a ReflectionCard', () => {
       render(
         <MemoryRouter>
@@ -18,9 +17,5 @@ describe('ReflectionCard', ()=>{
       expect(reflectionMood).toBeInTheDocument();
       expect(reflectionEntry).toBeInTheDocument();
     });
-
   })
 })
-
-
-// It should display a date, a mood, and a journal entry

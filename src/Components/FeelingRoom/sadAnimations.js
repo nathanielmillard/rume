@@ -32,3 +32,22 @@ export const sadBGAnimation = () => {
     background: 'linear-gradient(45deg, hsl(246, 48%, 8%) 0%, hsl(246, 45%, 4%) 100%)',
   })
 }
+export const sadDropAnimation = () => {
+  let sadDropTl = gsap.timeline()
+  sadDropTl.to('.drop', {
+    delay: 'random(2, 60)',
+    duration: 8,
+    y: '90vh',
+    ease: 'slow',
+    boxShadow: '0 0 0',
+    backgroundColor: 'hsla(0 0% 0% 0)'
+  })
+  .to('.drop2', {
+    delay: 'random(.001, 600)',
+    duration: 8,
+    y: '90vh',
+    ease: 'slow',
+    boxShadow: '0 0 0',
+    backgroundColor: 'hsla(0 0% 0% 0)'
+  })
+}

@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event'
 import Lobby from './Lobby';
-import {MemoryRouter} from 'react-router-dom'
-describe('Lobby', ()=>{
-  describe('Unit Tests', ()=>{
+import { MemoryRouter } from 'react-router-dom'
+
+describe('Lobby', () => {
+  describe('Unit Tests', () => {
     test('Should load messages and prompts in Lobby', () => {
       render(
         <MemoryRouter>
@@ -31,5 +33,28 @@ describe('Lobby', ()=>{
       expect(linkToFeeling).toBeInTheDocument();
       expect(linkToBreathing).toBeInTheDocument();
     });
+  })
+
+  describe('Integration Tests', () => {
+    test('Should fire function when Mood button is clicked', () => {
+      const mockedFunction = jest.fn()
+      render(
+        <MemoryRouter>
+          <Lobby
+            setMood={mockedFunction}
+          />
+        </MemoryRouter>
+      );
+      userEvent.click(screen.getByText('Angry'))
+      expect(mockedFunction).toHaveBeenCalledTimes(1)
+    });
+
+    test('Nav buttons should be disabled until Mood is selected', () => {
+      expect(true).toBe(true)
+    })
+
+
+
+
   })
 })

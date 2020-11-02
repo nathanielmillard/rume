@@ -64,7 +64,6 @@ describe('Lobby', () => {
           />
         </MemoryRouter>
       )
-      // screen.debug()
       const reflectButton = screen.getByTestId('reflect')
       expect(reflectButton).toHaveProperty('disabled')
     })

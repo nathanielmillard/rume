@@ -3,7 +3,8 @@ import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
 import { Component } from 'react';
 import './fineAnimations.scss';
-import { fineBackgroundAnimation, floatAnimation } from './fineAnimations.js'
+import { anxiousBackgroundAnimation, popAnimation } from './anxiousAnimations.js';
+import { fineBackgroundAnimation, floatAnimation } from './fineAnimations.js';
 
 class FeelingRoom extends Component {
   constructor(props){
@@ -45,102 +46,19 @@ class FeelingRoom extends Component {
     )
   }
   createAnxiousRoom = () => {
-    console.log('frick')
-    // anxiousFeeling()
+    popAnimation('.hex', 1)
     return (
-      <section>
-        <ul id="grid" className="clear">
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-          <li>
-            <div class="hexagon"></div>
-          </li>
-        </ul>
+      <section className='anxiousRoom'>
+        <section className="container">
+          <ol className="even">
+            <li className='hex'></li>
+            <li className='hex'></li>
+            <li className='hex'></li>
+            <li className='hex'></li>
+            <li className='hex'></li>
+          </ol>
+
+        </section>
       </section>
     )
   }
@@ -199,12 +117,5 @@ class FeelingRoom extends Component {
     )
   }
 }
-
-// <div className='anxiousHexagon' id='anxiousHexagon1'></div>
-// <div className='anxiousHexagon' id='anxiousHexagon2'></div>
-// <div className='anxiousHexagon' id='anxiousHexagon3'></div>
-// <div className='anxiousHexagon' id='anxiousHexagon4'></div>
-// <div className='anxiousHexagon' id='anxiousHexagon5'></div>
-// <div className='anxiousHexagon' id='anxiousHexagon6'></div>
 
 export default FeelingRoom

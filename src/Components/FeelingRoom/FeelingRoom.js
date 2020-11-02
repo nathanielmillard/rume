@@ -1,7 +1,12 @@
 import React from 'react';
 import './FeelingRoom.scss';
 import {Component} from 'react'
-
+import music from '../../Assets/music.svg'
+import nature from '../../Assets/nature.svg'
+import abstract from '../../Assets/abstract.svg'
+import play from '../../Assets/play.svg'
+import pause from '../../Assets/pause.svg'
+import {MusicButton} from '../../StyledComponents.js'
 class FeelingRoom extends Component {
   constructor(props){
     super(props)
@@ -53,25 +58,29 @@ class FeelingRoom extends Component {
   }
   render(){
     let instructions = (
-      <section className='Directions'>
+      <section className='directions'>
         <h1> Welcome to the feeling room </h1>
         <p>
           First pick a kind of sound you want to listen to.
           Then feel free to pause and play sound as you see fit.
           Enjoy the sights and sounds of your feeling space.
         </p>
-        <button onClick={this.startFeeling}> Get Started </button>
+        <button onClick={this.startFeeling} className='getStarted'> Get Started </button>
       </section>
     )
     return (
       <section className='FeelingRoom'>
         {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
-          <button>Nature Sound Svg</button>
-          <button>Ambient Sound Svg</button>
-          <button>Music Sound Svg</button>
-          <button> Play </button>
-          <button> Pause </button>
+          <div className='chooseSound'>
+            <MusicButton><img src={music}/></MusicButton>
+            <MusicButton><img src={nature}/></MusicButton>
+            <MusicButton><img src={abstract}/></MusicButton>
+          </div>
+          <div className='controlsound'>
+            <MusicButton><img src={play}/></MusicButton>
+            <MusicButton><img src={pause}/></MusicButton>
+          </div>
         </section>
         {this.chooseRoomMood()}
       </section>

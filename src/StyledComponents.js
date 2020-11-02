@@ -39,6 +39,18 @@ export const MoodButton = styled.button`
   }
 `;
 
+export const MusicButton = styled.button`
+  border-radius: 100px;
+  margin:1vh;
+  width: 5vh;
+  height: 5vh;
+  border: .5px solid #121316;
+  background-color: hsla(200, 14%, 96% .9);
+  &:focus {
+    background-color: hsla(200, 14%, 70% .2)
+  }
+`;
+
 export const FormWrap = styled.section`
   height: 65vh;
   width: 100vw;

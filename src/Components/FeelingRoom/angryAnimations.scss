@@ -1,0 +1,52 @@
+@mixin square($size, $pos) {
+  height: $size;
+  width: $size;
+  position: absolute;
+  x: -10vh;
+  left: $pos;
+  background-color: hsl(225, 10%, 8%);
+  text-align: center;
+  justify-content: center;
+  display: none;
+}
+
+.square0 {
+  @include square(10vw, 10vw)
+}
+.square1 {
+  @include square(8vw, 50vw)
+}
+.square2 {
+  @include square(10vw, 20vw)
+}
+.square3 {
+  @include square(5vw, 80vw)
+}
+.square4 {
+  @include square(7vw, 60vw)
+}
+.square5 {
+  @include square(10vw, 50vw)
+}
+.square6 {
+  @include square(5vw, 10vw)
+}
+.square7 {
+  @include square(8vw, 80vw)
+}
+.square8 {
+  @include square(6vw, 70vw)
+}
+.square9 {
+  @include square(10vw, 10vw)
+}
+
+
+.childSquare {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background-color: hsla(329, 57%, 25%, 0%);
+  height: 50%;
+  width: 50%;
+}

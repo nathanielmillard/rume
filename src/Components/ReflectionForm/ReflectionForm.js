@@ -50,7 +50,7 @@ class ReflectionForm extends Component {
         <section className="buttons">
           <button className="actionButton" onClick={this.submitReflection}>Save This Reflection</button>
           <Link to='/myreflections'>
-            <button className="actionButton">Show All Reflections</button>
+            <button data-testid='linkToAllReflections' className="actionButton">Show All Reflections</button>
           </Link>
         </section>
       </section>
@@ -61,5 +61,5 @@ class ReflectionForm extends Component {
 export default ReflectionForm
 
 ReflectionForm.propTypes = {
-  mood: PropTypes.string.isRequired,
+  mood: PropTypes.string,
 }

@@ -57,13 +57,13 @@ class App extends Component {
             <NavLink activeClassName="activeHomeButton" to='/lobby'>
               <img
                 className="homeButton"
-                data-test="homeButton"
+                data-testid="homeButton"
                 title="Return To Lobby"
                 src={openLogo}
                 alt="Navigate back to home page"
               />
             </NavLink>
-            <p>{this.state.quote}</p>
+            <p data-testid='randomQuote'>{this.state.quote}</p>
           </footer>
         </main>
       </BrowserRouter>

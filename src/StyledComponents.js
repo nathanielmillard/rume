@@ -1,3 +1,4 @@
+
 import angryJournal from './Assets/AngryJournal.jpg'
 import fineJournal from './Assets/FineJournal.jpg'
 import anxiousJournal from './Assets/AnxiousJournal.jpg'

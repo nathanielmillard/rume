@@ -28,13 +28,14 @@ class ReflectionLibrary extends Component {
   }
   async componentDidMount() {
     const reflections = await getReflections()
-    this.setState( reflections )
+    this.setState( {reflections: reflections} )
     this.setState( {loadingMessage: ''})
   }
   render() {
     return (
-      <section>
-        { !this.state.reflections.length ? <h1>{this.state.loadingMessage}</h1> : <section className="cardArea">{this.createCards()}</section> }
+      <section data-testid='reflections'>
+      {console.log(this.state.reflections)}
+        { !this.state.reflections.length ? <h1 data-testid='loadingMessage'>{this.state.loadingMessage}</h1> : <section className="cardArea">{this.createCards()}</section> }
       </section>
     )
   }

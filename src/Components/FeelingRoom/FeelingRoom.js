@@ -1,18 +1,15 @@
 import React from 'react';
 import './FeelingRoom.scss';
-import {Component} from 'react'
 import music from '../../Assets/music.svg'
 import nature from '../../Assets/nature.svg'
 import abstract from '../../Assets/abstract.svg'
 import play from '../../Assets/play.svg'
 import pause from '../../Assets/pause.svg'
 import {MusicButton} from '../../StyledComponents.js'
-
 import angryNature from '../../Assets/angryNature.wav' ;
 import anxiousNature from '../../Assets/anxiousNature.wav';
  import fineNature from '../../Assets/fineNature.wav' ;
 import sadNature from '../../Assets/sadNature.wav' ;
-
 class FeelingRoom extends Component {
   constructor(props){
     super(props)
@@ -21,10 +18,35 @@ class FeelingRoom extends Component {
     }
   }
   createFineRoom = () => {
-    //functions to animate go here
+    fineBackgroundAnimation()
+    floatAnimation('#fineCircle1', 1)
+    floatAnimation('#fineCircle2', 1)
+    floatAnimation('#fineCircle3', 1)
+    floatAnimation('#fineCircle4', 1)
+    floatAnimation('#fineCircle5', 1)
+    floatAnimation('#fineCircle6', 1)
+    floatAnimation('#fineCircle7', 1)
+    floatAnimation('#fineCircle8', 1)
+    floatAnimation('#fineCircle9', 1)
+    floatAnimation('#fineCircle10', 1)
+    floatAnimation('#fineCircle11', 1)
+    floatAnimation('#fineCircle12', 1)
     return (
-      console.log('Fine')
-      //elements to animate go here
+      // console.log('Fine')
+      <section className='fineRoom'>
+        <div className='fineCircles' id='fineCircle1'></div>
+        <div className='fineCircles' id='fineCircle2'></div>
+        <div className='fineCircles' id='fineCircle3'></div>
+        <div className='fineCircles' id='fineCircle4'></div>
+        <div className='fineCircles' id='fineCircle5'></div>
+        <div className='fineCircles' id='fineCircle6'></div>
+        <div className='fineCircles' id='fineCircle7'></div>
+        <div className='fineCircles' id='fineCircle8'></div>
+        <div className='fineCircles' id='fineCircle9'></div>
+        <div className='fineCircles' id='fineCircle10'></div>
+        <div className='fineCircles' id='fineCircle11'></div>
+        <div className='fineCircles' id='fineCircle12'></div>
+      </section>
     )
   }
   createAnxiousRoom = () => {

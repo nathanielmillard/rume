@@ -22,30 +22,33 @@ class Lobby extends Component {
 
     return (
       <section className='Lobby'>
-        <h1>Welcome Back, it's {new Date().toDateString()}</h1>
-        <h2>How are you feeling today?</h2>
-        <section className='moodContainer'>
+        <h1 data-testid='welcomeMessage'>Welcome Back, it's {new Date().toDateString()}</h1>
+        <h2 data-testid='checkInQuestion'>How are you feeling today?</h2>
+        <section data-testid='moodButtonContainer' className='moodContainer'>
           <MoodButton mood='fine' onClick={this.clickHandler}>Fine</MoodButton>
           <MoodButton mood='anxious' onClick={this.clickHandler}>Anxious</MoodButton>
           <MoodButton mood='sad' onClick={this.clickHandler}>Sad</MoodButton>
           <MoodButton mood='angry' onClick={this.clickHandler}>Angry</MoodButton>
         </section>
-        <h2>What do you want do do about it?</h2>
+        <h2 data-testid='actionPrompt'>What do you want do do about it?</h2>
         <nav>
           <Link to={`/reflecting/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
+            data-testid='reflect'
             className='roomButton'>
             Reflect
             </button>
           </Link>
           <Link to={`/feeling/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
+            data-testid='feel'
             className='roomButton'>
             Feel
             </button>
           </Link>
           <Link to={`/breathing/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}
+            data-testid='breathe'
             className='roomButton'>
             Breathe
             </button>

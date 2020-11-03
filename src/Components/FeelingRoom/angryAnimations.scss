@@ -5,11 +5,15 @@
   x: -10vh;
   left: $pos;
   background-color: hsl(225, 10%, 8%);
-  text-align: center;
-  justify-content: center;
   display: none;
 }
-
+.angryWrap {
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
 .square0 {
   @include square(150px, 10vw)
 }
@@ -26,10 +30,10 @@
   @include square(60px, 60vw)
 }
 .square5 {
-  @include square(120px, 50vw)
+  @include square(120px, 30vw)
 }
 .square6 {
-  @include square(100px, 10vw)
+  @include square(100px, 40vw)
 }
 .square7 {
   @include square(150px, 80vw)
@@ -40,12 +44,24 @@
 .square9 {
   @include square(90px, 10vw)
 }
+.square10 {
+  @include square(150px, 20vw)
+}
+.square11 {
+  @include square(60px, 80vw)
+}
+.square12 {
+  @include square(100px, 10vw)
+}
+.square13 {
+  @include square(75px, 30vw)
+}
 
 .childSquare {
   position: fixed;
   top: 25%;
   left: 25%;
   background-color: hsla(329, 57%, 25%, 0%);
-  height: 25%;
-  width: 25%;
+  height: 50%;
+  width: 50%;
 }

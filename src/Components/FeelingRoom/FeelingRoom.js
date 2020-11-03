@@ -107,6 +107,10 @@ class FeelingRoom extends Component {
             <div className='childSquare' id='part3'></div>
             <div className='childSquare' id='part2'></div>
             <div className='childSquare' id='part4'></div>
+            <div className='childSquare' id='part5'></div>
+            <div className='childSquare' id='part6'></div>
+            <div className='childSquare' id='part7'></div>
+            <div className='childSquare' id='part8'></div>
           </div>
         )
       })

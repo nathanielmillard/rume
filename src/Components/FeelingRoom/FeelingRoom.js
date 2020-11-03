@@ -1,8 +1,11 @@
 import React from 'react';
 import './FeelingRoom.scss';
-import { Component } from 'react';
+import './angryAnimations.scss';
+import {Component} from 'react'
+import {angryFeelingAnimation} from './angryAnimations.js'
 import './fineAnimations.scss';
 import { fineBackgroundAnimation, floatAnimation } from './fineAnimations.js'
+
 
 class FeelingRoom extends Component {
   constructor(props){
@@ -58,18 +61,30 @@ class FeelingRoom extends Component {
     )
   }
   createAngryRoom = () => {
-    //functions to animate go here
-    return (
-      console.log('ANGRY')
-      //elements to animate go here
+    const squareNums = Array.from(Array(10).keys())
+      angryFeelingAnimation()
+    const angrySquares = squareNums.map(num => {
+        return (
+          <div className={`square${num}`}>
+            <div className='childSquare' id='part1'></div>
+            <div className='childSquare' id='part3'></div>
+            <div className='childSquare' id='part2'></div>
+            <div className='childSquare' id='part4'></div>
+          </div>
+        )
+      })
+      return (
+        <section>
+          {angrySquares}
+        </section>
     )
   }
   chooseRoomMood = () => {
-    if(this.props.mood === 'angry') {
+    if(this.props.mood === 'Angry') {
       return this.createAngryRoom()
-    } else if(this.props.mood === 'sad') {
+    } else if(this.props.mood === 'Sad') {
       return this.createSadRoom()
-    } else if(this.props.mood === 'anxious'){
+    } else if(this.props.mood === 'Anxious'){
       return this.createAnxiousRoom()
     } else {
       return this.createFineRoom()

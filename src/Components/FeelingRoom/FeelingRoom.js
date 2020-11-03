@@ -7,7 +7,7 @@ import './SadAnimation.scss'
 import {sadBGAnimation, sadDropAnimation} from './sadAnimations.js'
 import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
 import './angryAnimations.scss';
-import {angryFeelingAnimation, angryFeelingAnimation2} from './angryAnimations.js'
+import {angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3} from './angryAnimations.js'
 import './fineAnimations.scss';
 
 import music from '../../Assets/music.svg'
@@ -99,6 +99,7 @@ class FeelingRoom extends Component {
     const squareNums = Array.from(Array(13).keys())
       angryFeelingAnimation()
       angryFeelingAnimation2()
+      angryFeelingAnimation3()
     const angrySquares = squareNums.map(num => {
         return (
           <div className={`square${num}`}>

@@ -52,6 +52,38 @@ export const angryFeelingAnimation = () => {
        x: "+=30vh",
        backgroundColor: 'hsla(329, 57%, 25%, 0%)',
      }, "explode")
+     .to(`.square${i} #part5`, {
+       duration:.5,
+       height: "10%",
+       width: "10%",
+       y: "-=90vh",
+       x: "+=20vh",
+       backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+     }, "explode")
+     .to(`.square${i} #part6`, {
+       duration:.5,
+       height: "15%",
+       width: "15%",
+       y: "-=80vh",
+       x: "-=50vh",
+       backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+     }, "explode")
+     .to(`.square${i} #part7`, {
+       duration:.5,
+       height: "20%",
+       width: "20%",
+       y: "-=70vh",
+       x: "+=0vh",
+       backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+     }, "explode")
+     .to(`.square${i} #part8`, {
+       duration:.5,
+       height: "30%",
+       width: "30%",
+       y: "-=60vh",
+       x: "-=20vh",
+       backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+     }, "explode")
     }
   }
 
@@ -91,13 +123,13 @@ export const angryFeelingAnimation2 = () => {
       }, "explode")
       .to(`.square${i} #part2`, {
         duration:.5,
-        y: "-=50vh",
+        y: "-=70vh",
         x: "+=10vh",
         backgroundColor: 'hsla(329, 57%, 25%, 0%)',
       }, "explode")
       .to(`.square${i} #part3`, {
         duration:.5,
-        y: "-=50vh",
+        y: "-=60vh",
         x: "-=60vh",
         backgroundColor: 'hsla(329, 57%, 25%, 0%)',
       }, "explode")
@@ -105,6 +137,38 @@ export const angryFeelingAnimation2 = () => {
         duration:.5,
         y: "-=50vh",
         x: "+=30vh",
+        backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+      }, "explode")
+      .to(`.square${i} #part5`, {
+        duration:.5,
+        height: "10%",
+        width: "10%",
+        y: "-=90vh",
+        x: "+=20vh",
+        backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+      }, "explode")
+      .to(`.square${i} #part6`, {
+        duration:.5,
+        height: "15%",
+        width: "15%",
+        y: "-=80vh",
+        x: "-=50vh",
+        backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+      }, "explode")
+      .to(`.square${i} #part7`, {
+        duration:.5,
+        height: "20%",
+        width: "20%",
+        y: "-=70vh",
+        x: "+=0vh",
+        backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+      }, "explode")
+      .to(`.square${i} #part8`, {
+        duration:.5,
+        height: "30%",
+        width: "30%",
+        y: "-=60vh",
+        x: "-=20vh",
         backgroundColor: 'hsla(329, 57%, 25%, 0%)',
       }, "explode")
      }
@@ -159,6 +223,38 @@ export const angryFeelingAnimation3 = () => {
        duration:.5,
        y: "-=50vh",
        x: "+=30vh",
+       backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+     }, "explode")
+     .to(`.square${i} #part5`, {
+       duration:.5,
+       height: "10%",
+       width: "10%",
+       y: "-=90vh",
+       x: "+=20vh",
+       backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+     }, "explode")
+     .to(`.square${i} #part6`, {
+       duration:.5,
+       height: "15%",
+       width: "15%",
+       y: "-=80vh",
+       x: "-=50vh",
+       backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+     }, "explode")
+     .to(`.square${i} #part7`, {
+       duration:.5,
+       height: "20%",
+       width: "20%",
+       y: "-=70vh",
+       x: "+=0vh",
+       backgroundColor: 'hsla(329, 57%, 25%, 0%)',
+     }, "explode")
+     .to(`.square${i} #part8`, {
+       duration:.5,
+       height: "30%",
+       width: "30%",
+       y: "-=60vh",
+       x: "-=20vh",
        backgroundColor: 'hsla(329, 57%, 25%, 0%)',
      }, "explode")
    }

@@ -1,15 +1,23 @@
 import React from 'react';
 import './FeelingRoom.scss';
+import {Component} from 'react'
+
+import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
+import './fineAnimations.scss';
+
 import music from '../../Assets/music.svg'
 import nature from '../../Assets/nature.svg'
 import abstract from '../../Assets/abstract.svg'
 import play from '../../Assets/play.svg'
 import pause from '../../Assets/pause.svg'
+
 import {MusicButton} from '../../StyledComponents.js'
+
 import angryNature from '../../Assets/angryNature.wav' ;
+import fineNature from '../../Assets/fineNature.wav' ;
 import anxiousNature from '../../Assets/anxiousNature.wav';
- import fineNature from '../../Assets/fineNature.wav' ;
 import sadNature from '../../Assets/sadNature.wav' ;
+
 class FeelingRoom extends Component {
   constructor(props){
     super(props)
@@ -18,6 +26,7 @@ class FeelingRoom extends Component {
     }
   }
   createFineRoom = () => {
+    console.log('Made it here')
     fineBackgroundAnimation()
     floatAnimation('#fineCircle1', 1)
     floatAnimation('#fineCircle2', 1)
@@ -32,7 +41,6 @@ class FeelingRoom extends Component {
     floatAnimation('#fineCircle11', 1)
     floatAnimation('#fineCircle12', 1)
     return (
-      // console.log('Fine')
       <section className='fineRoom'>
         <div className='fineCircles' id='fineCircle1'></div>
         <div className='fineCircles' id='fineCircle2'></div>

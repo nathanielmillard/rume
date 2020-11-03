@@ -1,6 +1,9 @@
 import React from 'react';
 import './FeelingRoom.scss';
 import {Component} from 'react'
+
+import './SadAnimation.scss'
+import {sadBGAnimation, sadDropAnimation} from './sadAnimations.js'
 import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
 import './angryAnimations.scss';
 import {angryFeelingAnimation} from './angryAnimations.js'
@@ -68,8 +71,26 @@ class FeelingRoom extends Component {
   }
   createSadRoom = () => {
     //functions to animate go here
+    console.log('sad')
+    sadBGAnimation()
+    sadDropAnimation()
+    let drops = []
+    for(let i=0; i<400; i++){
+      drops.push(i)
+    }
+    drops = drops.map(drop => {
+      if(!(drop % 2)){
+        return <DropIcon className='drop' />
+      } else {
+        return <DropIcon className='drop2' />
+      }
+    }
+    )
+
     return (
-      console.log('SAD')
+      <section className='sadRoom'>
+        {drops}
+      </section>
       //elements to animate go here
     )
   }

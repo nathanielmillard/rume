@@ -1,6 +1,7 @@
 import React from 'react';
 import './FeelingRoom.scss';
 import {Component} from 'react'
+import {DropIcon} from './FeelingRoom-SC'
 
 import './SadAnimation.scss'
 import {sadBGAnimation, sadDropAnimation} from './sadAnimations.js'

@@ -25,10 +25,10 @@ class Lobby extends Component {
         <h1 data-testid='welcomeMessage'>Welcome Back, it's {new Date().toDateString()}</h1>
         <h2 data-testid='checkInQuestion'>How are you feeling today?</h2>
         <section data-testid='moodButtonContainer' className='moodContainer'>
-          <MoodButton mood='fine' onClick={this.props.setMood}>Fine</MoodButton>
-          <MoodButton mood='anxious' onClick={this.props.setMood}>Anxious</MoodButton>
-          <MoodButton mood='sad' onClick={this.props.setMood}>Sad</MoodButton>
-          <MoodButton mood='angry' onClick={this.props.setMood}>Angry</MoodButton>
+          <MoodButton mood='fine' onClick={this.clickHandler}>Fine</MoodButton>
+          <MoodButton mood='anxious' onClick={this.clickHandler}>Anxious</MoodButton>
+          <MoodButton mood='sad' onClick={this.clickHandler}>Sad</MoodButton>
+          <MoodButton mood='angry' onClick={this.clickHandler}>Angry</MoodButton>
         </section>
         <h2 data-testid='actionPrompt'>What do you want do do about it?</h2>
         <nav>

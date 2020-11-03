@@ -41,12 +41,11 @@
   @include square(10vw, 10vw)
 }
 
-
 .childSquare {
-  position: absolute;
+  position: fixed;
   top: 25%;
   left: 25%;
   background-color: hsla(329, 57%, 25%, 0%);
-  height: 50%;
-  width: 50%;
+  height: 25%;
+  width: 25%;
 }

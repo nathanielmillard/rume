@@ -4,7 +4,8 @@
   position: absolute;
   x: -10vh;
   left: $pos;
-  background-color: hsl(225, 10%, 8%);
+  background-color: hsl(200, 14%, 96%);
+  // border: hsl(200, 14%, 96%) 5px solid;
   display: none;
 }
 .angryWrap {
@@ -62,7 +63,8 @@
   position: fixed;
   top: 25%;
   left: 25%;
-  background-color: hsla(329, 57%, 25%, 0%);
+  display: none;
+  // background-color: hsla(329, 57%, 25%, 0%);
   height: 50%;
   width: 50%;
 }

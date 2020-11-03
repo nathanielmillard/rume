@@ -45,9 +45,9 @@ export const MusicButton = styled.button`
   width: 5vh;
   height: 5vh;
   border: .5px solid #121316;
-  background-color: hsla(200, 14%, 96% .9);
+  background-color: hsla(200, 14%, 96%, .7);
   &:focus {
-    background-color: hsla(200, 14%, 70% .2)
+    background-color: hsla(190, 14%, 74% ,.7);
   }
 `;
 

@@ -40,7 +40,8 @@ export const getReflections = () => {
   return fetch("http://localhost:3001/api/v1/reflections")
   .then(response => {
     if(response.ok) {
-      return response.json()
+      response.json()
+      return response.reflections 
     } else {
       throw Error
     }

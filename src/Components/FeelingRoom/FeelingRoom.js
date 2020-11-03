@@ -1,7 +1,7 @@
 import React from 'react';
 import './FeelingRoom.scss';
 import {Component} from 'react'
-
+import {DropIcon} from './FeelingRoom-SC'
 import './SadAnimation.scss'
 import {sadBGAnimation, sadDropAnimation} from './sadAnimations.js'
 import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
@@ -135,6 +135,43 @@ class FeelingRoom extends Component {
     let audio = e.target.parentNode.parentNode.firstChild
     audio.pause()
   }
+  changeAudio(e){
+    let audio = e.target.parentNode.parentNode.nextSibling.firstChild
+    if (this.props.mood === 'Sad'){
+      if(e.target.id === 'nature'){
+        audio.src = {sadNature}
+      } else if (e.target.id === 'abstract'){
+        audio.src = {abstract}
+      } else if (e.target.id === 'music'){
+        audio.src = {music}
+      }
+    } else if (this.props.mood === 'Anxious'){
+      if(e.target.id === 'nature'){
+        audio.src = {anxiousNature}
+      } else if (e.target.id === 'abstract'){
+        audio.src = {abstract}
+      } else if (e.target.id === 'music'){
+        audio.src = {music}
+      }
+    } else if (this.props.mood === 'Angry'){
+      if(e.target.id === 'nature'){
+        audio.src = {angryNature}
+      } else if (e.target.id === 'abstract'){
+        audio.src = {abstract}
+      } else if (e.target.id === 'music'){
+        audio.src = {music}
+      }
+    } else {
+      if(e.target.id === 'nature'){
+        audio.src = {fineNature}
+      } else if (e.target.id === 'abstract'){
+        audio.src = {abstract}
+      } else if (e.target.id === 'music'){
+        audio.src = {music}
+      }
+    }
+
+  }
 
   render(){
     let instructions = (
@@ -153,9 +190,9 @@ class FeelingRoom extends Component {
         {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
           <div className='chooseSound'>
-            <MusicButton><img src={music}/></MusicButton>
-            <MusicButton><img src={nature}/></MusicButton>
-            <MusicButton><img src={abstract}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='music'><img src={music}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='nature'><img src={nature}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='abstract'><img src={abstract}/></MusicButton>
           </div>
           <div className='controlsound'>
             <audio> 

@@ -1,5 +1,38 @@
 import gsap from 'gsap'
 
+export const angryBGAnimation = () => {
+const angryBGTL = gsap.timeline({repeat: 100, yoyo: true})
+angryBGTL.from(".angryWrap", {
+  duration: .1,
+  background: 'linear-gradient(45deg, hsla(327, 25%, 39%, 100%), hsl(320, 30%, 12%))',
+})
+angryBGTL.to(".angryWrap", {
+  duration: 2,
+  background: 'linear-gradient(45deg, hsl(327, 25%, 35%),  hsl(324, 27%, 20%))',
+})
+angryBGTL.to(".angryWrap", {
+  duration: 2,
+  background: 'linear-gradient(45deg, hsl(327, 25%, 31%), hsl(325, 26%, 24%))',
+})
+angryBGTL.to(".angryWrap", {
+  duration: 2,
+  background: 'linear-gradient(45deg, hsl(327, 26%, 27%), hsl(327, 26%, 27%))',
+})
+angryBGTL.to(".angryWrap", {
+  duration: 2,
+  background: 'linear-gradient(45deg, hsl(325, 26%, 24%), hsl(327, 25%, 31%))',
+})
+angryBGTL.to(".angryWrap", {
+  duration: 2,
+  background: 'linear-gradient(45deg, hsl(324, 27%, 20%), hsl(327, 25%, 35%) )',
+})
+angryBGTL.to(".angryWrap", {
+  duration: 2,
+  background: 'linear-gradient(45deg, hsl(320, 30%, 12%), hsl(327, 25%, 39%) )',
+})
+}
+
+
 export const angryFeelingAnimation = () => {
   let angryTimeline = gsap.timeline({repeat: 10});
   for (var i = 0; i <= 10; i++) {

@@ -7,7 +7,7 @@ import './SadAnimation.scss'
 import {sadBGAnimation, sadDropAnimation} from './sadAnimations.js'
 import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
 import './angryAnimations.scss';
-import {angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3} from './angryAnimations.js'
+import {angryBGAnimation, angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3} from './angryAnimations.js'
 import './fineAnimations.scss';
 
 import music from '../../Assets/music.svg'
@@ -97,6 +97,7 @@ class FeelingRoom extends Component {
   }
   createAngryRoom = () => {
     const squareNums = Array.from(Array(13).keys())
+      angryBGAnimation()
       angryFeelingAnimation()
       angryFeelingAnimation2()
       angryFeelingAnimation3()

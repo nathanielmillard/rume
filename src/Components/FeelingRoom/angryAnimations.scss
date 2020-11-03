@@ -13,6 +13,7 @@
   overflow: hidden;
   display: flex;
   align-items: flex-start;
+  background: linear-gradient(45deg, hsla(327, 25%, 39%, 100%), hsl(320, 30%, 12%));
 }
 .square0 {
   @include square(150px, 10vw)

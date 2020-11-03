@@ -62,6 +62,15 @@ class FeelingRoom extends Component {
   startFeeling = () => {
     this.setState({isFeeling: true})
   }
+  playSound(e) {
+    let audio = e.target.parentNode.parentNode.firstChild
+    audio.play()
+  }
+  pauseSound(e) {
+    let audio = e.target.parentNode.parentNode.firstChild
+    audio.pause()
+  }
+
   render(){
     let instructions = (
       <section className='directions'>
@@ -77,10 +86,6 @@ class FeelingRoom extends Component {
     return (
       <section className='FeelingRoom'>
         {!this.state.isFeeling && instructions}
-        <audio> 
-          <source src={fineNature} type="audio/wav"/> 
-          Your Browser Doesn't Support This Audio 
-        </audio>
         <section className="soundControlPanel">
           <div className='chooseSound'>
             <MusicButton><img src={music}/></MusicButton>
@@ -88,8 +93,12 @@ class FeelingRoom extends Component {
             <MusicButton><img src={abstract}/></MusicButton>
           </div>
           <div className='controlsound'>
-            <MusicButton><img src={play}/></MusicButton>
-            <MusicButton><img src={pause}/></MusicButton>
+            <audio> 
+            <source src={fineNature} type="audio/wav" className="audio"/> 
+            Your Browser Doesn't Support This Audio 
+            </audio>
+            <MusicButton onClick={this.playSound}><img src={play}/></MusicButton>
+            <MusicButton onClick={this.pauseSound}><img src={pause}/></MusicButton>
           </div>
         </section>
         {this.chooseRoomMood()}

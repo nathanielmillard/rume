@@ -1,10 +1,23 @@
 import React from 'react';
 import './FeelingRoom.scss';
-import './angryAnimations.scss';
 import {Component} from 'react'
+import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
+import './angryAnimations.scss';
 import {angryFeelingAnimation} from './angryAnimations.js'
 import './fineAnimations.scss';
-import { fineBackgroundAnimation, floatAnimation } from './fineAnimations.js'
+
+import music from '../../Assets/music.svg'
+import nature from '../../Assets/nature.svg'
+import abstract from '../../Assets/abstract.svg'
+import play from '../../Assets/play.svg'
+import pause from '../../Assets/pause.svg'
+
+import {MusicButton} from '../../StyledComponents.js'
+
+import angryNature from '../../Assets/angryNature.wav' ;
+import fineNature from '../../Assets/fineNature.wav' ;
+import anxiousNature from '../../Assets/anxiousNature.wav';
+import sadNature from '../../Assets/sadNature.wav' ;
 
 
 class FeelingRoom extends Component {
@@ -15,6 +28,7 @@ class FeelingRoom extends Component {
     }
   }
   createFineRoom = () => {
+    console.log('Made it here')
     fineBackgroundAnimation()
     floatAnimation('#fineCircle1', 1)
     floatAnimation('#fineCircle2', 1)
@@ -29,7 +43,6 @@ class FeelingRoom extends Component {
     floatAnimation('#fineCircle11', 1)
     floatAnimation('#fineCircle12', 1)
     return (
-      // console.log('Fine')
       <section className='fineRoom'>
         <div className='fineCircles' id='fineCircle1'></div>
         <div className='fineCircles' id='fineCircle2'></div>
@@ -93,27 +106,44 @@ class FeelingRoom extends Component {
   startFeeling = () => {
     this.setState({isFeeling: true})
   }
+  playSound(e) {
+    let audio = e.target.parentNode.parentNode.firstChild
+    audio.play()
+  }
+  pauseSound(e) {
+    let audio = e.target.parentNode.parentNode.firstChild
+    audio.pause()
+  }
+
   render(){
     let instructions = (
-      <section className='Directions'>
+      <section className='directions'>
         <h1> Welcome to the feeling room </h1>
         <p>
           First pick a kind of sound you want to listen to.
           Then feel free to pause and play sound as you see fit.
           Enjoy the sights and sounds of your feeling space.
         </p>
-        <button onClick={this.startFeeling}> Get Started </button>
+        <button onClick={this.startFeeling} className='getStarted'> Get Started </button>
       </section>
     )
     return (
       <section className='FeelingRoom'>
         {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
-          <button>Nature Sound Svg</button>
-          <button>Ambient Sound Svg</button>
-          <button>Music Sound Svg</button>
-          <button> Play </button>
-          <button> Pause </button>
+          <div className='chooseSound'>
+            <MusicButton><img src={music}/></MusicButton>
+            <MusicButton><img src={nature}/></MusicButton>
+            <MusicButton><img src={abstract}/></MusicButton>
+          </div>
+          <div className='controlsound'>
+            <audio> 
+            <source src={fineNature} type="audio/wav" className="audio"/> 
+            Your Browser Doesn't Support This Audio 
+            </audio>
+            <MusicButton onClick={this.playSound}><img src={play}/></MusicButton>
+            <MusicButton onClick={this.pauseSound}><img src={pause}/></MusicButton>
+          </div>
         </section>
         {this.chooseRoomMood()}
       </section>

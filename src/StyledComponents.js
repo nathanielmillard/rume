@@ -40,6 +40,17 @@ export const MoodButton = styled.button`
   }
 `;
 
+export const MusicButton = styled.button`
+  border-radius: 100px;
+  margin:1vh;
+  width: 5vh;
+  height: 5vh;
+  border: .5px solid #121316;
+  background-color: hsla(200, 14%, 96%, .7);
+  &:focus {
+    background-color: hsla(190, 14%, 74% ,.7);
+  }
+`;
 
 export const FormWrap = styled.section`
   height: 65vh;

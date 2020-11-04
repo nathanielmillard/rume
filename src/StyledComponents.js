@@ -45,8 +45,9 @@ export const MusicButton = styled.button`
   margin:1vh;
   width: 5vh;
   height: 5vh;
-  border: .5px solid #121316;
+  border: 0;
   background-color: hsla(200, 14%, 96%, .7);
+  filter: drop-shadow(5px 5px 5px hsla(190, 20%, 2%, .5));
   &:focus {
     background-color: hsla(190, 14%, 74% ,.7);
   }

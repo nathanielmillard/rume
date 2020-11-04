@@ -31,17 +31,23 @@ class App extends Component {
       <BrowserRouter >
         <main className="App">
           <Switch >
-          <Route path='/reflecting'>
-            <ReflectionForm mood={this.state.mood} />
-          </Route>
+          <Route path='/reflecting/:feeling' render={({match})=>{
+            const feeling = match.params.feeling
+            return (
+              <ReflectionForm mood={feeling} />
+            )
+          }}/>
+          <Route path='/feeling/:feeling' render={({match})=>{
+            const feeling = match.params.feeling
+            return (
+              <FeelingRoom  mood={feeling}/>
+            )
+          }}/>
           <Route path='/myreflections'>
             <ReflectionLibrary />
           </Route>
-          <Route path='/feeling'>
-            <FeelingRoom mood={this.state.mood}/>
-          </Route>
-          <Route path='/breathing'>
-            <BreathingRoom />
+          <Route path='/breathing/:feeling'>
+            <BreathingRoom/>
           </Route>
           <Route path='/lobby'>
           <Lobby

@@ -26,6 +26,7 @@
 };
 
 footer {
+  z-index: 101;
   align-self: flex-end;
   display: flex;
   flex-direction: row;
@@ -38,9 +39,13 @@ footer {
   height: 5vh;
 };
 
+.homeButton {
+  box-shadow: 5px 5px hsl(200, 14%, 96%) ;
+}
+
 .activeHomeButton {
   margin: 2vh;
   height: 5vh;
+  box-shadow: 5px 5px hsl(200, 14%, 96%) ;
   content: url('../../Assets/closedLogo.svg');
-  // border: 3px solid red;
 }

@@ -3,8 +3,10 @@ import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
 import { Component } from 'react';
 import './fineAnimations.scss';
-import { anxiousBackgroundAnimation, anxiousAnimation } from './anxiousAnimations.js';
+import { anxiousAnimation1, anxiousAnimation2, anxiousAnimation3, anxiousAnimation4, anxiousAnimation5, anxiousAnimation6, anxiousAnimation7, anxiousAnimation8, anxiousAnimation9 } from './anxiousAnimations.js';
 import { fineBackgroundAnimation, floatAnimation } from './fineAnimations.js';
+import gsap from 'gsap';
+
 
 class FeelingRoom extends Component {
   constructor(props){
@@ -14,7 +16,6 @@ class FeelingRoom extends Component {
     }
   }
   createFineRoom = () => {
-    fineBackgroundAnimation()
     floatAnimation('#fineCircle1', 1)
     floatAnimation('#fineCircle2', 1)
     floatAnimation('#fineCircle3', 1)
@@ -30,23 +31,37 @@ class FeelingRoom extends Component {
     return (
       // console.log('Fine')
       <section className='fineRoom'>
-        <div className='fineCircles' id='fineCircle1'></div>
-        <div className='fineCircles' id='fineCircle2'></div>
-        <div className='fineCircles' id='fineCircle3'></div>
-        <div className='fineCircles' id='fineCircle4'></div>
-        <div className='fineCircles' id='fineCircle5'></div>
-        <div className='fineCircles' id='fineCircle6'></div>
-        <div className='fineCircles' id='fineCircle7'></div>
-        <div className='fineCircles' id='fineCircle8'></div>
-        <div className='fineCircles' id='fineCircle9'></div>
-        <div className='fineCircles' id='fineCircle10'></div>
-        <div className='fineCircles' id='fineCircle11'></div>
-        <div className='fineCircles' id='fineCircle12'></div>
+        <section className='hexarea'>
+          <div className='fineCircles' id='fineCircle1'></div>
+          <div className='fineCircles' id='fineCircle2'></div>
+          <div className='fineCircles' id='fineCircle3'></div>
+          <div className='fineCircles' id='fineCircle4'></div>
+          <div className='fineCircles' id='fineCircle5'></div>
+          <div className='fineCircles' id='fineCircle6'></div>
+          <div className='fineCircles' id='fineCircle7'></div>
+          <div className='fineCircles' id='fineCircle8'></div>
+          <div className='fineCircles' id='fineCircle9'></div>
+          <div className='fineCircles' id='fineCircle10'></div>
+          <div className='fineCircles' id='fineCircle11'></div>
+          <div className='fineCircles' id='fineCircle12'></div>
+        </section>
       </section>
     )
   }
   createAnxiousRoom = () => {
-    anxiousAnimation('.hexagon')
+
+    anxiousAnimation9('#hex1')
+    anxiousAnimation5('#hex2')
+    anxiousAnimation3('#hex3')
+    anxiousAnimation6('#hex4')
+    anxiousAnimation2('#hex5')
+    anxiousAnimation9('#hex6')
+    anxiousAnimation8('#hex7')
+    anxiousAnimation1('#hex8')
+    anxiousAnimation9('#hex9')
+    anxiousAnimation4('#hex10')
+    anxiousAnimation7('#hex11')
+
     return (
       <section className='anxiousRoom'>
         <div class='hexagon' id='hex1'></div>

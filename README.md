@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/nathanielmillard/stretch.git">
-    <img src="src/RTJourney1.gif" alt="moving image of application in use" width="600">
+    <img src="src/Assets/introGif.gif" alt="moving image of application in use" width="600">
   </a>
   <h3 align="center">Rume</h3>
   <p align="center">
@@ -40,23 +40,23 @@ In your terminal:
 
 ## Usage
 #### LANDING PAGE
-<img src="src/LoginPage.png" alt="Rancid Tomatillos app log-in view" width="600">
+<img src="src/Assets/Landing.gif" alt="Rume landing page view with logo animation" width="600">
 
-#### HOMEPAGE
-<img src="src/LogInHome.png" alt="Rancid Tomatillos homepage view" width="600">
+#### LOBBY
+<img src="src/Assets/Lobby.gif" alt="Rume lobby view" width="600">
 
 #### REFLECT RUMES
 ###### 'Fine' Reflecting
-<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
+<img src="src/Assets/ReflectingFine.png" alt="Rume reflection journal view with 'fine' mood theme" width="600">
 
 ###### 'Anxious' Reflecting
-<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
+<img src="src/Assets/ReflectingAnxious.png" alt="Rume reflection journal view with 'anxious' mood theme" width="600">
 
 ###### 'Sad' Reflecting
-<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
+<img src="src/Assets/ReflectingSad.png" alt="Rume reflection journal view with 'sad' mood theme" width="600">
 
 ###### 'Angry' Reflecting
-<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
+<img src="src/Assets/ReflectingAngry.png" alt="Rume reflection journal view with 'angry' mood theme" width="600">
 
 #### REFLECTION LIBRARY
 <img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
@@ -72,7 +72,7 @@ In your terminal:
 <img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
 ###### 'Angry' Feeling
-<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
+<img src="src/Assets/FeelingAngry.gif" alt="Angry themed feeling rume with exploding box animation" width="600">
 
 #### BREATHING RUME
 <img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">

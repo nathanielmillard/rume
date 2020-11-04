@@ -46,8 +46,13 @@ export const getReflections = () => {
     }
   })
   .then(response => {
-    console.log(response.reflections)
-    return response.reflections
+    if (response.reflections.length) {
+      return response.reflections
+    } else {
+      return {
+        errorMessage: 'Your library is empty. :('
+      }
+    }
   })
   .catch(error => {
     console.log(error);

@@ -12,7 +12,7 @@ export const inhaleExhale = () => {
       scale: 1,
       backgroundColor:'hsl(200, 14%, 96%)',
   })
-  var tl2 = gsap.timeline({repeat: 5, yoyo: true});
+  var tl2 = gsap.timeline({repeat: 25, yoyo: true});
   tl2.to("#two", {
       duration: 5,
       scale: 4,
@@ -23,7 +23,7 @@ export const inhaleExhale = () => {
       scale: 1,
       backgroundColor:'hsl(200, 14%, 96%)',
   })
-  var tl3 = gsap.timeline({repeat: 5, yoyo: true});
+  var tl3 = gsap.timeline({repeat: 25, yoyo: true});
   tl3.to("#three", {
       duration: 5,
       scale: 6,
@@ -34,7 +34,7 @@ export const inhaleExhale = () => {
       scale: 1,
       backgroundColor:'hsl(200, 14%, 96%)',
   })
-  var tl4 = gsap.timeline({repeat: 5, yoyo: true});
+  var tl4 = gsap.timeline({repeat: 25, yoyo: true});
   tl4.to("#four", {
       duration: 5,
       scale: 9,
@@ -45,7 +45,7 @@ export const inhaleExhale = () => {
       scale: 1,
       backgroundColor:'hsl(200, 14%, 96%)',
   })
-  var tl5 = gsap.timeline({repeat: 5, yoyo: true});
+  var tl5 = gsap.timeline({repeat: 25, yoyo: true});
   tl5.to("#five", {
       duration: 5,
       scale: 12,

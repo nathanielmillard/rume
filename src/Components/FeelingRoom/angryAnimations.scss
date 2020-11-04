@@ -4,48 +4,65 @@
   position: absolute;
   x: -10vh;
   left: $pos;
-  background-color: hsl(225, 10%, 8%);
-  text-align: center;
-  justify-content: center;
+  background-color: hsl(200, 14%, 96%);
   display: none;
 }
-
+.angryWrap {
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(45deg, hsla(327, 25%, 39%, 100%), hsl(320, 30%, 12%));
+}
 .square0 {
-  @include square(10vw, 10vw)
+  @include square(150px, 10vw)
 }
 .square1 {
-  @include square(8vw, 50vw)
+  @include square(80px, 50vw)
 }
 .square2 {
-  @include square(10vw, 20vw)
+  @include square(125px, 20vw)
 }
 .square3 {
-  @include square(5vw, 80vw)
+  @include square(75px, 80vw)
 }
 .square4 {
-  @include square(7vw, 60vw)
+  @include square(60px, 60vw)
 }
 .square5 {
-  @include square(10vw, 50vw)
+  @include square(120px, 30vw)
 }
 .square6 {
-  @include square(5vw, 10vw)
+  @include square(100px, 40vw)
 }
 .square7 {
-  @include square(8vw, 80vw)
+  @include square(150px, 80vw)
 }
 .square8 {
-  @include square(6vw, 70vw)
+  @include square(60px, 70vw)
 }
 .square9 {
-  @include square(10vw, 10vw)
+  @include square(90px, 10vw)
+}
+.square10 {
+  @include square(150px, 20vw)
+}
+.square11 {
+  @include square(60px, 80vw)
+}
+.square12 {
+  @include square(100px, 10vw)
+}
+.square13 {
+  @include square(75px, 30vw)
 }
 
 .childSquare {
   position: fixed;
   top: 25%;
   left: 25%;
-  background-color: hsla(329, 57%, 25%, 0%);
-  height: 25%;
-  width: 25%;
+  display: none;
+  height: 50%;
+  width: 50%;
 }

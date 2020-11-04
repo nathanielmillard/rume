@@ -13,7 +13,7 @@ class BreathingRoom extends Component {
   }
   clickHandler = () => {
     this.setState({isBreathing: true})
-    inhaleExhale()
+    inhaleExhale(this.props.mood.toLowerCase())
   }
 
   render(){

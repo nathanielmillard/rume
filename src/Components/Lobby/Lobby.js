@@ -4,6 +4,7 @@ import './Lobby.scss';
 import PropTypes from 'prop-types'
 import { MoodButton } from '../../StyledComponents.js'
 import styled from "styled-components";
+import gsap from 'gsap';
 
 class Lobby extends Component {
   constructor(props) {
@@ -11,6 +12,10 @@ class Lobby extends Component {
     this.state = {
     hasAMood: false,
     }
+  }
+
+  componentDidMount() {
+    gsap.to(".moodContainer", {duration: 1.5, height: "18vh", ease: "back"})
   }
 
   clickHandler = (e) => {
@@ -30,7 +35,7 @@ class Lobby extends Component {
           <MoodButton mood='sad' onClick={this.clickHandler}>Sad</MoodButton>
           <MoodButton mood='angry' onClick={this.clickHandler}>Angry</MoodButton>
         </section>
-        <h2 data-testid='actionPrompt'>What do you want do do about it?</h2>
+        <h2 data-testid='actionPrompt'>What do you want to do about it?</h2>
         <nav>
           <Link to={`/reflecting/${this.props.mood}`}>
             <button disabled={!this.state.hasAMood}

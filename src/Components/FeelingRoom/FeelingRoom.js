@@ -21,17 +21,21 @@ import angryNature from '../../Assets/angryNature.wav' ;
 import fineNature from '../../Assets/fineNature.wav' ;
 import anxiousNature from '../../Assets/anxiousNature.wav';
 import sadNature from '../../Assets/sadNature.wav' ;
-
+import angryAbstract from '../../Assets/angryAbstract.wav' ;
+import anxiousAbstract from '../../Assets/anxiousAbstract.wav' ;
+import sadAbstract from '../../Assets/sadAbstract.wav' ;
+import fineAbstract from '../../Assets/fineAbstract.wav' ;
 
 class FeelingRoom extends Component {
   constructor(props){
     super(props)
     this.state= {
-      isFeeling: false
+      isFeeling: false,
+      hasAudio: false,
+      audio: '',
     }
   }
   createFineRoom = () => {
-    console.log('Made it here')
     fineBackgroundAnimation()
     floatAnimation('#fineCircle1', 1)
     floatAnimation('#fineCircle2', 1)
@@ -71,7 +75,6 @@ class FeelingRoom extends Component {
   }
   createSadRoom = () => {
     //functions to animate go here
-    console.log('sad')
     sadBGAnimation()
     sadDropAnimation()
     let drops = []
@@ -113,6 +116,7 @@ class FeelingRoom extends Component {
         </section>
     )
   }
+
   chooseRoomMood = () => {
     if(this.props.mood === 'Angry') {
       return this.createAngryRoom()
@@ -124,53 +128,68 @@ class FeelingRoom extends Component {
       return this.createFineRoom()
     }
   }
+
   startFeeling = () => {
     this.setState({isFeeling: true})
   }
-  playSound(e) {
-    let audio = e.target.parentNode.parentNode.firstChild
-    audio.play()
+
+  playSound = (e) => {
+    if(this.state.hasAudio){
+      let audio = e.target.parentNode.parentNode.firstChild
+      audio.play()
+    } else {
+      alert('Select a kind of audio')
+    }
   }
-  pauseSound(e) {
+  pauseSound = (e) => {
+    if(this.state.hasAudio){
     let audio = e.target.parentNode.parentNode.firstChild
     audio.pause()
+  } else {
+    alert('No audio to pause')
   }
-  changeAudio(e){
-    let audio = e.target.parentNode.parentNode.nextSibling.firstChild
+  }
+
+  changeAudio = (e) => {
+    let specificAudio
     if (this.props.mood === 'Sad'){
-      if(e.target.id === 'nature'){
-        audio.src = {sadNature}
-      } else if (e.target.id === 'abstract'){
-        audio.src = {abstract}
+      if (e.target.id === 'nature'){
+        specificAudio = sadNature
       } else if (e.target.id === 'music'){
-        audio.src = {music}
-      }
-    } else if (this.props.mood === 'Anxious'){
-      if(e.target.id === 'nature'){
-        audio.src = {anxiousNature}
-      } else if (e.target.id === 'abstract'){
-        audio.src = {abstract}
-      } else if (e.target.id === 'music'){
-        audio.src = {music}
-      }
-    } else if (this.props.mood === 'Angry'){
-      if(e.target.id === 'nature'){
-        audio.src = {angryNature}
-      } else if (e.target.id === 'abstract'){
-        audio.src = {abstract}
-      } else if (e.target.id === 'music'){
-        audio.src = {music}
-      }
-    } else {
-      if(e.target.id === 'nature'){
-        audio.src = {fineNature}
-      } else if (e.target.id === 'abstract'){
-        audio.src = {abstract}
-      } else if (e.target.id === 'music'){
-        audio.src = {music}
+        specificAudio = sadNature
+      } else {
+        specificAudio = sadAbstract
       }
     }
-
+    if (this.props.mood === 'Anxious'){
+      if (e.target.id === 'nature'){
+        specificAudio = anxiousNature
+      } else if (e.target.id === 'music'){
+        specificAudio = sadNature
+      } else {
+        specificAudio = anxiousAbstract
+      }
+    }
+    if (this.props.mood === 'Angry'){
+      if (e.target.id === 'nature'){
+        specificAudio = angryNature
+      } else if (e.target.id === 'music'){
+        specificAudio = sadNature
+      } else {
+        specificAudio = angryAbstract
+      }
+    }
+    if (this.props.mood === 'Fine') {
+      if (e.target.id === 'nature'){
+        specificAudio = fineNature
+      } else if (e.target.id === 'music'){
+        specificAudio = sadNature
+      } else {
+        specificAudio = fineAbstract
+      }
+    }
+    console.log(specificAudio)
+    this.setState({hasAudio: true, audio:specificAudio})
   }
 
   render(){
@@ -185,20 +204,23 @@ class FeelingRoom extends Component {
         <button onClick={this.startFeeling} className='getStarted'> Get Started </button>
       </section>
     )
+    let audio = (
+      <audio> 
+        <source src={this.state.audio} type="audio/wav" className="audio"/> 
+        Your Browser Doesn't Support This Audio 
+      </audio>
+    )
     return (
       <section className='FeelingRoom'>
         {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
           <div className='chooseSound'>
-            <MusicButton onClick={this.changeAudio} id='music'><img src={music}/></MusicButton>
-            <MusicButton onClick={this.changeAudio} id='nature'><img src={nature}/></MusicButton>
-            <MusicButton onClick={this.changeAudio} id='abstract'><img src={abstract}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='music'><img id='music' src={music}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='nature'><img id='nature' src={nature}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='abstract'><img id='abstract' src={abstract}/></MusicButton>
           </div>
           <div className='controlsound'>
-            <audio> 
-            <source src={fineNature} type="audio/wav" className="audio"/> 
-            Your Browser Doesn't Support This Audio 
-            </audio>
+            {this.state.hasAudio && audio}
             <MusicButton onClick={this.playSound}><img src={play}/></MusicButton>
             <MusicButton onClick={this.pauseSound}><img src={pause}/></MusicButton>
           </div>

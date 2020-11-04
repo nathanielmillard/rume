@@ -116,7 +116,7 @@ class FeelingRoom extends Component {
         )
       })
       return (
-        <section className="angryWrap">
+        <section className='angryWrap'>
           {angrySquares}
         </section>
     )

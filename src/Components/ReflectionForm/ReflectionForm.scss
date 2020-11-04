@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .ReflectionForm {
   display: flex;
   flex-direction: column;
@@ -5,8 +7,19 @@
   text-align: center;
 }
 .buttons {
-  display: inline-flex;
-  flex-flow: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button {
+  color: $lightest;
+  background-color: $darkest;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.2rem;
+  width: 10vw;
+  height: 2rem;
 }
 .actionButton {
   width: 20vw;

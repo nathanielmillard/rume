@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Rume
+###### An interactive emotional experience | A digital space to sit and ruminate.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Where it started?
+When developers [Kristi](), [Brigette](), and [Nathaniel](), were thinking of an app they would want to build together, Rume was born of an interesting in creating a design specific app that helped an already emotionally conscious user do more than "get past" or deescalate feelings, and rather create a "space" that validates a user where they are at. We at Rume, believe that it's just important to take time and feel what you are feeling, as it is to know how to guide yourself back to peace and calm.
 
-## Available Scripts
+## How to engage with it?
+Rume is a desktop experience that you can enjoy at [our deployed site](), or by cloning down this repo, running npm install, and npm start to launch the app itself.
+Due to the limited scope of this project as a [Turing]() project, we aren't accepting contributors, but any feedback would be more than welcome to any of the three developers on this projects.
 
-In the project directory, you can run:
+## What did it take to make it?
+This project was a touch point to solidify React fundamentals, explore more with React Router, React Testing Library, and Fetch calls, and fully introduce Styled Components, GSAP animations, building a back end micro service, and using audio on a website for the first time.
+While our Turing does teach React, this was an opportunity for us as developers to show how much we could teach ourselves in a week.
 
-### `npm start`
+## Where it could go?
+It's easy to say the sky's the limit, but realistically we would love to see more dynamic options than four emotional inputs, a more robust and flexible journal, stronger and more interactive animations, and a app that is comfortably compatible on a variety of devices and screen sizes.
+The remedy for all of these is time, but also more specified technologies we might not have access to yet. We could see implementing a machine learning API to review our user's feedback and give insight on the tone and feeling of reflections, using GSAP's scroll, drag, and physics plug ins by joining club green sock, and finding better ways to conditionally render different animations for different screen sizes, since currently we felt a bit limited and tied to pixels with GSAP, and struggled to find more dynamic units.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How was the process?
+Honestly, we felt really successful. It was exciting to determine an MVP for a project we were planning from scratch, and to not only meet our base MVP, but to implement features we only hope we would have time for. Most of our challenges were around the amount of conditionally rendered choices, making sure we kept files granular and specific, and managing three people working on large complex files asynchronously.  
+We would love more time to look for bugs, really manually test the limits of the app, and look at the accessibility implications of having so much of an app be visual. 

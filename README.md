@@ -1,70 +1,69 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# What's Cookin'
 
-## Available Scripts
+![Rume]()
 
-In the project directory, you can run:
+This application focuses on giving the user a place to feel and process their emotions. They are given a space to reflect, to breathe, and to just ruminate.
 
-### `npm start`
+## Developers
+[Nathaniel Millard](https://github.com/nathanielmillard)<br>
+[Kristi Miller](https://github.com/MichaelEWalker87)<br>
+[Brigette Doelp](https://github.com/BrigetteDoelp)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instructors
+[Robert Gu](https://github.com/BobGu)<br>
+[Travis Rollins](https://github.com/kalikoze)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Links
+[Project Repo](https://github.com/Estaffieri/whats-cookin)<br>
+[Project Spec](https://frontend.turing.io/projects/module-2/refactor-tractor-wc.html)
 
-### `npm test`
+## Set-up
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ```
+      Fork Repo
+      run "npm run" in your terminal
+      run "npm start" in your terminal
+ ```
 
-### `npm run build`
+## Goals and Objectives
+- Build on top of pre-existing code that you did not write and navigate someone else’s codebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Develop processes for working remotely and submitting pull requests to perform effective code reviews that help ensure the code is accurate and that everyone understands it
+- Make network requests to API endpoints to retrieve and manipulate data
+- Refactor pre-existing code and use inheritance to DRY up repetitive logic
+- Ensure your app is following best practices for accessibility
+- Leverage Sass to DRY up your CSS
+- Incorporate Webpack to streamline your workflow process
+- Leverage Chai Spies to verify that your DOM manipulation is happening
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Wins & Challenges
+#### Wins:
+Got a better understanding of iterator methods. <br>
+Began working in earnest with building accessibily. <br>
+Using extents in SASS. <br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Challenges:
+Working with several new pieces of information led to many broken links and changes needed to be made.<br>
+The data isolataion of fetch requests was difficult to work around and definitely something to examine in more depth.<br>
+Coming in to a project that already had a significant amount of code and refactoring what was there.<br>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Under the Hood
+Many of the decisions we made were based on the time we had already invested and the time we had left for the rest of the project.
+Understanding that we should be seperating out all our DOM functionality, API's from our Scripts.js file was late coming, but took several days to fully reconnect once we started that direction.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Functionality Showcase
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p align="center"></br>
+  <img width="460" height="300" src="https://i.imgur.com/4Hjz3ao.gif" alt="Mobile View of FreshPicks site">
+</p><br>
 
-## Learn More
+<p align="center"></br>
+  <img width="460" height="300" src="https://i.imgur.com/Te4DXc7.gif" alt="Desktop view of FreshPicks site">
+</p><br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Thank you to Nathan, Blake, Matthew, Ashley, John Adams, Travis, Bob, Nathaniel, Jeff, Ian, Katy, Nathaniel D. Foster and to all of Turing.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### And special thanks to Gilbert, Ascot, Bea, and Sofie (aka Sofritas/Ms. Sulky), the furry creatures in our lives that kept us sane during this project.

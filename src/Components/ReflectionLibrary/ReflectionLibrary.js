@@ -28,7 +28,7 @@ class ReflectionLibrary extends Component {
   }
   async componentDidMount() {
     const reflections = await getReflections()
-    this.setState( {reflections: reflections} )
+    this.setState( {reflections} )
     this.setState( {loadingMessage: ''})
   }
   render() {

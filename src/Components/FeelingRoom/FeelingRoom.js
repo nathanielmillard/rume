@@ -49,20 +49,18 @@ class FeelingRoom extends Component {
     floatAnimation('#fineCircle12', 1)
     return (
       <section className='fineRoom'>
-        <section className='hexarea'>
-          <div className='fineCircles' id='fineCircle1'></div>
-          <div className='fineCircles' id='fineCircle2'></div>
-          <div className='fineCircles' id='fineCircle3'></div>
-          <div className='fineCircles' id='fineCircle4'></div>
-          <div className='fineCircles' id='fineCircle5'></div>
-          <div className='fineCircles' id='fineCircle6'></div>
-          <div className='fineCircles' id='fineCircle7'></div>
-          <div className='fineCircles' id='fineCircle8'></div>
-          <div className='fineCircles' id='fineCircle9'></div>
-          <div className='fineCircles' id='fineCircle10'></div>
-          <div className='fineCircles' id='fineCircle11'></div>
-          <div className='fineCircles' id='fineCircle12'></div>
-        </section>
+        <div className='fineCircles' id='fineCircle1'></div>
+        <div className='fineCircles' id='fineCircle2'></div>
+        <div className='fineCircles' id='fineCircle3'></div>
+        <div className='fineCircles' id='fineCircle4'></div>
+        <div className='fineCircles' id='fineCircle5'></div>
+        <div className='fineCircles' id='fineCircle6'></div>
+        <div className='fineCircles' id='fineCircle7'></div>
+        <div className='fineCircles' id='fineCircle8'></div>
+        <div className='fineCircles' id='fineCircle9'></div>
+        <div className='fineCircles' id='fineCircle10'></div>
+        <div className='fineCircles' id='fineCircle11'></div>
+        <div className='fineCircles' id='fineCircle12'></div>
       </section>
     )
   }

@@ -1,5 +1,4 @@
-
-# What's Cookin'
+# Rume
 
 ![Rume]()
 
@@ -10,48 +9,41 @@ This application focuses on giving the user a place to feel and process their em
 [Kristi Miller](https://github.com/MichaelEWalker87)<br>
 [Brigette Doelp](https://github.com/BrigetteDoelp)
 
-## Instructors
-[Robert Gu](https://github.com/BobGu)<br>
-[Travis Rollins](https://github.com/kalikoze)
-
 ## Project Links
-[Project Repo](https://github.com/Estaffieri/whats-cookin)<br>
-[Project Spec](https://frontend.turing.io/projects/module-2/refactor-tractor-wc.html)
+[Project Repo](https://github.com/nathanielmillard/stretch)<br>
+[Project Spec](https://frontend.turing.io/projects/module-3/stretch.html)
 
 ## Set-up
 
   ```
       Fork Repo
-      run "npm run" in your terminal
-      run "npm start" in your terminal
+      Clone Down Onto Local Machine
+      cd Into Repository
+      npm install
+      npm start
  ```
 
 ## Goals and Objectives
-- Build on top of pre-existing code that you did not write and navigate someone else’s codebase
+- Create and meet an MVP for an application of our own design.
+- Learn and utilize `Green Sock Animations` in application.
+- Learn and utilize `styled-components` in application.
+- Learn and utilize deploying a back end `microserver` in application.
 
-- Develop processes for working remotely and submitting pull requests to perform effective code reviews that help ensure the code is accurate and that everyone understands it
-- Make network requests to API endpoints to retrieve and manipulate data
-- Refactor pre-existing code and use inheritance to DRY up repetitive logic
-- Ensure your app is following best practices for accessibility
-- Leverage Sass to DRY up your CSS
-- Incorporate Webpack to streamline your workflow process
-- Leverage Chai Spies to verify that your DOM manipulation is happening
 
 ## Wins & Challenges
 #### Wins:
-Got a better understanding of iterator methods. <br>
-Began working in earnest with building accessibily. <br>
-Using extents in SASS. <br>
+All of us envisioning and then building out animations in a brand new, self taught technology. <br>
+Setting realistic goals and meeting those goals. <br>
+<<more to come from other team mates>> <br>
 
 #### Challenges:
-Working with several new pieces of information led to many broken links and changes needed to be made.<br>
-The data isolataion of fetch requests was difficult to work around and definitely something to examine in more depth.<br>
-Coming in to a project that already had a significant amount of code and refactoring what was there.<br>
+Implementing audio into the application.<br>
+Figuring out the quirks of the new technologies, and working to make them play nice with the rest of the application.<br>
+<<more to come from other team mates>><br>
 
 
 ## Under the Hood
-Many of the decisions we made were based on the time we had already invested and the time we had left for the rest of the project.
-Understanding that we should be seperating out all our DOM functionality, API's from our Scripts.js file was late coming, but took several days to fully reconnect once we started that direction.
+
 
 
 ## Functionality Showcase

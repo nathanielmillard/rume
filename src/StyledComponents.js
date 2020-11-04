@@ -12,7 +12,8 @@ export const MoodButton = styled.button`
   height: 15vh;
   font-size: 1.5rem;
   color: #121316;
-  border: .5px solid #121316;
+  border: none;
+  box-shadow: 0px 10px 10px hsla(200, 14%, 96%, .5) inset;
   background-color: ${props => {
     if (props.mood === 'fine') {
       return `rgb(157, 211, 156, .25);`
@@ -25,6 +26,7 @@ export const MoodButton = styled.button`
     }
   } };
   &:focus {
+    box-shadow: 0px -10px 10px hsla(200, 14%, 96%, .5) inset;
     background-color: ${props => {
       if (props.mood === 'fine') {
         return `rgb(157, 211, 156);`

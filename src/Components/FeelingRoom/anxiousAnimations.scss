@@ -1,8 +1,12 @@
+
+
 .anxiousRoom {
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
   height: 100vh;
+  background: rgb(92,73,36);
+  background: radial-gradient(circle, rgba(92,73,36,1) 0%, rgba(18,19,22,1) 100%);
 }
 
 #hex1 {

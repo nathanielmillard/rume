@@ -5,11 +5,11 @@ export const sadBGAnimation = () => {
   const sadBGTL = gsap.timeline({repeat: 2, yoyo:true})
   sadBGTL.to(".sadRoom", {
     duration: 2,
-    background: 'linear-gradient(45deg, hsl(198, 29%, 80%) 0%, hsl(197, 30%, 63%) 100%)',
+    background: 'linear-gradient(45deg, hsl(200, 29%, 80%) 0%, hsl(200, 30%, 63%) 100%)',
   })
   sadBGTL.to(".sadRoom", {
     duration: 2,
-    background: 'linear-gradient(45deg, hsl(197, 30%, 63%) 0%,  hsl(202, 19%, 49%) 100%)',
+    background: 'linear-gradient(45deg, hsl(200, 30%, 63%) 0%,  hsl(202, 19%, 49%) 100%)',
   })
   sadBGTL.to(".sadRoom", {
     duration: 2,

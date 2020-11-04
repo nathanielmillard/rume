@@ -13,23 +13,23 @@ export const fineBackgroundAnimation = () => {
 }
 
 export const floatAnimation = (element, scale) => {
-  let floatTl = gsap.timeline({repeat: 200, });
+  let floatTl = gsap.timeline({repeat: 200, yoyo:true});
   floatTl.to(element, {
-    duration: 5,
+    duration: 10,
     scale: scale,
     x: '+=random(-400, 400)',
     y: '+=random(-400, 400)',
     ease: 'slow',
   })
   .to(element, {
-    duration: 5,
+    duration: 10,
     scale: scale,
     x: '+=random(-400, 400)',
     y: '+=random(-400, 400)',
     ease: 'slow',
   })
   .to(element, {
-    duration: 5,
+    duration: 10,
     scale: scale,
     x: '+=random(-400, 400)',
     y: '+=random(-400, 400)',

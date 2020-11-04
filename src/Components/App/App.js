@@ -46,9 +46,12 @@ class App extends Component {
           <Route path='/myreflections'>
             <ReflectionLibrary />
           </Route>
-          <Route path='/breathing/:feeling'>
-            <BreathingRoom/>
-          </Route>
+          <Route path='/breathing/:feeling' render={({match}) => {
+            const feeling = match.params.feeling
+            return (
+              <BreathingRoom mood={feeling} />
+            )
+          }}/>
           <Route path='/lobby'>
           <Lobby
             setMood={this.setMood}

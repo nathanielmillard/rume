@@ -1,14 +1,16 @@
 import React from 'react';
+import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
 import {Component} from 'react'
 
 import './SadAnimation.scss'
 import {sadBGAnimation, sadDropAnimation} from './sadAnimations.js'
 import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
+import { anxiousAnimation } from './anxiousAnimations.js';
 import './angryAnimations.scss';
 import {angryFeelingAnimation} from './angryAnimations.js'
 import './fineAnimations.scss';
-
+import {DropIcon} from './FeelingRoom-SC'
 import music from '../../Assets/music.svg'
 import nature from '../../Assets/nature.svg'
 import abstract from '../../Assets/abstract.svg'
@@ -63,10 +65,32 @@ class FeelingRoom extends Component {
     )
   }
   createAnxiousRoom = () => {
-    //functions to animate go here
+    anxiousAnimation('#hex1', .74, 1, 1.8, .90)
+    anxiousAnimation('#hex2', .5, 1, .7, .45)
+    anxiousAnimation('#hex3', .6, .7, 3.4, 2)
+    anxiousAnimation('#hex4', .78, .2, .2, .75)
+    anxiousAnimation('#hex5', .67, .1, .1, 0)
+    anxiousAnimation('#hex6', .74, 1, 1.8, .90)
+    anxiousAnimation('#hex7', .86, 1, 1.8, .55)
+    anxiousAnimation('#hex8', .8, .5, 2, 1.5)
+    anxiousAnimation('#hex9', .5, 1, .7, .45)
+    anxiousAnimation('#hex10', .7, 1, 2.5, 2.5)
+    anxiousAnimation('#hex11', .49, .5, .3, 2.5)
+
     return (
-      console.log('ANXIOUS')
-      //elements to animate go here
+      <section className='anxiousRoom'>
+        <div class='hexagon' id='hex1'></div>
+        <div class='hexagon' id='hex2'></div>
+        <div class='hexagon' id='hex3'></div>
+        <div class='hexagon' id='hex4'></div>
+        <div class='hexagon' id='hex5'></div>
+        <div class='hexagon' id='hex6'></div>
+        <div class='hexagon' id='hex7'></div>
+        <div class='hexagon' id='hex8'></div>
+        <div class='hexagon' id='hex9'></div>
+        <div class='hexagon' id='hex10'></div>
+        <div class='hexagon' id='hex11'></div>
+      </section>
     )
   }
   createSadRoom = () => {
@@ -171,5 +195,6 @@ class FeelingRoom extends Component {
     )
   }
 }
+
 
 export default FeelingRoom

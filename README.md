@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+<br />
+<p align="center">
+  <a href="https://github.com/nathanielmillard/stretch.git">
+    <img src="src/RTJourney1.gif" alt="moving image of application in use" width="600">
+  </a>
+  <h3 align="center">Rume</h3>
+  <p align="center">
+    A Turing School Mod 3 Group Stretch Project
+    <br />
+    <a href="https://github.com/nathanielmillard/stretch.git"><strong>Repo Link</strong></a>
+    <br />
+    <br />
+  </p>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About The Project
+Rume is a group project assigned during the third week of the third module of the Front-End Program at the Turing School of Software and Design. With a timeline of roughly 10 days, this project served as an experiment in less-taught technologies that are of interest to the members of each assigned group. This group's shared interest in animations and styled components is the driving force behind Rume.
 
-## Available Scripts
+As a group, we noticed that many meditation and therapeutic apps don't allow users to ruminate in their emotions. Rume seeks to fill this void by offering 3 different "rooms" in which to face emotions head on either through reflecting (writing), feeling (ruminating with sound and animation), or breathing (guided color-based animations).
 
-In the project directory, you can run:
+The learning goals of this project include: cementing fundamental concepts of styled components and GSAP animations. While learning these new technologies, we also strive to sharpen skills in architecting a React application from scratch, implementing class and functional components, and utilizing React Router for path transitions and displays. Robust unit and integration testing will also be implemented for each component utilizing the Jest testing suite.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Built With
+* JavaScript
+* CSS/HTML
+* React
+* React Router
+* Jest
+* Babel
+* GSAP
+* Express
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Installation
+In your terminal:
+1. Clone the repo-
+`git clone git@github.com:nathanielmillard/stretch.git`
+2. Install NPM packages- `npm install`
+3. Start application- `npm start`
 
-### `npm test`
+## Usage
+#### LANDING PAGE
+<img src="src/LoginPage.png" alt="Rancid Tomatillos app log-in view" width="600">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### HOMEPAGE
+<img src="src/LogInHome.png" alt="Rancid Tomatillos homepage view" width="600">
 
-### `npm run build`
+#### REFLECT RUMES
+###### 'Fine' Reflecting
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###### 'Anxious' Reflecting
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###### 'Sad' Reflecting
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###### 'Angry' Reflecting
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-### `npm run eject`
+#### REFLECTION LIBRARY
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### FEEL RUMES
+###### 'Fine' Feeling
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###### 'Anxious' Feeling
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+###### 'Sad' Feeling
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+###### 'Angry' Feeling
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-## Learn More
+#### BREATHING RUME
+<img src="src/MovieView.png" alt="Rancid Tomatillos app movie show view" width="600">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Roadmap
+The total time allotted for this project was approximately 10 days. Future features contemplated by the developers include the following:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Adding a self-contained quotes api for the quote of the day
+* Additional options for breathing animations
+* Additional styling and animations to the reflection library
+* Deploying library to Heroku
 
-### Code Splitting
+See the [open issues](https://github.com/nathanielmillard/stretch/issues) for a list of proposed features (and known issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
+[Kristi Miller - Developer](https://github.com/Kristiannmiller)
 
-### Analyzing the Bundle Size
+[Nathaniel Millard - Developer](https://github.com/nathanielmillard)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[Brigette Doelp - Developer](https://github.com/BrigetteDoelp)
 
-### Making a Progressive Web App
+Project Link: [Rume](https://github.com/nathanielmillard/stretch)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgements
+Leta Keane and Khalid Williams - This team would like to thank the Turing Module 3 instructors for their assistance throughout this project and for their daily lessons on the magic of React.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Our Turing Mentors - Including Turing graduates Jon Sweet, Pol Sieira, and Aimee Fritz for their constant support throughout this project.

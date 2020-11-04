@@ -37,12 +37,12 @@ export const angryFeelingAnimation = () => {
   let angryTimeline = gsap.timeline({repeat: 10});
   for (var i = 0; i <= 10; i++) {
     angryTimeline.from(`.square${i}`, {
-      duration: .5,
+      duration: .2,
       y: "-60vh",
       display: "flex"
     })
     .from(`.square${i} .childSquare`, {
-      duration: .5,
+      duration: .3,
       x: "0",
       y: "0",
       display: "flex",
@@ -51,7 +51,7 @@ export const angryFeelingAnimation = () => {
     })
     .to(`.square${i}`, {
       backgroundColor: 'hsl(200, 14%, 96%)',
-      duration: 1.5,
+      duration: 2,
       height: "150px",
       width: "150px",
       y: "55vh",
@@ -64,31 +64,31 @@ export const angryFeelingAnimation = () => {
        display: "none",
      }, "explode")
      .to(`.square${i} #part1`, {
-       duration:.5,
+       duration:.8,
        y: "-=50vh",
        x: "-=30vh",
        backgroundColor: 'hsla(200, 14%, 96%, 0%)',
      }, "explode")
      .to(`.square${i} #part2`, {
-       duration:.5,
+       duration:.8,
        y: "-=50vh",
        x: "+=10vh",
        backgroundColor: 'hsla(200, 14%, 96%, 0%)',
      }, "explode")
      .to(`.square${i} #part3`, {
-       duration:.5,
+       duration:.8,
        y: "-=50vh",
        x: "-=60vh",
        backgroundColor: 'hsla(200, 14%, 96%, 0%)',
      }, "explode")
      .to(`.square${i} #part4`, {
-       duration:.5,
+       duration:.8,
        y: "-=50vh",
        x: "+=30vh",
        backgroundColor: 'hsla(200, 14%, 96%, 0%)',
      }, "explode")
      .to(`.square${i} #part5`, {
-       duration:.5,
+       duration:.8,
        height: "10%",
        width: "10%",
        y: "-=90vh",
@@ -96,7 +96,7 @@ export const angryFeelingAnimation = () => {
        backgroundColor: 'hsla(200, 14%, 96%, 0%)',
      }, "explode")
      .to(`.square${i} #part6`, {
-       duration:.5,
+       duration:.8,
        height: "15%",
        width: "15%",
        y: "-=80vh",
@@ -104,7 +104,7 @@ export const angryFeelingAnimation = () => {
        backgroundColor: 'hsla(200, 14%, 96%, 0%)',
      }, "explode")
      .to(`.square${i} #part7`, {
-       duration:.5,
+       duration:.8,
        height: "20%",
        width: "20%",
        y: "-=70vh",
@@ -123,7 +123,7 @@ export const angryFeelingAnimation = () => {
   }
 
 export const angryFeelingAnimation2 = () => {
-   let angryTimeline2 = gsap.timeline({repeat: 10, delay: .5});
+   let angryTimeline2 = gsap.timeline({repeat: 10});
    for (var i = 3; i <= 13; i++) {
      angryTimeline2.from(`.square${i}`, {
        duration: .5,
@@ -211,10 +211,10 @@ export const angryFeelingAnimation2 = () => {
      }
    }
 export const angryFeelingAnimation3 = () => {
-  let angryTimeline3 = gsap.timeline({repeat: 10, delay: 1});
+  let angryTimeline3 = gsap.timeline({repeat: 10});
   for (var i = 2; i <= 12; i++) {
     angryTimeline3.from(`.square${i}`, {
-      duration: .5,
+      duration: 1,
       y: "-60vh",
       display: "flex",
     })

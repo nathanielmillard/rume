@@ -43,19 +43,34 @@ Figuring out the quirks of the new technologies, and working to make them play n
 
 
 ## Under the Hood
-
-
+<<explain some decisions in the code we made, and WHY we made those decisions>>
 
 ## Functionality Showcase
 
 <p align="center"></br>
-  <img width="460" height="300" src="https://i.imgur.com/4Hjz3ao.gif" alt="Mobile View of FreshPicks site">
+  <img width="460" height="300" src="" alt="Home Page Gif">
 </p><br>
 
 <p align="center"></br>
-  <img width="460" height="300" src="https://i.imgur.com/Te4DXc7.gif" alt="Desktop view of FreshPicks site">
+  <img width="460" height="300" src="" alt="Tour Of Reflection Rooms">
 </p><br>
 
-## Thank you to Nathan, Blake, Matthew, Ashley, John Adams, Travis, Bob, Nathaniel, Jeff, Ian, Katy, Nathaniel D. Foster and to all of Turing.
+<p align="center"></br>
+  <img width="460" height="300" src="" alt="Fine Feeling Room">
+</p><br>
 
-### And special thanks to Gilbert, Ascot, Bea, and Sofie (aka Sofritas/Ms. Sulky), the furry creatures in our lives that kept us sane during this project.
+<p align="center"></br>
+  <img width="460" height="300" src="" alt="Anxiety Feeling Room">
+</p><br>
+
+<p align="center"></br>
+  <img width="460" height="300" src="" alt="Sad Feeling Room">
+</p><br>
+
+<p align="center"></br>
+  <img width="460" height="300" src="" alt="Angry Feeling Room">
+</p><br>
+
+## Credits to mentors!
+
+### Credits to pets, specifically Laika's insightful input over the course of the project.

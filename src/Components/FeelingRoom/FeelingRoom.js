@@ -7,7 +7,7 @@ import {sadBGAnimation, sadDropAnimation} from './sadAnimations.js'
 import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
 import { anxiousAnimation } from './anxiousAnimations.js';
 import './angryAnimations.scss';
-import {angryFeelingAnimation} from './angryAnimations.js'
+import {angryBGAnimation, angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3} from './angryAnimations.js'
 import './fineAnimations.scss';
 import {DropIcon} from './FeelingRoom-SC'
 import music from '../../Assets/music.svg'
@@ -125,8 +125,11 @@ class FeelingRoom extends Component {
     )
   }
   createAngryRoom = () => {
-    const squareNums = Array.from(Array(10).keys())
+    const squareNums = Array.from(Array(13).keys())
+      angryBGAnimation()
       angryFeelingAnimation()
+      angryFeelingAnimation2()
+      angryFeelingAnimation3()
     const angrySquares = squareNums.map(num => {
         return (
           <div className={`square${num}`}>
@@ -134,11 +137,15 @@ class FeelingRoom extends Component {
             <div className='childSquare' id='part3'></div>
             <div className='childSquare' id='part2'></div>
             <div className='childSquare' id='part4'></div>
+            <div className='childSquare' id='part5'></div>
+            <div className='childSquare' id='part6'></div>
+            <div className='childSquare' id='part7'></div>
+            <div className='childSquare' id='part8'></div>
           </div>
         )
       })
       return (
-        <section>
+        <section className='angryWrap'>
           {angrySquares}
         </section>
     )

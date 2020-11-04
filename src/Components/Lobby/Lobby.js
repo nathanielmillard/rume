@@ -24,7 +24,7 @@ class Lobby extends Component {
   }
 
   render() {
-
+    
     return (
       <section className='Lobby'>
         <h1 data-testid='welcomeMessage'>Welcome Back, it's {new Date().toDateString()}</h1>

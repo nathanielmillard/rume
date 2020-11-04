@@ -3,7 +3,7 @@ import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
 import { Component } from 'react';
 import './fineAnimations.scss';
-import { anxiousBackgroundAnimation, popAnimation } from './anxiousAnimations.js';
+import { anxiousBackgroundAnimation, anxiousAnimation } from './anxiousAnimations.js';
 import { fineBackgroundAnimation, floatAnimation } from './fineAnimations.js';
 
 class FeelingRoom extends Component {
@@ -46,19 +46,20 @@ class FeelingRoom extends Component {
     )
   }
   createAnxiousRoom = () => {
-    popAnimation('.hex', 1)
+    anxiousAnimation('.hexagon')
     return (
       <section className='anxiousRoom'>
-        <section className="container">
-          <ol className="even">
-            <li className='hex'></li>
-            <li className='hex'></li>
-            <li className='hex'></li>
-            <li className='hex'></li>
-            <li className='hex'></li>
-          </ol>
-
-        </section>
+        <div class='hexagon' id='hex1'></div>
+        <div class='hexagon' id='hex2'></div>
+        <div class='hexagon' id='hex3'></div>
+        <div class='hexagon' id='hex4'></div>
+        <div class='hexagon' id='hex5'></div>
+        <div class='hexagon' id='hex6'></div>
+        <div class='hexagon' id='hex7'></div>
+        <div class='hexagon' id='hex8'></div>
+        <div class='hexagon' id='hex9'></div>
+        <div class='hexagon' id='hex10'></div>
+        <div class='hexagon' id='hex11'></div>
       </section>
     )
   }
@@ -117,5 +118,6 @@ class FeelingRoom extends Component {
     )
   }
 }
+
 
 export default FeelingRoom

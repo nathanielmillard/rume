@@ -14,7 +14,7 @@ class Lobby extends Component {
     }
   }
   componentDidMount() {
-    gsap.to(".moodContainer", {duration: 3, height: "18vh", ease: "back"})
+    gsap.to(".moodContainer", {duration: 1.5, height: "18vh", ease: "back"})
   }
   clickHandler = (e) => {
     this.props.setMood(e)

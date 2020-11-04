@@ -16,6 +16,7 @@ class FeelingRoom extends Component {
     }
   }
   createFineRoom = () => {
+    fineBackgroundAnimation()
     floatAnimation('#fineCircle1', 1)
     floatAnimation('#fineCircle2', 1)
     floatAnimation('#fineCircle3', 1)
@@ -49,7 +50,6 @@ class FeelingRoom extends Component {
     )
   }
   createAnxiousRoom = () => {
-
     anxiousAnimation9('#hex1')
     anxiousAnimation5('#hex2')
     anxiousAnimation3('#hex3')

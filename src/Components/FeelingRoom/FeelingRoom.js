@@ -3,7 +3,7 @@ import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
 import { Component } from 'react';
 import './fineAnimations.scss';
-import { anxiousAnimation1, anxiousAnimation2, anxiousAnimation3, anxiousAnimation4, anxiousAnimation5, anxiousAnimation6, anxiousAnimation7, anxiousAnimation8, anxiousAnimation9 } from './anxiousAnimations.js';
+import { anxiousAnimation } from './anxiousAnimations.js';
 import { fineBackgroundAnimation, floatAnimation } from './fineAnimations.js';
 import gsap from 'gsap';
 
@@ -50,17 +50,17 @@ class FeelingRoom extends Component {
     )
   }
   createAnxiousRoom = () => {
-    anxiousAnimation9('#hex1')
-    anxiousAnimation5('#hex2')
-    anxiousAnimation3('#hex3')
-    anxiousAnimation6('#hex4')
-    anxiousAnimation2('#hex5')
-    anxiousAnimation9('#hex6')
-    anxiousAnimation8('#hex7')
-    anxiousAnimation1('#hex8')
-    anxiousAnimation9('#hex9')
-    anxiousAnimation4('#hex10')
-    anxiousAnimation7('#hex11')
+    anxiousAnimation('#hex1', .74, 1, 1.8, .90)
+    anxiousAnimation('#hex2', .5, 1, .7, .45)
+    anxiousAnimation('#hex3', .6, .7, 3.4, 2)
+    anxiousAnimation('#hex4', .78, .2, .2, .75)
+    anxiousAnimation('#hex5', .67, .1, .1, 0)
+    anxiousAnimation('#hex6', .74, 1, 1.8, .90)
+    anxiousAnimation('#hex7', .86, 1, 1.8, .55)
+    anxiousAnimation('#hex8', .8, .5, 2, 1.5)
+    anxiousAnimation('#hex9', .5, 1, .7, .45)
+    anxiousAnimation('#hex10', .7, 1, 2.5, 2.5)
+    anxiousAnimation('#hex11', .49, .5, .3, 2.5)
 
     return (
       <section className='anxiousRoom'>

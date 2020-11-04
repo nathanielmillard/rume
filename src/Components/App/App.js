@@ -41,7 +41,7 @@ class App extends Component {
             <FeelingRoom mood={this.state.mood}/>
           </Route>
           <Route path='/breathing'>
-            <BreathingRoom />
+            <BreathingRoom mood={this.state.mood}/>
           </Route>
           <Route path='/lobby'>
           <Lobby

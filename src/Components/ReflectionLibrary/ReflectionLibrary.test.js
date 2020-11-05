@@ -3,7 +3,6 @@ import ReflectionLibrary from './ReflectionLibrary';
 import { MemoryRouter } from 'react-router-dom';
 import { getReflections } from '../../apiCalls.js';
 import '@testing-library/jest-dom';
-
 jest.mock('../../apiCalls.js');
 
 
@@ -37,6 +36,8 @@ describe('ReflectionLibrary', ()=>{
     });
   });
 
+  // NOTE: Integration test below needs additional assitance
+
   // describe('Integration Tests', ()=>{
   //   test('Should display stored reflections', async () => {
   //     const reflections = [{
@@ -44,20 +45,17 @@ describe('ReflectionLibrary', ()=>{
   //       date: new Date(),
   //       mood: 'Angry',
   //       reflection: 'I want sushi, but no one is delivering. >:|',
-  //     }];
+  //     }]
   //     getReflections.mockResolvedValue(reflections);
   //     render(
   //       <MemoryRouter>
   //         <ReflectionLibrary />
   //       </MemoryRouter>
   //     )
-  //     // screen.debug()
-  //     const reflection = await waitFor( () => {
+  //     await waitFor( () => {
   //       screen.getByTestId('cardDate')
   //     })
   //     expect(screen.getByTestId('cardDate')).toBeInTheDocument()
-  //
   //   });
   // })
-
 })

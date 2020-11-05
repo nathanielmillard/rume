@@ -242,7 +242,7 @@ class FeelingRoom extends Component {
           Then feel free to pause and play sound as you see fit.
           Enjoy the sights and sounds of your feeling space.
         </p>
-        <button onClick={this.startFeeling} className='getStarted'> Get Started </button>
+        <button data-testid="startButton" onClick={this.startFeeling} className='getStarted'> Get Started </button>
       </section>
     )
     let audio;

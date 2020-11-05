@@ -23,7 +23,7 @@ class BreathingRoom extends Component {
       <h1>Time to Take Breathe</h1>
       <p>Follow the animation, breathe in as it expands
       and breathe out as it contracts.</p>
-      <button onClick={this.clickHandler}> Start</button>
+      <button onClick={this.clickHandler}> Start </button>
     </section>
   )
     return (

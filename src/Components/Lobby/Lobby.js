@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Lobby.scss';
-import PropTypes from 'prop-types'
-import { MoodButton } from '../../StyledComponents.js'
 import styled from "styled-components";
 import gsap from 'gsap';
+import PropTypes from 'prop-types'
+import './Lobby.scss';
+import { MoodButton } from '../../StyledComponents.js'
 
 class Lobby extends Component {
   constructor(props) {
@@ -13,18 +13,14 @@ class Lobby extends Component {
     hasAMood: false,
     }
   }
-
   componentDidMount() {
     gsap.to(".moodContainer", {duration: 1.5, height: "18vh", ease: "back"})
   }
-
   clickHandler = (e) => {
     this.props.setMood(e)
     this.setState({hasAMood: true})
   }
-
   render() {
-    
     return (
       <section className='Lobby'>
         <h1 data-testid='welcomeMessage'>Welcome Back, it's {new Date().toDateString()}</h1>

@@ -1,6 +1,6 @@
 import './App.scss';
-import {Component} from 'react';
-import {BrowserRouter, Switch, Route, NavLink} from 'react-router-dom';
+import { Component } from 'react';
+import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import WelcomePage from '../WelcomePage/WelcomePage.js';
 import Lobby from '../Lobby/Lobby.js';
 import ReflectionForm from '../ReflectionForm/ReflectionForm.js';
@@ -8,10 +8,10 @@ import ReflectionLibrary from '../ReflectionLibrary/ReflectionLibrary.js';
 import FeelingRoom from '../FeelingRoom/FeelingRoom.js';
 import BreathingRoom from '../BreathingRoom/BreathingRoom.js';
 import openLogo from '../../Assets/openLogo.svg';
-import {getQuote} from '../../apiCalls.js'
+import { getQuote } from '../../apiCalls.js'
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       quote: '',
@@ -26,42 +26,48 @@ class App extends Component {
     let mood = e.target.innerText
     this.setState({mood: mood})
   }
-  render () {
+  render() {
     return (
       <BrowserRouter >
         <main className="App">
           <Switch >
-          <Route path='/reflecting/:feeling' render={({match})=>{
-            const feeling = match.params.feeling
-            return (
-              <ReflectionForm mood={feeling} />
-            )
-          }}/>
-          <Route path='/feeling/:feeling' render={({match})=>{
-            const feeling = match.params.feeling
-            return (
-              <FeelingRoom  mood={feeling}/>
-            )
-          }}/>
-          <Route path='/myreflections'>
-            <ReflectionLibrary />
-          </Route>
-          <Route path='/breathing/:feeling' render={({match}) => {
-            const feeling = match.params.feeling
-            return (
-              <BreathingRoom mood={feeling} />
-            )
-          }}/>
-          <Route path='/lobby'>
-          <Lobby
-            setMood={this.setMood}
-            mood={this.state.mood}
-          />
-          </Route>
-          <Route path='/'>
-           <WelcomePage />
-          </Route>
-          </Switch>
+            <Route
+              path='/reflecting/:feeling'
+              render={({match})=>{
+                const feeling = match.params.feeling
+                return (
+                  <ReflectionForm mood={feeling} />
+                )
+            }}/>
+            <Route
+              path='/feeling/:feeling'
+              render={({match})=>{
+                const feeling = match.params.feeling
+                return (
+                  <FeelingRoom  mood={feeling}/>
+                )
+            }}/>
+            <Route path='/myreflections'>
+              <ReflectionLibrary />
+            </Route>
+            <Route
+              path='/breathing/:feeling'
+              render={({match}) => {
+                const feeling = match.params.feeling
+                return (
+                  <BreathingRoom mood={feeling} />
+                )
+            }}/>
+            <Route path='/lobby'>
+              <Lobby
+                setMood={this.setMood}
+                mood={this.state.mood}
+              />
+            </Route>
+            <Route path='/'>
+             <WelcomePage />
+            </Route>
+            </Switch>
           <footer>
             <NavLink activeClassName="activeHomeButton" to='/lobby'>
               <img
@@ -76,7 +82,7 @@ class App extends Component {
           </footer>
         </main>
       </BrowserRouter>
-    );
+    )
   }
 }
 

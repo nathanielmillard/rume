@@ -4,11 +4,9 @@ import './WelcomePage.scss'
 import gsap from 'gsap';
 
 const WelcomePage = () => {
-
   const animate = () => {
     gsap.to(".logo", {duration: 3, fontSize: "30vw", ease: "power2", opacity: 100})
   }
-
   return (
     <section className="welcomeWrapper">
       {animate()}

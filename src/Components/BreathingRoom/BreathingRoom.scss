@@ -1,12 +1,14 @@
-.BreathingRoom{
+.BreathingRoom {
   display: flex;
   height: 90vh;
   height: 90vw;
 }
-.directions{
+
+.directions {
   position: fixed;
   align-self: flex-start;
 }
+
 .shape {
   height: 10vw;
   width: 10vw;
@@ -18,11 +20,11 @@
   margin-right: 45vw;
 }
 
-#five{
+#five {
   z-index: 1;
 }
 
-#four{
+#four {
   z-index: 2;
 }
 
@@ -38,6 +40,6 @@
   z-index: 5;
 }
 
-.hidden{
+.hidden {
   display: none;
 }

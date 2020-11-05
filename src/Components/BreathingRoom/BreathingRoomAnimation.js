@@ -10,7 +10,8 @@ export const inhaleExhale = (mood) => {
         'hsl(329, 57%, 25%)', '	hsl(327, 52%, 21%)', 'hsl(320, 30%, 12%)'],
     sad: ['hsl(198, 29%, 80%)', 'hsl(200, 14%, 96%)', 'hsl(197, 30%, 63%)',
         'hsl(210, 21%, 34%)', 'hsl(224, 26%, 20%)', 'hsl(246, 48%, 8%)']
-    };
+  }
+  
   var tl1 = gsap.timeline({repeat: 25, yoyo: true});
   tl1.to("#one", {
       duration: 5,

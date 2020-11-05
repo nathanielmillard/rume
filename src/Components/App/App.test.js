@@ -3,8 +3,8 @@ import App from './App';
 import userEvent from '@testing-library/user-event';
 
 
-describe('App', ()=>{
-  describe('Unit Tests', ()=>{
+describe('App', () => {
+  describe('Unit Tests', () => {
     test('Should render a footer on the App', () => {
       render(<App />);
       const homeButton = screen.getByTestId("homeButton");
@@ -14,7 +14,7 @@ describe('App', ()=>{
     });
 
     test('Should see a random quote generated in the footer', () => {
-      render (<App />);
+      render(<App />);
       const randomQuote = screen.getByTestId("randomQuote");
       expect(randomQuote).toBeInTheDocument();
     });
@@ -27,14 +27,15 @@ describe('App', ()=>{
   })
 
   describe('Integration Tests', () => {
-    test('Should render the lobby when the "door" icon is clicked', () => {
-      render (<App />);
+    test('Should render Lobby when the "door" icon is clicked', () => {
+      render(<App />);
       const homeButton = screen.getByTestId("homeButton");
       expect(homeButton).toBeInTheDocument();
       userEvent.click(homeButton);
       const feelingPrompt = screen.getByTestId("checkInQuestion");
       expect(feelingPrompt).toBeInTheDocument();
     });
+
     test('Should render the Reflection page when the reflect button is clicked', () => {
       render (<App />);
       const homeButton = screen.getByTestId("homeButton");
@@ -48,6 +49,7 @@ describe('App', ()=>{
       const reflectionsButton = screen.getByTestId("linkToAllReflections");
       expect(reflectionsButton).toBeInTheDocument();
     });
+
     test('Should render the Reflection Library when the "show all reflections" button is clicked', () => {
       render (<App />);
       const homeButton = screen.getByTestId("homeButton");
@@ -64,7 +66,8 @@ describe('App', ()=>{
       const library = screen.getByTestId("reflections");
       expect(library).toBeInTheDocument();
     });
-    test('Should render the Feeling page when the feel button is clicked', () => {
+
+    test('Should render the Feeling page when feel is clicked', () => {
       render (<App />);
       const homeButton = screen.getByTestId("homeButton");
       expect(homeButton).toBeInTheDocument();
@@ -77,7 +80,8 @@ describe('App', ()=>{
       const directions = screen.getByText("Welcome to the feeling room");
       expect(directions).toBeInTheDocument();
     });
-    test('Should render the Breathing page when the breathe button is clicked', () => {
+    
+    test('Should render the Breathing page when breathe is clicked', () => {
       render (<App />);
       const homeButton = screen.getByTestId("homeButton");
       expect(homeButton).toBeInTheDocument();

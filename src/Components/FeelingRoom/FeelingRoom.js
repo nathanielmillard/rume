@@ -1,22 +1,24 @@
 import React from 'react';
 import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
-import {Component} from 'react'
 import './SadAnimation.scss'
-import {sadBGAnimation, sadDropAnimation} from './sadAnimations.js'
-import {floatAnimation, fineBackgroundAnimation} from './fineAnimations.js'
-import { anxiousAnimation } from './anxiousAnimations.js';
 import './angryAnimations.scss';
-import {angryBGAnimation, angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3} from './angryAnimations.js'
 import './fineAnimations.scss';
-import {DropIcon} from './FeelingRoom-SC'
+
+import { Component } from 'react'
+import { DropIcon } from './FeelingRoom-SC'
+import { MusicButton } from '../../StyledComponents.js'
+
+import { sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
+import { floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
+import { anxiousAnimation } from './anxiousAnimations.js';
+import { angryBGAnimation, angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3 } from './angryAnimations.js'
+
 import music from '../../Assets/music.svg'
 import nature from '../../Assets/nature.svg'
 import abstract from '../../Assets/abstract.svg'
 import play from '../../Assets/play.svg'
 import pause from '../../Assets/pause.svg'
-
-import {MusicButton} from '../../StyledComponents.js'
 
 import angryNature from '../../Assets/angryNature.wav' ;
 import fineNature from '../../Assets/fineNature.wav' ;
@@ -32,7 +34,7 @@ import sadMusic from '../../Assets/sadMusic.mp3'
 import fineMusic from '../../Assets/fineMusic.mp3'
 
 class FeelingRoom extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state= {
       isFeeling: false,
@@ -83,7 +85,6 @@ class FeelingRoom extends Component {
     anxiousAnimation('#hex9', .5, 1, .7, .45)
     anxiousAnimation('#hex10', .7, 1, 2.5, 2.5)
     anxiousAnimation('#hex11', .49, .5, .3, 2.5)
-
     return (
       <section className='anxiousRoom'>
         <div class='hexagon' id='hex1'></div>
@@ -101,7 +102,6 @@ class FeelingRoom extends Component {
     )
   }
   createSadRoom = () => {
-    //functions to animate go here
     sadBGAnimation()
     sadDropAnimation()
     let drops = []
@@ -114,14 +114,11 @@ class FeelingRoom extends Component {
       } else {
         return <DropIcon className='drop2' />
       }
-    }
-    )
-
+    })
     return (
       <section className='sadRoom'>
         {drops}
       </section>
-      //elements to animate go here
     )
   }
   createAngryRoom = () => {
@@ -131,26 +128,25 @@ class FeelingRoom extends Component {
       angryFeelingAnimation2()
       angryFeelingAnimation3()
     const angrySquares = squareNums.map(num => {
-        return (
-          <div className={`square${num}`}>
-            <div className='childSquare' id='part1'></div>
-            <div className='childSquare' id='part3'></div>
-            <div className='childSquare' id='part2'></div>
-            <div className='childSquare' id='part4'></div>
-            <div className='childSquare' id='part5'></div>
-            <div className='childSquare' id='part6'></div>
-            <div className='childSquare' id='part7'></div>
-            <div className='childSquare' id='part8'></div>
-          </div>
-        )
-      })
       return (
-        <section className='angryWrap'>
-          {angrySquares}
-        </section>
+        <div className={`square${num}`}>
+          <div className='childSquare' id='part1'></div>
+          <div className='childSquare' id='part3'></div>
+          <div className='childSquare' id='part2'></div>
+          <div className='childSquare' id='part4'></div>
+          <div className='childSquare' id='part5'></div>
+          <div className='childSquare' id='part6'></div>
+          <div className='childSquare' id='part7'></div>
+          <div className='childSquare' id='part8'></div>
+        </div>
+      )
+    })
+    return (
+      <section className='angryWrap'>
+        {angrySquares}
+      </section>
     )
   }
-
   chooseRoomMood = () => {
     if(this.props.mood === 'Angry') {
       return this.createAngryRoom()
@@ -162,11 +158,9 @@ class FeelingRoom extends Component {
       return this.createFineRoom()
     }
   }
-
   startFeeling = () => {
     this.setState({isFeeling: true})
   }
-
   playSound = (e) => {
     if(!this.state.hasAudio){
       alert('Select a kind of audio')
@@ -180,18 +174,17 @@ class FeelingRoom extends Component {
   }
   pauseSound = (e) => {
     if(!this.state.hasAudio){
-      alert('No audio to pause')
-  } else if (e.target.id === 'svg'){
-    let audio = e.target.parentNode.parentNode.firstChild
-    audio.pause()
-    this.setState({hasAudio: false, audio:''})
-  } else if (e.target.id === 'button'){
-    let audio = e.target.parentNode.firstChild
-    audio.pause()
-    this.setState({hasAudio: false, audio:''})
+        alert('No audio to pause')
+    } else if (e.target.id === 'svg'){
+      let audio = e.target.parentNode.parentNode.firstChild
+      audio.pause()
+      this.setState({hasAudio: false, audio:''})
+    } else if (e.target.id === 'button'){
+      let audio = e.target.parentNode.firstChild
+      audio.pause()
+      this.setState({hasAudio: false, audio:''})
+    }
   }
-  }
-
   changeAudio = (e) => {
     let specificAudio
     if (this.props.mood === 'Sad'){
@@ -232,7 +225,6 @@ class FeelingRoom extends Component {
     }
     this.setState({hasAudio: true, audio:specificAudio})
   }
-
   render(){
     let instructions = (
       <section className='directions'>

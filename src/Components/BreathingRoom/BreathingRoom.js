@@ -19,8 +19,8 @@ class BreathingRoom extends Component {
 
   render(){
     let instructions = (
-      <section className='directions'>
-      <h1>Time to Take Breathe</h1>
+      <section className='directions' data-testid='instructions'>
+      <h1>Take a moment to breathe</h1>
       <p>Follow the animation, breathe in as it expands
       and breathe out as it contracts.</p>
       <button onClick={this.clickHandler}> Start</button>

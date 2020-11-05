@@ -7,6 +7,5 @@ describe('BreathingRoom', ()=>{
     test('Should render a BreathingRoom', () => {
       expect(true).toBe(true)
     });
-
   })
 })

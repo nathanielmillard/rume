@@ -67,9 +67,5 @@ describe('Lobby', () => {
       const reflectButton = screen.getByTestId('reflect')
       expect(reflectButton).toHaveProperty('disabled')
     })
-
-
-
-
   })
 })

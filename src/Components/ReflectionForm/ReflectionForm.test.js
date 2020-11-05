@@ -5,8 +5,8 @@ import { MemoryRouter } from 'react-router-dom'
 import { postAReflection } from '../../apiCalls.js'
 jest.mock('../../apiCalls.js')
 
-describe('ReflectionForm', ()=>{
-  describe('Unit Tests', ()=>{
+describe('ReflectionForm', () => {
+  describe('Unit Tests', () => {
     test('Should render a ReflectionForm', () => {
       render(
         <MemoryRouter>
@@ -23,7 +23,8 @@ describe('ReflectionForm', ()=>{
       expect(reflectionForm).toBeInTheDocument();
     });
   })
-  describe('Integration Tests', ()=>{
+
+  describe('Integration Tests', () => {
     test('Should reset the input when a user types a reflection and submits it', () => {
       render(
         <MemoryRouter>
@@ -44,6 +45,7 @@ describe('ReflectionForm', ()=>{
       userEvent.click(submitButton);
       expect(input.value).toBe("");
     });
+    
     test('Should post a reflection', () => {
       render(
         <MemoryRouter>

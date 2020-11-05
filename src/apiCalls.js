@@ -26,16 +26,16 @@ export const postAReflection = (reflection, date, mood) => {
   })
   .then(response => {
     if(response.ok){
-      console.log(response)
       return response
     } else {
       throw Error
     }
   })
   .catch(error => {
-    console.log(error)
+    alert('Something went wrong posting your reflection')
   })
 }
+
 export const getReflections = () => {
   return fetch("https://rume-microservice.herokuapp.com/api/v1/reflections")
   .then(response => {
@@ -55,7 +55,6 @@ export const getReflections = () => {
     }
   })
   .catch(error => {
-    console.log(error);
     return { errorMessage:'We encountered an error, please reload' }
   })
 }

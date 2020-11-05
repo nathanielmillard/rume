@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
-import BreathingRoom from './BreathingRoom';
 import { MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
+import BreathingRoom from './BreathingRoom';
 import { inhaleExhale } from './BreathingRoomAnimation.js';
 jest.mock('./BreathingRoomAnimation.js')
 
-describe('BreathingRoom', ()=>{
-  describe('Unit Tests', ()=>{
+describe('BreathingRoom', () => {
+  describe('Unit Tests', () => {
     test('Should render a BreathingRoom', () => {
       const currentMood = 'Fine'
       render (
@@ -21,7 +21,8 @@ describe('BreathingRoom', ()=>{
       expect(startButton).toBeInTheDocument();
     });
   })
-  describe('Integration Tests', ()=>{
+
+  describe('Integration Tests', () => {
     test('Should not display instructions once breathing animation begins', () => {
       const currentMood = 'Fine'
       render (
@@ -37,7 +38,8 @@ describe('BreathingRoom', ()=>{
       userEvent.click(startButton);
       expect(directions).not.toBeInTheDocument();
     });
-    test('Should invoke the animation function after start button is clicked ', () => {
+    
+    test('Should invoke the animation function after start is clicked ', () => {
       const currentMood = 'Fine'
       render (
         <MemoryRouter>

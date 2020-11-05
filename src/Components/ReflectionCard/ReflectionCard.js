@@ -1,5 +1,4 @@
 import React from 'react'
-import './ReflectionCard.scss'
 import { RefCard } from '../../StyledComponents.js'
 
 const ReflectionCard = (props) => {

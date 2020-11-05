@@ -1,8 +1,7 @@
 import React from 'react';
-import {Component} from 'react'
+import { Component } from 'react'
 import './BreathingRoom.scss';
-
-import {inhaleExhale} from './BreathingRoomAnimation.js'
+import { inhaleExhale } from './BreathingRoomAnimation.js'
 
 class BreathingRoom extends Component {
   constructor(props){
@@ -23,9 +22,9 @@ class BreathingRoom extends Component {
       <h1>Take a moment to breathe</h1>
       <p>Follow the animation, breathe in as it expands
       and breathe out as it contracts.</p>
-      <button onClick={this.clickHandler}> Start</button>
+      <button onClick={this.clickHandler}> Start </button>
     </section>
-  )
+    )
     return (
       <section className='BreathingRoom'>
       {!this.state.isBreathing && instructions}

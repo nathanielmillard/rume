@@ -12,18 +12,15 @@ class ReflectionForm extends Component {
      reflection: '',
    }
  }
-
  keepReflection = (e) => {
    this.setState({reflection: e.target.value})
  }
-
  submitReflection = (e) => {
    e.preventDefault()
    postAReflection(this.state.reflection, new Date(), this.props.mood)
    document.getElementById("textArea").value = ''
  }
   render() {
-
     return (
       <section className='ReflectionForm'>
         <form data-testid='reflectionForm'>

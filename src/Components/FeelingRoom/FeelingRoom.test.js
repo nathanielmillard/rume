@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import FeelingRoom from './FeelingRoom';
-import { MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
+import { MemoryRouter } from 'react-router-dom';
+import FeelingRoom from './FeelingRoom';
 import { fineBackgroundAnimation, floatAnimation } from './fineAnimations.js';
 jest.mock('./fineAnimations.js');
 
-describe('FeelingRoom', ()=>{
+describe('FeelingRoom', () => {
   describe('Unit Tests', () => {
     test('Should render a FeelingRoom', () => {
       const currentMood = 'Fine'
@@ -22,6 +22,7 @@ describe('FeelingRoom', ()=>{
       expect(startButton).toBeInTheDocument();
     });
   })
+
   describe('Integration Tests', () => {
     test('Should not display the welcome message or start button after animation has begun', () => {
       const currentMood = 'Fine'
@@ -40,6 +41,7 @@ describe('FeelingRoom', ()=>{
       expect(startButton).not.toBeInTheDocument()
       expect(welcomeMessage).not.toBeInTheDocument()
     });
+
     test('Should invoke the animation function after the start button has been clicked', () => {
       const currentMood = 'Fine'
       render (
@@ -58,6 +60,5 @@ describe('FeelingRoom', ()=>{
       expect(floatAnimation).toHaveBeenCalledWith('#fineCircle1', 1);
       expect(floatAnimation).toHaveBeenLastCalledWith('#fineCircle12', 1);
     });
-
   })
 })

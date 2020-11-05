@@ -6,8 +6,8 @@ import '@testing-library/jest-dom';
 jest.mock('../../apiCalls.js');
 
 
-describe('ReflectionLibrary', ()=>{
-  describe('Unit Tests', ()=>{
+describe('ReflectionLibrary', () => {
+  describe('Unit Tests', () => {
     test('Should render a section for the reflections', () => {
       render(
         <MemoryRouter>

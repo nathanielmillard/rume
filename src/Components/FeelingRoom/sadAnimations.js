@@ -32,6 +32,7 @@ export const sadBGAnimation = () => {
     background: 'linear-gradient(45deg, hsl(246, 48%, 8%) 0%, hsl(246, 45%, 4%) 100%)',
   })
 }
+
 export const sadDropAnimation = () => {
   let sadDropTl = gsap.timeline()
   sadDropTl.to('.drop', {

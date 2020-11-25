@@ -20,6 +20,12 @@ import abstract from '../../Assets/abstract.svg'
 import play from '../../Assets/play.svg'
 import pause from '../../Assets/pause.svg'
 
+import hexoutline1 from '../../Assets/hexoutline1.png';
+import hexoutline2 from '../../Assets/hexoutline2.png';
+import hexoutline3 from '../../Assets/hexoutline1=3.png';
+import hexsolid1 from '../../Assets/hexsolid1.png';
+import hexsolid2 from '../../Assets/hexsolid2.png';
+
 import angryNature from '../../Assets/angryNature.wav' ;
 import fineNature from '../../Assets/fineNature.wav' ;
 import anxiousNature from '../../Assets/anxiousNature.wav';
@@ -74,7 +80,7 @@ class FeelingRoom extends Component {
     )
   }
   createAnxiousRoom = () => {
-    anxiousAnimation('#hex1', .74, 1, 1.8, .90)
+    anxiousAnimation('hex1', .74, 1, 1.8, .90)
     anxiousAnimation('#hex2', .5, 1, .7, .45)
     anxiousAnimation('#hex3', .6, .7, 3.4, 2)
     anxiousAnimation('#hex4', .78, .2, .2, .75)

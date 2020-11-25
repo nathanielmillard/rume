@@ -103,7 +103,7 @@ class FeelingRoom extends Component {
         <img id='hex8' src={hexoutlineblur3} />
         <img id='hex9' src={hexoutline2} />
         <img id='hex10' src={hexoutlineblur1} />
-        <img id='hex11' src={hexoutlineblur3} />
+        <img id='hex11' src={hexoutline3} />
       </section>
     )
   }

@@ -281,29 +281,5 @@ class FeelingRoom extends Component {
   }
 }
 
-// <div class='hexagon' id='hex1'></div>
-// <div class='hexagon' id='hex2'></div>
-// <div class='hexagon' id='hex3'></div>
-// <div class='hexagon' id='hex4'></div>
-// <div class='hexagon' id='hex5'></div>
-// <div class='hexagon' id='hex6'></div>
-// <div class='hexagon' id='hex7'></div>
-// <div class='hexagon' id='hex8'></div>
-// <div class='hexagon' id='hex9'></div>
-// <div class='hexagon' id='hex10'></div>
-// <div class='hexagon' id='hex11'></div>
-
-// anxiousAnimation('#hex1', .74, 1, 1.8, .90)
-// anxiousAnimation('#hex2', .5, 1, .7, .45)
-// anxiousAnimation('#hex3', .6, .7, 3.4, 2)
-// anxiousAnimation('#hex4', .78, .2, .2, .75)
-// anxiousAnimation('#hex5', .67, .1, .1, 0)
-// anxiousAnimation('#hex6', .74, 1, 1.8, .90)
-// anxiousAnimation('#hex7', .86, 1, 1.8, .55)
-// anxiousAnimation('#hex8', .8, .5, 2, 1.5)
-// anxiousAnimation('#hex9', .5, 1, .7, .45)
-// anxiousAnimation('#hex10', .7, 1, 2.5, 2.5)
-// anxiousAnimation('#hex11', .49, .5, .3, 2.5)
-
 
 export default FeelingRoom

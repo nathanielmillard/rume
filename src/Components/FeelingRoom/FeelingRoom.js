@@ -23,6 +23,9 @@ import pause from '../../Assets/pause.svg'
 import hexoutline1 from '../../Assets/hexoutline1.png';
 import hexoutline2 from '../../Assets/hexoutline2.png';
 import hexoutline3 from '../../Assets/hexoutline3.png';
+import hexoutlineblur1 from '../../Assets/hexoutlineblur1.png';
+import hexoutlineblur2 from '../../Assets/hexoutlineblur2.png';
+import hexoutlineblur3 from '../../Assets/hexoutlineblur3.png';
 import hexsolid1 from '../../Assets/hexsolid1.png';
 import hexsolid2 from '../../Assets/hexsolid2.png';
 
@@ -81,9 +84,26 @@ class FeelingRoom extends Component {
   }
   createAnxiousRoom = () => {
     anxiousAnimation('#hex1', .74, 1, 1.8, .90)
+    anxiousAnimation('#hex2', .5, 1, .7, .45)
+    anxiousAnimation('#hex3', .6, .7, 3.4, 2)
+    anxiousAnimation('#hex4', .78, .2, .2, .75)
+    anxiousAnimation('#hex5', .67, .1, .1, 0)
+    anxiousAnimation('#hex6', .74, 1, 1.8, .90)
+    anxiousAnimation('#hex7', .86, 1, 1.8, .55)
+    anxiousAnimation('#hex8', .8, .5, 2, 1.5)
     return (
       <section className='anxiousRoom'>
         <img id='hex1' src={hexoutline1} />
+        <img id='hex2' src={hexoutlineblur2} />
+        <img id='hex3' src={hexoutlineblur1} />
+        <img id='hex4' src={hexoutline2} />
+        <img id='hex5' src={hexoutline3} />
+        <img id='hex6' src={hexoutlineblur1} />
+        <img id='hex7' src={hexoutlineblur2} />
+        <img id='hex8' src={hexoutlineblur3} />
+        <img id='hex9' src={hexoutline2} />
+        <img id='hex10' src={hexoutlineblur1} />
+        <img id='hex11' src={hexoutlineblur3} />
       </section>
     )
   }

@@ -11,35 +11,35 @@
   right: -11em;
   top: 3em;
   opacity: 0;
-}
-
-#hex1 {
   position: relative;
-  width: 20vh;
-  height: 11.547619047619047vh;
-  background-color: hsl(48.1,57.2%,44.9%);
+  width: 23vh;
+  height: 20vh;
   margin: 10vh 0;
 }
 
-#hex1:before,
-#hex1:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 10vh solid transparent;
-  border-right: 10vh solid transparent;
+#hex1 {
+
 }
 
-#hex1:before {
-  bottom: 100%;
-  border-bottom: 5.773182957393484vh solid hsl(48.1,57.2%,44.9%);
-}
-
-#hex1:after {
-  top: 100%;
-  width: 0;
-  border-top: 5.773182957393484vh solid hsl(48.1,57.2%,44.9%);
-}
+// #hex1:before,
+// #hex1:after {
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   border-left: 10vh solid transparent;
+//   border-right: 10vh solid transparent;
+// }
+//
+// #hex1:before {
+//   bottom: 100%;
+//   border-bottom: 5.773182957393484vh solid hsl(48.1,57.2%,44.9%);
+// }
+//
+// #hex1:after {
+//   top: 100%;
+//   width: 0;
+//   border-top: 5.773182957393484vh solid hsl(48.1,57.2%,44.9%);
+// }
 
 #hex2 {
   right: -29em;

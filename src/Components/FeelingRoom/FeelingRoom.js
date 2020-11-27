@@ -190,14 +190,7 @@ class FeelingRoom extends Component {
   }
   changeAudio = (e) => {
     let specificAudio
-    console.log(e);
     let audio = document.querySelector('.audio')
-    console.log(audio);
-    // if(e.target.id === 'svg') {
-    //   let audio = e.target.parentNode.parentNode.firstChild
-    // } else if (e.target.id === 'button') {
-    //   let audio = e.target.parentNode.firstChild
-    // }
     if (this.props.mood === 'Sad'){
       if (e.target.id === 'nature'){
         specificAudio = sadNature
@@ -252,7 +245,7 @@ class FeelingRoom extends Component {
           <br/>
           Once the animation begins, select your audio of choice and click the play button.
           <br/>
-          Then feel free to pause and play sound as you see fit.
+          Then feel free to pause, play, and change audio as you see fit.
         </p>
         <button data-testid="startButton" onClick={this.startFeeling} className='getStarted'> Get Started </button>
       </section>

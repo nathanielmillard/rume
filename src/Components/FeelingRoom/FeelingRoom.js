@@ -190,7 +190,6 @@ class FeelingRoom extends Component {
   }
   changeAudio = (e) => {
     let specificAudio
-    let audio = document.querySelector('.audio')
     if (this.props.mood === 'Sad'){
       if (e.target.id === 'nature'){
         specificAudio = sadNature

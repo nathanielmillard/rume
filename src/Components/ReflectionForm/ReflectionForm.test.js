@@ -61,7 +61,6 @@ describe('ReflectionForm', () => {
       const reflectionForm = screen.getByTestId("reflectionForm");
       expect(reflectionForm).toBeInTheDocument();
       const input = screen.getByTestId("reflectionArea");
-      const date = new Date()
       userEvent.type(input, "Feeling fine!")
       expect(input.value).toBe("Feeling fine!");
       userEvent.click(submitButton);

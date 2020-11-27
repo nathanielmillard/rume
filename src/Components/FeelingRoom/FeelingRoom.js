@@ -271,14 +271,14 @@ class FeelingRoom extends Component {
         {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
           <div className='chooseSound'>
-            <MusicButton onClick={this.changeAudio} id='music'><img id='music' src={music}/></MusicButton>
-            <MusicButton onClick={this.changeAudio} id='nature'><img id='nature' src={nature}/></MusicButton>
-            <MusicButton onClick={this.changeAudio} id='abstract'><img id='abstract' src={abstract}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='music'><img title="music" alt="music-based audio" id='music' src={music}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='nature'><img title="nature" alt="nature-based audio" id='nature' src={nature}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='abstract'><img title="abstract" alt="abstract-based audio" id='abstract' src={abstract}/></MusicButton>
           </div>
           <div className='controlsound'>
             {this.state.hasAudio && audio}
-            <MusicButton onClick={this.playSound} id='button'><img id='svg' src={play}/></MusicButton>
-            <MusicButton onClick={this.pauseSound} id='button'><img id='svg' src={pause}/></MusicButton>
+            <MusicButton onClick={this.playSound} id='button'><img title="play audio" alt="play audio button" id='svg' src={play}/></MusicButton>
+            <MusicButton onClick={this.pauseSound} id='button'><img title="stop audio" alt="stop audio button" id='svg' src={pause}/></MusicButton>
           </div>
         </section>
         {this.chooseRoomMood()}

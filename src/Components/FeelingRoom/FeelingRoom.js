@@ -40,6 +40,7 @@ class FeelingRoom extends Component {
       isFeeling: false,
       hasAudio: false,
       audio: '',
+      isPlaying: false
     }
   }
   createFineRoom = () => {
@@ -167,9 +168,11 @@ class FeelingRoom extends Component {
     } else if (e.target.id == 'svg'){
       let audio = e.target.parentNode.parentNode.firstChild
       audio.play()
+      this.setState({isPlaying: true})
     } else if (e.target.id === 'button'){
       let audio = e.target.parentNode.firstChild
       audio.play()
+      this.setState({isPlaying: true})
     }
   }
   pauseSound = (e) => {
@@ -178,15 +181,23 @@ class FeelingRoom extends Component {
     } else if (e.target.id === 'svg'){
       let audio = e.target.parentNode.parentNode.firstChild
       audio.pause()
-      this.setState({hasAudio: false, audio:''})
+      this.setState({hasAudio: false, audio:'', isPlaying: false})
     } else if (e.target.id === 'button'){
       let audio = e.target.parentNode.firstChild
       audio.pause()
-      this.setState({hasAudio: false, audio:''})
+      this.setState({hasAudio: false, audio:'', isPlaying: false})
     }
   }
   changeAudio = (e) => {
     let specificAudio
+    console.log(e);
+    let audio = document.querySelector('.audio')
+    console.log(audio);
+    // if(e.target.id === 'svg') {
+    //   let audio = e.target.parentNode.parentNode.firstChild
+    // } else if (e.target.id === 'button') {
+    //   let audio = e.target.parentNode.firstChild
+    // }
     if (this.props.mood === 'Sad'){
       if (e.target.id === 'nature'){
         specificAudio = sadNature
@@ -222,6 +233,12 @@ class FeelingRoom extends Component {
       } else {
         specificAudio = fineAbstract
       }
+    }
+    if (this.state.isPlaying) {
+      let audio = document.querySelector('.audio').parentNode
+      console.log(audio);
+      audio.load()
+      audio.play()
     }
     this.setState({hasAudio: true, audio:specificAudio})
   }

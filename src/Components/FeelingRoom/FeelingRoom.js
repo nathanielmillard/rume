@@ -165,7 +165,7 @@ class FeelingRoom extends Component {
   playSound = (e) => {
     if(!this.state.hasAudio){
       alert('Select a kind of audio')
-    } else if (e.target.id == 'svg'){
+    } else if (e.target.id === 'svg'){
       let audio = e.target.parentNode.parentNode.firstChild
       audio.play()
       this.setState({isPlaying: true})

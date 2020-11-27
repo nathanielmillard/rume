@@ -45,7 +45,7 @@ describe('ReflectionForm', () => {
       userEvent.click(submitButton);
       expect(input.value).toBe("");
     });
-    
+
     test('Should post a reflection', () => {
       render(
         <MemoryRouter>

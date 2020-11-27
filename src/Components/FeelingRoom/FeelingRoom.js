@@ -236,7 +236,6 @@ class FeelingRoom extends Component {
     }
     if (this.state.isPlaying) {
       let audio = document.querySelector('.audio').parentNode
-      console.log(audio);
       audio.load()
       audio.play()
     }
@@ -247,9 +246,13 @@ class FeelingRoom extends Component {
       <section className='directions'>
         <h1> Welcome to the feeling room </h1>
         <p>
-          First pick a kind of sound you want to listen to.
+          This is a safe space to ruminate in your feelings.
+          <br/>
+          Click the start button to begin.
+          <br/>
+          Once the animation begins, select your audio of choice and click the play button.
+          <br/>
           Then feel free to pause and play sound as you see fit.
-          Enjoy the sights and sounds of your feeling space.
         </p>
         <button data-testid="startButton" onClick={this.startFeeling} className='getStarted'> Get Started </button>
       </section>

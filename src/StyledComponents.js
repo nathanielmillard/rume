@@ -12,7 +12,7 @@ export const MoodButton = styled.button`
   font-size: 1.5rem;
   color: #121316;
   border: none;
-  box-shadow: 0px 10px 10px hsla(200, 14%, 96%, .5) inset;
+  box-shadow: -5px 10px 10px hsla(200, 14%, 96%, .5) inset;
   background-color: ${props => {
     if (props.mood === 'fine') {
       return `rgb(157, 211, 156, .25);`
@@ -25,7 +25,22 @@ export const MoodButton = styled.button`
     }
   } };
   &:focus {
-    box-shadow: 0px -10px 10px hsla(200, 14%, 96%, .5) inset;
+    box-shadow: 5px -10px 10px hsla(200, 14%, 96%, .5) inset;
+    background-color: ${props => {
+      if (props.mood === 'fine') {
+        return `rgb(157, 211, 156);`
+      } else if (props.mood === 'anxious') {
+        return `rgb(180, 154, 49);`
+      } else if (props.mood === 'sad') {
+        return `rgb(132, 173, 189);`
+      } else {
+        return `rgb(100, 27, 65);
+                color: #f3f5f6;`
+      }
+    } }
+  }
+  &:hover {
+    box-shadow: 5px -10px 10px hsla(200, 14%, 96%, .8) inset;
     background-color: ${props => {
       if (props.mood === 'fine') {
         return `rgb(157, 211, 156);`
@@ -41,6 +56,24 @@ export const MoodButton = styled.button`
   }
 `;
 
+export const NavButton = styled.button`
+  font-size: 1.2rem;
+  color: hsla(200, 14%, 96%, 1);
+  background-color: hsla(225, 10%, 8%, 1);
+  height: 2.5rem;
+  width: auto;
+  min-width: 8vw;
+  padding: 1vh;
+  margin: 2vh;
+  &:hover {
+    font-size: 1.1rem;
+  }
+  &:disabled {
+    font-size: 1.2rem;
+    opacity: 50%;
+  }
+`
+
 export const MusicButton = styled.button`
   border-radius: 100px;
   margin:1vh;
@@ -51,6 +84,9 @@ export const MusicButton = styled.button`
   filter: drop-shadow(5px 5px 5px hsla(190, 20%, 2%, .5));
   &:focus {
     background-color: hsla(190, 14%, 74% ,.7);
+  }
+  &:hover {
+    background-color: hsla(190, 14%, 74% ,.2);
   }
 `;
 

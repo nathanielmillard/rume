@@ -6,24 +6,25 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+  padding-top: 35vh;
   position: fixed;
   z-index: 101;
-  .getStarted {
-    font-size: 1.2rem;
-    width: 10%;
-    margin: 5vh;
+  font-size: 1.5rem;
+  p {
+    height: auto;
+    margin: 3vh;
   }
 }
 
 .soundControlPanel {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   border-radius: 3vh;
   background-color: hsla(199, 14%, 74%, .7);
-  height: 14vh;
+  height: auto;
   width: 12vw;
   position: fixed;
   z-index: 100;

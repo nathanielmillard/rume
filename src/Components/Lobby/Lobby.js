@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import PropTypes from 'prop-types'
 import './Lobby.scss';
-import { MoodButton } from '../../StyledComponents.js'
+import { MoodButton, NavButton} from '../../StyledComponents.js'
 
 class Lobby extends Component {
   constructor(props) {
@@ -33,25 +33,22 @@ class Lobby extends Component {
         <h2 data-testid='actionPrompt'>What do you want to do about it?</h2>
         <nav>
           <Link to={`/reflecting/${this.props.mood}`}>
-            <button disabled={!this.state.hasAMood}
-            data-testid='reflect'
-            className='roomButton'>
+            <NavButton disabled={!this.state.hasAMood}
+            data-testid='reflect'>
             Reflect
-            </button>
+            </NavButton>
           </Link>
           <Link to={`/feeling/${this.props.mood}`}>
-            <button disabled={!this.state.hasAMood}
-            data-testid='feel'
-            className='roomButton'>
+            <NavButton disabled={!this.state.hasAMood}
+            data-testid='feel'>
             Feel
-            </button>
+            </NavButton>
           </Link>
           <Link to={`/breathing/${this.props.mood}`}>
-            <button disabled={!this.state.hasAMood}
-            data-testid='breathe'
-            className='roomButton'>
+            <NavButton disabled={!this.state.hasAMood}
+            data-testid='breathe'>
             Breathe
-            </button>
+            </NavButton>
           </Link>
         </nav>
       </section>

@@ -1,3 +1,4 @@
+@import '../../variables.scss';
 .Lobby {
   display: flex;
   flex-direction: column;
@@ -8,27 +9,12 @@
   width: 80vw;
 }
 
-.roomButton {
-  margin: 1vh;
-  width: 10vh;
-  height: 2rem;
-  font-size: 1.2rem;
-  border-radius: 10rem;
-  color: #f3f5f6;
-  border: solid 1px #121316;
-  background-color: #121316;
-  margin: 1%;
-}
-
 .moodContainer {
   height: 0vh;
   overflow: hidden;
   text-align: center;
 }
 
-.roomButton:disabled {
-  opacity: 50%;
-}
 h2 {
   margin: 2vh;
   font-size: 2rem;

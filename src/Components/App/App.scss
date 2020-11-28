@@ -1,3 +1,4 @@
+@import '../../variables.scss';
 * {
   padding: 0;
   margin: 0;
@@ -15,7 +16,7 @@
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  background-color: #F3F5F6;
+  background-color: $lightest;
 }
 
 button {
@@ -33,6 +34,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   width: 100vw;
+  filter: drop-shadow(0px 0px 10px $lightest);
 }
 
 .homeButton, p {
@@ -40,8 +42,9 @@ footer {
   height: 5vh;
 }
 
-.homeButton {
-  box-shadow: 5px 5px hsl(200, 14%, 96%) ;
+.homeButton:hover {
+  height: 5.1vh;
+  filter: drop-shadow(0px 0px 40px $lightest);
 }
 
 .activeHomeButton {

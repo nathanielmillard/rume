@@ -7,7 +7,7 @@ import './fineAnimations.scss';
 
 import { Component } from 'react'
 import { DropIcon } from './FeelingRoom-SC'
-import { MusicButton } from '../../StyledComponents.js'
+import { MusicButton, NavButton } from '../../StyledComponents.js'
 
 import { sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
 import { floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
@@ -169,7 +169,7 @@ class FeelingRoom extends Component {
       let audio = e.target.parentNode.parentNode.firstChild
       audio.play()
       this.setState({isPlaying: true})
-    } else if (e.target.id === 'button'){
+    } else if (e.target.id === 'playButton'){
       let audio = e.target.parentNode.firstChild
       audio.play()
       this.setState({isPlaying: true})
@@ -182,7 +182,7 @@ class FeelingRoom extends Component {
       let audio = e.target.parentNode.parentNode.firstChild
       audio.pause()
       this.setState({hasAudio: false, audio:'', isPlaying: false})
-    } else if (e.target.id === 'button'){
+    } else if (e.target.id === 'pauseButton'){
       let audio = e.target.parentNode.firstChild
       audio.pause()
       this.setState({hasAudio: false, audio:'', isPlaying: false})
@@ -246,7 +246,7 @@ class FeelingRoom extends Component {
           <br/>
           Then feel free to pause, play, and change audio as you see fit.
         </p>
-        <button data-testid="startButton" onClick={this.startFeeling} className='getStarted'> Get Started </button>
+        <NavButton data-testid="startButton" onClick={this.startFeeling}> Get Started </NavButton>
       </section>
     )
     let audio;
@@ -270,16 +270,12 @@ class FeelingRoom extends Component {
       <section className='FeelingRoom'>
         {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
-          <div className='chooseSound'>
+            {this.state.hasAudio && audio}
             <MusicButton onClick={this.changeAudio} id='music'><img title="music" alt="music-based audio" id='music' src={music}/></MusicButton>
             <MusicButton onClick={this.changeAudio} id='nature'><img title="nature" alt="nature-based audio" id='nature' src={nature}/></MusicButton>
             <MusicButton onClick={this.changeAudio} id='abstract'><img title="abstract" alt="abstract-based audio" id='abstract' src={abstract}/></MusicButton>
-          </div>
-          <div className='controlsound'>
-            {this.state.hasAudio && audio}
-            <MusicButton onClick={this.playSound} id='button'><img title="play audio" alt="play audio button" id='svg' src={play}/></MusicButton>
-            <MusicButton onClick={this.pauseSound} id='button'><img title="stop audio" alt="stop audio button" id='svg' src={pause}/></MusicButton>
-          </div>
+            <MusicButton onClick={this.playSound} id='playButton'><img title="play audio" alt="play audio button" id='svg' src={play}/></MusicButton>
+            <MusicButton onClick={this.pauseSound} id='pauseButton'><img title="stop audio" alt="stop audio button" id='svg' src={pause}/></MusicButton>
         </section>
         {this.chooseRoomMood()}
       </section>

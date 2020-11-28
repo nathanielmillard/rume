@@ -61,7 +61,6 @@ export const createFineRoom = () => {
       />
     )
   }
-  console.log(bubbles)
   return (
     <section className='fineRoom'>
       {bubbles}

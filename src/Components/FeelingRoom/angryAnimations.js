@@ -32,7 +32,6 @@ export const angryBGAnimation = () => {
   })
 }
 
-
 export const angryFeelingAnimation = () => {
   let angryTimeline = gsap.timeline({repeat: 10});
   for (var i = 0; i <= 10; i++) {
@@ -210,6 +209,7 @@ export const angryFeelingAnimation2 = () => {
       }, 'explode')
      }
    }
+
 export const angryFeelingAnimation3 = () => {
   let angryTimeline3 = gsap.timeline({repeat: 10});
   for (var i = 2; i <= 12; i++) {
@@ -298,3 +298,26 @@ export const angryFeelingAnimation3 = () => {
      }, 'explode')
    }
  }
+
+export const createAngryRoom = () => {
+  const squareNums = Array.from(Array(13).keys())
+  const angrySquares = squareNums.map(num => {
+    return (
+      <div className={`square${num}`}>
+        <div className='childSquare' id='part1'></div>
+        <div className='childSquare' id='part3'></div>
+        <div className='childSquare' id='part2'></div>
+        <div className='childSquare' id='part4'></div>
+        <div className='childSquare' id='part5'></div>
+        <div className='childSquare' id='part6'></div>
+        <div className='childSquare' id='part7'></div>
+        <div className='childSquare' id='part8'></div>
+      </div>
+    )
+  })
+  return (
+    <section className='angryWrap'>
+      {angrySquares}
+    </section>
+  )
+}

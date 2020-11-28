@@ -1,3 +1,4 @@
+@import '../../variables.scss';
 .Lobby {
   display: flex;
   flex-direction: column;
@@ -14,10 +15,12 @@
   height: 2rem;
   font-size: 1.2rem;
   border-radius: 10rem;
-  color: #f3f5f6;
-  border: solid 1px #121316;
-  background-color: #121316;
+  color: $lightest;
+  background-color: $darkest;
   margin: 1%;
+}
+.roomButton:hover {
+  font-size: 1.1rem;
 }
 
 .moodContainer {
@@ -28,7 +31,9 @@
 
 .roomButton:disabled {
   opacity: 50%;
+  font-size: 1.2rem;
 }
+
 h2 {
   margin: 2vh;
   font-size: 2rem;

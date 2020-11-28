@@ -1,7 +1,6 @@
 import React from 'react';
 import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
-import './SadAnimation.scss'
 import './angryAnimations.scss';
 
 import { Component } from 'react'
@@ -43,18 +42,10 @@ class FeelingRoom extends Component {
   }
   moveFineRoom = () => {
     fineBackgroundAnimation()
-    floatAnimation('#fineCircle1', 1)
-    floatAnimation('#fineCircle2', 1)
-    floatAnimation('#fineCircle3', 1)
-    floatAnimation('#fineCircle4', 1)
-    floatAnimation('#fineCircle5', 1)
-    floatAnimation('#fineCircle6', 1)
-    floatAnimation('#fineCircle7', 1)
-    floatAnimation('#fineCircle8', 1)
-    floatAnimation('#fineCircle9', 1)
-    floatAnimation('#fineCircle10', 1)
-    floatAnimation('#fineCircle11', 1)
-    floatAnimation('#fineCircle12', 1)
+    for(let i = 0; i < 13; i++){
+      let target = `#fineCircle${i}`
+      floatAnimation(target)
+    }
   }
   createAnxiousRoom = () => {
     anxiousAnimation('#hex1', .74, 1, 1.8, .90)

@@ -12,7 +12,7 @@ export const MoodButton = styled.button`
   font-size: 1.5rem;
   color: #121316;
   border: none;
-  box-shadow: 0px 10px 10px hsla(200, 14%, 96%, .5) inset;
+  box-shadow: -5px 10px 10px hsla(200, 14%, 96%, .5) inset;
   background-color: ${props => {
     if (props.mood === 'fine') {
       return `rgb(157, 211, 156, .25);`
@@ -25,7 +25,22 @@ export const MoodButton = styled.button`
     }
   } };
   &:focus {
-    box-shadow: 0px -10px 10px hsla(200, 14%, 96%, .5) inset;
+    box-shadow: 5px -10px 10px hsla(200, 14%, 96%, .5) inset;
+    background-color: ${props => {
+      if (props.mood === 'fine') {
+        return `rgb(157, 211, 156);`
+      } else if (props.mood === 'anxious') {
+        return `rgb(180, 154, 49);`
+      } else if (props.mood === 'sad') {
+        return `rgb(132, 173, 189);`
+      } else {
+        return `rgb(100, 27, 65);
+                color: #f3f5f6;`
+      }
+    } }
+  }
+  &:hover {
+    box-shadow: 5px -10px 10px hsla(200, 14%, 96%, .8) inset;
     background-color: ${props => {
       if (props.mood === 'fine') {
         return `rgb(157, 211, 156);`

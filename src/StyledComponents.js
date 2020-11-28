@@ -67,6 +67,9 @@ export const MusicButton = styled.button`
   &:focus {
     background-color: hsla(190, 14%, 74% ,.7);
   }
+  &:hover {
+    background-color: hsla(190, 14%, 74% ,.2);
+  }
 `;
 
 export const FormWrap = styled.section`

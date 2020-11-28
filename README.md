@@ -7,7 +7,7 @@
 When developers [Kristi](https://github.com/Kristiannmiller), [Brigette](https://github.com/BrigetteDoelp), and [Nathaniel](https://github.com/nathanielmillard), were thinking of an app they would want to build together, Rume was born of an interesting in creating a design specific app that helped an already emotionally conscious user do more than "get past" or deescalate feelings, and rather create a "space" that validates a user where they are at. We at Rume, believe that it's just important to take time and feel what you are feeling, as it is to know how to guide yourself back to peace and calm.
 
 ## How to engage with it?
-Rume is a desktop experience that you can enjoy at [our deployed site](https://nathanielmillard.github.io/stretch/), or by cloning down this repo, running npm install, and npm start to launch the app itself.
+Rume is a desktop experience that you can enjoy at [our deployed site](https://rume-app.herokuapp.com/), or by cloning down this repo, running npm install, and npm start to launch the app itself.
 Due to the limited scope of this project as a [Turing](https://turing.io/) project, we aren't accepting contributors, but any feedback would be more than welcome to any of the three developers on this projects.
 
 ## What did it take to make it?

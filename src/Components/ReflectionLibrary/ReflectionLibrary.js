@@ -35,7 +35,7 @@ class ReflectionLibrary extends Component {
     return (
       <section data-testid='reflections'>
         { this.state.errorMessage && <h1>{this.state.errorMessage}</h1>}
-        { this.state.loadingMessage && <h1>{this.state.loadingMessage}</h1>}
+        { this.state.loadingMessage && <h1 data-testid='loadingMessage'>{this.state.loadingMessage}</h1>}
         { !this.state.reflections.length ? <h1 data-testid='noReflectionsMessage'>There are no saved reflections yet...</h1> : <section className="cardArea">{this.createCards()}</section> }
       </section>
     )

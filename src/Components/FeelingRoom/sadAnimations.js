@@ -1,5 +1,4 @@
 import gsap from 'gsap'
-import {DropIcon} from './FeelingRoom-SC'
 
 export const sadBGAnimation = () => {
   const sadBGTL = gsap.timeline({repeat: 2, yoyo:true})

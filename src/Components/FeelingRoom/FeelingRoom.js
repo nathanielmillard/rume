@@ -40,6 +40,7 @@ class FeelingRoom extends Component {
       isFeeling: false,
       hasAudio: false,
       audio: '',
+      isPlaying: false
     }
   }
   createFineRoom = () => {
@@ -164,12 +165,14 @@ class FeelingRoom extends Component {
   playSound = (e) => {
     if(!this.state.hasAudio){
       alert('Select a kind of audio')
-    } else if (e.target.id == 'svg'){
+    } else if (e.target.id === 'svg'){
       let audio = e.target.parentNode.parentNode.firstChild
       audio.play()
+      this.setState({isPlaying: true})
     } else if (e.target.id === 'button'){
       let audio = e.target.parentNode.firstChild
       audio.play()
+      this.setState({isPlaying: true})
     }
   }
   pauseSound = (e) => {
@@ -178,11 +181,11 @@ class FeelingRoom extends Component {
     } else if (e.target.id === 'svg'){
       let audio = e.target.parentNode.parentNode.firstChild
       audio.pause()
-      this.setState({hasAudio: false, audio:''})
+      this.setState({hasAudio: false, audio:'', isPlaying: false})
     } else if (e.target.id === 'button'){
       let audio = e.target.parentNode.firstChild
       audio.pause()
-      this.setState({hasAudio: false, audio:''})
+      this.setState({hasAudio: false, audio:'', isPlaying: false})
     }
   }
   changeAudio = (e) => {
@@ -223,6 +226,11 @@ class FeelingRoom extends Component {
         specificAudio = fineAbstract
       }
     }
+    if (this.state.isPlaying) {
+      let audio = document.querySelector('.audio').parentNode
+      audio.load()
+      audio.play()
+    }
     this.setState({hasAudio: true, audio:specificAudio})
   }
   render(){
@@ -230,9 +238,13 @@ class FeelingRoom extends Component {
       <section className='directions'>
         <h1> Welcome to the feeling room </h1>
         <p>
-          First pick a kind of sound you want to listen to.
-          Then feel free to pause and play sound as you see fit.
-          Enjoy the sights and sounds of your feeling space.
+          This is a safe space to ruminate in your feelings.
+          <br/>
+          Click the start button to begin.
+          <br/>
+          Once the animation begins, select your audio of choice and click the play button.
+          <br/>
+          Then feel free to pause, play, and change audio as you see fit.
         </p>
         <button data-testid="startButton" onClick={this.startFeeling} className='getStarted'> Get Started </button>
       </section>
@@ -259,14 +271,14 @@ class FeelingRoom extends Component {
         {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
           <div className='chooseSound'>
-            <MusicButton onClick={this.changeAudio} id='music'><img id='music' src={music}/></MusicButton>
-            <MusicButton onClick={this.changeAudio} id='nature'><img id='nature' src={nature}/></MusicButton>
-            <MusicButton onClick={this.changeAudio} id='abstract'><img id='abstract' src={abstract}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='music'><img title="music" alt="music-based audio" id='music' src={music}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='nature'><img title="nature" alt="nature-based audio" id='nature' src={nature}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='abstract'><img title="abstract" alt="abstract-based audio" id='abstract' src={abstract}/></MusicButton>
           </div>
           <div className='controlsound'>
             {this.state.hasAudio && audio}
-            <MusicButton onClick={this.playSound} id='button'><img id='svg' src={play}/></MusicButton>
-            <MusicButton onClick={this.pauseSound} id='button'><img id='svg' src={pause}/></MusicButton>
+            <MusicButton onClick={this.playSound} id='button'><img title="play audio" alt="play audio button" id='svg' src={play}/></MusicButton>
+            <MusicButton onClick={this.pauseSound} id='button'><img title="stop audio" alt="stop audio button" id='svg' src={pause}/></MusicButton>
           </div>
         </section>
         {this.chooseRoomMood()}

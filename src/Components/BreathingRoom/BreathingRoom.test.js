@@ -38,8 +38,7 @@ describe('BreathingRoom', () => {
       userEvent.click(startButton);
       expect(directions).not.toBeInTheDocument();
     });
-    
-    test('Should invoke the animation function after start is clicked ', () => {
+    test('Should invoke the animation function after start is clicked', () => {
       const currentMood = 'Fine'
       render (
         <MemoryRouter>

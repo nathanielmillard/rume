@@ -1,4 +1,5 @@
 import gsap from 'gsap'
+import {FineBubble} from './FeelingRoom-SC.js'
 
 export const fineBackgroundAnimation = () => {
   let fineTl = gsap.timeline({repeat: 25, yoyo: true});
@@ -35,4 +36,35 @@ export const floatAnimation = (element, scale) => {
     y: '+=random(-400, 400)',
     ease: 'slow',
   })
+}
+
+export const createFineRoom = () => {
+  let bubbles = []
+  for (let i=0; i < 13; i++ ){
+    let randomNum = Math.random() * (40 - 5) + 5
+    let color
+    if (randomNum % 2 > 1) {
+      color = 'hsla(119, 38%, 72%, .8)'
+    } else if (randomNum % 2 > .6) {
+      color = 'hsla(62, 69%, 90%, .7)'
+    } else if (randomNum % 2 > 1.2) {
+      color = 'hsla(62, 69%, 90%, .2)'
+    } else {
+      color = 'hsla(119, 38%, 72%, .2)'
+    }
+    bubbles.push(
+      <FineBubble id={`fineCircle${i}`}
+      size={`${randomNum}vh`}
+      color= {color}
+      zIndex={i}
+      key={i}
+      />
+    )
+  }
+  console.log(bubbles)
+  return (
+    <section className='fineRoom'>
+      {bubbles}
+    </section>
+  )
 }

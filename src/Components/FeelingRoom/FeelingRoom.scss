@@ -34,3 +34,11 @@
   height: 90vh;
   width: 100vw;
 }
+
+.fineRoom {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(0deg, hsl(164, 73%, 80%) 0%, hsl(118, 32%, 64%) 50%, hsl(33, 29%, 68%) 100%);
+}

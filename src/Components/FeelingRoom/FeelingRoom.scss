@@ -19,11 +19,13 @@
 
 .soundControlPanel {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   border-radius: 3vh;
   background-color: hsla(199, 14%, 74%, .7);
-  height: 14vh;
+  height: auto;
   width: 12vw;
   position: fixed;
   z-index: 100;

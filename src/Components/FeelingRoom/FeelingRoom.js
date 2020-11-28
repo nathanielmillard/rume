@@ -3,13 +3,12 @@ import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
 import './SadAnimation.scss'
 import './angryAnimations.scss';
-import './fineAnimations.scss';
 
 import { Component } from 'react'
 import { MusicButton, NavButton } from '../../StyledComponents.js'
 
 import { createSadRoom, sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
-import { floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
+import { createFineRoom, floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
 import { anxiousAnimation } from './anxiousAnimations.js';
 import { angryBGAnimation, angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3 } from './angryAnimations.js'
 
@@ -42,7 +41,7 @@ class FeelingRoom extends Component {
       isPlaying: false
     }
   }
-  createFineRoom = () => {
+  moveFineRoom = () => {
     fineBackgroundAnimation()
     floatAnimation('#fineCircle1', 1)
     floatAnimation('#fineCircle2', 1)
@@ -56,22 +55,6 @@ class FeelingRoom extends Component {
     floatAnimation('#fineCircle10', 1)
     floatAnimation('#fineCircle11', 1)
     floatAnimation('#fineCircle12', 1)
-    return (
-      <section className='fineRoom'>
-        <div className='fineCircles' id='fineCircle1'></div>
-        <div className='fineCircles' id='fineCircle2'></div>
-        <div className='fineCircles' id='fineCircle3'></div>
-        <div className='fineCircles' id='fineCircle4'></div>
-        <div className='fineCircles' id='fineCircle5'></div>
-        <div className='fineCircles' id='fineCircle6'></div>
-        <div className='fineCircles' id='fineCircle7'></div>
-        <div className='fineCircles' id='fineCircle8'></div>
-        <div className='fineCircles' id='fineCircle9'></div>
-        <div className='fineCircles' id='fineCircle10'></div>
-        <div className='fineCircles' id='fineCircle11'></div>
-        <div className='fineCircles' id='fineCircle12'></div>
-      </section>
-    )
   }
   createAnxiousRoom = () => {
     anxiousAnimation('#hex1', .74, 1, 1.8, .90)
@@ -139,7 +122,7 @@ class FeelingRoom extends Component {
     } else if(this.props.mood === 'Anxious'){
       return this.createAnxiousRoom()
     } else {
-      return this.createFineRoom()
+      return createFineRoom()
     }
   }
 

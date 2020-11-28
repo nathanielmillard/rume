@@ -56,6 +56,19 @@ export const MoodButton = styled.button`
   }
 `;
 
+export const NavButton = styled.button`
+  font-size: 1.2rem;
+  color: hsla(200, 14%, 96%, 1);
+  background-color: hsla(225, 10%, 8%, 1);
+  height: auto;
+  width: auto;
+  padding: 1vh;
+  margin: 3vh;
+  &:hover {
+    font-size: 1.1rem;
+  }
+`
+
 export const MusicButton = styled.button`
   border-radius: 100px;
   margin:1vh;

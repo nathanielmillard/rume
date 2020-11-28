@@ -7,7 +7,7 @@ import './fineAnimations.scss';
 
 import { Component } from 'react'
 import { DropIcon } from './FeelingRoom-SC'
-import { MusicButton } from '../../StyledComponents.js'
+import { MusicButton, NavButton } from '../../StyledComponents.js'
 
 import { sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
 import { floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
@@ -246,7 +246,7 @@ class FeelingRoom extends Component {
           <br/>
           Then feel free to pause, play, and change audio as you see fit.
         </p>
-        <button data-testid="startButton" onClick={this.startFeeling} className='getStarted'> Get Started </button>
+        <NavButton data-testid="startButton" onClick={this.startFeeling}> Get Started </NavButton>
       </section>
     )
     let audio;

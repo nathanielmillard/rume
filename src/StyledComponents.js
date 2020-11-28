@@ -60,8 +60,9 @@ export const NavButton = styled.button`
   font-size: 1.2rem;
   color: hsla(200, 14%, 96%, 1);
   background-color: hsla(225, 10%, 8%, 1);
-  height: auto;
-  min-width: 2vw;
+  height: 2.5rem;
+  width: auto;
+  min-width: 8vw;
   padding: 1vh;
   margin: 2vh;
   &:hover {

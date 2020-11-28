@@ -1,4 +1,5 @@
 import gsap from 'gsap'
+import { DropIcon } from './FeelingRoom-SC'
 
 export const sadBGAnimation = () => {
   const sadBGTL = gsap.timeline({repeat: 2, yoyo:true})
@@ -50,4 +51,23 @@ export const sadDropAnimation = () => {
     boxShadow: '0 0 0',
     backgroundColor: 'hsla(0 0% 0% 0)'
   })
+}
+
+export const createSadRoom = () => {
+  let drops = []
+  for(let i=0; i<400; i++){
+    drops.push(i)
+  }
+  drops = drops.map((drop, index) => {
+    if(!(drop % 2)){
+      return <DropIcon className='drop' key={index}/>
+    } else {
+      return <DropIcon className='drop2' key={index}/>
+    }
+  })
+  return (
+    <section className='sadRoom'>
+      {drops}
+    </section>
+  )
 }

@@ -6,10 +6,9 @@ import './angryAnimations.scss';
 import './fineAnimations.scss';
 
 import { Component } from 'react'
-import { DropIcon } from './FeelingRoom-SC'
 import { MusicButton, NavButton } from '../../StyledComponents.js'
 
-import { sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
+import { createSadRoom, sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
 import { floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
 import { anxiousAnimation } from './anxiousAnimations.js';
 import { angryBGAnimation, angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3 } from './angryAnimations.js'
@@ -102,25 +101,9 @@ class FeelingRoom extends Component {
       </section>
     )
   }
-  createSadRoom = () => {
+  moveSadRoom = () => {
     sadBGAnimation()
     sadDropAnimation()
-    let drops = []
-    for(let i=0; i<400; i++){
-      drops.push(i)
-    }
-    drops = drops.map(drop => {
-      if(!(drop % 2)){
-        return <DropIcon className='drop' />
-      } else {
-        return <DropIcon className='drop2' />
-      }
-    })
-    return (
-      <section className='sadRoom'>
-        {drops}
-      </section>
-    )
   }
   createAngryRoom = () => {
     const squareNums = Array.from(Array(13).keys())
@@ -152,16 +135,31 @@ class FeelingRoom extends Component {
     if(this.props.mood === 'Angry') {
       return this.createAngryRoom()
     } else if(this.props.mood === 'Sad') {
-      return this.createSadRoom()
+      return createSadRoom()
     } else if(this.props.mood === 'Anxious'){
       return this.createAnxiousRoom()
     } else {
       return this.createFineRoom()
     }
   }
+
+  startAnimations = () => {
+    if(this.props.mood === 'Angry') {
+      return this.moveAngryRoom()
+    } else if(this.props.mood === 'Sad') {
+      return this.moveSadRoom()
+    } else if(this.props.mood === 'Anxious'){
+      return this.moveAnxiousRoom()
+    } else {
+      return this.moveFineRoom()
+    }
+  }
+
   startFeeling = () => {
     this.setState({isFeeling: true})
+    this.startAnimations()
   }
+
   playSound = (e) => {
     if(!this.state.hasAudio){
       alert('Select a kind of audio')

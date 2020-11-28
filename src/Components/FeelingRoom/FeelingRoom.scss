@@ -6,14 +6,22 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+  padding-top: 35vh;
   position: fixed;
   z-index: 101;
+  font-size: 1.5rem;
+  p {
+    height: auto;
+    margin: 3vh;
+  }
   .getStarted {
-    font-size: 1.2rem;
-    width: 10%;
-    margin: 5vh;
+    height: auto;
+    width: auto;
+    padding: 1vh;
+    margin: 3vh;
+  }
+  .getStarted:hover {
+    font-size: 1.1rem;
   }
 }
 

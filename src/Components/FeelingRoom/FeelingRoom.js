@@ -50,7 +50,6 @@ class FeelingRoom extends Component {
     }
   }
   moveAnxiousRoom = () => {
-    createAnxiousRoom()
     anxiousAnimation('#hex1', .74, 1, 1.8, .90)
     anxiousAnimation('#hex2', .5, 1, .7, .45)
     anxiousAnimation('#hex3', .6, .7, 3.4, 2)

@@ -8,7 +8,7 @@ import { MusicButton, NavButton } from '../../StyledComponents.js'
 import { createSadRoom, sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
 import { createFineRoom, floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
 import { createAnxiousRoom, anxiousAnimation } from './anxiousAnimations.js';
-import { createAngryRoom, angryBGAnimation, angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3, angryBoxAnimation } from './angryAnimations.js'
+import { createAngryRoom, angryBGAnimation, angryBoxAnimation } from './angryAnimations.js'
 
 import music from '../../Assets/music.svg'
 import nature from '../../Assets/nature.svg'

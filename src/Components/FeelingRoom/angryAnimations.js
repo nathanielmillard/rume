@@ -369,22 +369,43 @@ export const angryFeelingAnimation3 = () => {
 
 export const createAngryRoom = () => {
   const squareNums = Array.from(Array(13).keys())
-  const angrySquares = squareNums.map(num => {
+  const angrySquares = squareNums.map((num, index) => {
+    let randomSize = Math.random() * (30 - 10) + 10
+    let randomPosition = Math.random() * (90 - 10) + 10
+    let color
+    if(index % 3 === 0) {
+      color = 'hsl(225, 10%, 8%)'
+    } else if(index % 2 === 0) {
+      color = 'hsl(329, 57%, 25%)'
+    } else {
+      color = 'hsl(200, 14%, 96%)'
+    }
+    let childArray = []
+    for (let i = 0; i < 8; i++) {
+      childArray.push(
+        <AngryChild
+          color={color}
+          id={`angryBox${index}Child${i}`}
+          className={`angryBoxChild`}
+          size={`${randomSize/2}vh`}
+          key={i}
+        />
+      )
+    }
     return (
-      <div className={`square${num}`}>
-        <div className='childSquare' id='part1'></div>
-        <div className='childSquare' id='part3'></div>
-        <div className='childSquare' id='part2'></div>
-        <div className='childSquare' id='part4'></div>
-        <div className='childSquare' id='part5'></div>
-        <div className='childSquare' id='part6'></div>
-        <div className='childSquare' id='part7'></div>
-        <div className='childSquare' id='part8'></div>
-      </div>
+      <AngryBox
+        size={`${randomSize}vh`}
+        position={`${randomPosition}vw`}
+        color={color}
+        id={`angryBox${index}`}
+        key={index}
+      >
+        {childArray}
+      </AngryBox>
     )
   })
   return (
-    <section className='angryWrap'>
+    <section className='angryRoom'>
       {angrySquares}
     </section>
   )

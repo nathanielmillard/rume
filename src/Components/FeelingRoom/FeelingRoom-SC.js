@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const DropIcon = styled.div`
-  height: 1vh;
-  width: .5vh;
+  position: relative;
+  top: -1.2vw;
+  height: .9vw;
+  min-width: .4vw;
   background-color: hsl(237, 33%, 12%);
+  border-radius: 100%;
   box-shadow: 1px 1px 3px #F3F5F6;
 `
 

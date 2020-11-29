@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types'
 import { postAReflection } from '../../apiCalls.js'
 import './ReflectionForm.scss';
-import { FormWrap, RefPrompt } from '../../StyledComponents.js'
+import { NavButton, FormWrap, RefPrompt } from '../../StyledComponents.js'
 
 class ReflectionForm extends Component {
  constructor(props){
@@ -45,9 +45,9 @@ class ReflectionForm extends Component {
           </FormWrap>
         </form>
         <section className="buttons">
-          <button className="actionButton" onClick={this.submitReflection}>Save This Reflection</button>
+          <NavButton onClick={this.submitReflection}>Save This Reflection</NavButton>
           <Link to='/myreflections'>
-            <button data-testid='linkToAllReflections' className="actionButton">Show All Reflections</button>
+            <NavButton data-testid='linkToAllReflections'>Show All Reflections</NavButton>
           </Link>
         </section>
       </section>

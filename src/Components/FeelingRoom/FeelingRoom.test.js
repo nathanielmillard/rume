@@ -57,8 +57,8 @@ describe('FeelingRoom', () => {
       expect(startButton).toBeInTheDocument();
       userEvent.click(startButton);
       expect(fineBackgroundAnimation).toHaveBeenCalled();
-      expect(floatAnimation).toHaveBeenCalledWith('#fineCircle1', 1);
-      expect(floatAnimation).toHaveBeenLastCalledWith('#fineCircle12', 1);
+      expect(floatAnimation).toHaveBeenCalledWith('#fineCircle0');
+      expect(floatAnimation).toHaveBeenCalledTimes(13);
     });
   })
 })

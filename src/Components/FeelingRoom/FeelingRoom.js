@@ -1,18 +1,14 @@
 import React from 'react';
 import './anxiousAnimations.scss';
 import './FeelingRoom.scss';
-import './SadAnimation.scss'
-import './angryAnimations.scss';
-import './fineAnimations.scss';
 
 import { Component } from 'react'
-import { DropIcon } from './FeelingRoom-SC'
-import { MusicButton } from '../../StyledComponents.js'
+import { MusicButton, NavButton } from '../../StyledComponents.js'
 
-import { sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
-import { floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
-import { anxiousAnimation } from './anxiousAnimations.js';
-import { angryBGAnimation, angryFeelingAnimation, angryFeelingAnimation2, angryFeelingAnimation3 } from './angryAnimations.js'
+import { createSadRoom, sadBGAnimation, sadDropAnimation } from './sadAnimations.js'
+import { createFineRoom, floatAnimation, fineBackgroundAnimation } from './fineAnimations.js'
+import { createAnxiousRoom, anxiousAnimation } from './anxiousAnimations.js';
+import { createAngryRoom, angryBGAnimation, angryBoxAnimation } from './angryAnimations.js'
 
 import music from '../../Assets/music.svg'
 import nature from '../../Assets/nature.svg'
@@ -33,7 +29,7 @@ import angryNature from '../../Assets/angryNature.wav' ;
 import fineNature from '../../Assets/fineNature.wav' ;
 import anxiousNature from '../../Assets/anxiousNature.wav';
 import sadNature from '../../Assets/sadNature.wav' ;
-import angryAbstract from '../../Assets/angryAbstract.wav' ;
+import angryAbstract from '../../Assets/angryAbstract.mp3' ;
 import anxiousAbstract from '../../Assets/anxiousAbstract.wav' ;
 import sadAbstract from '../../Assets/sadAbstract.wav' ;
 import fineAbstract from '../../Assets/fineAbstract.wav' ;
@@ -49,40 +45,17 @@ class FeelingRoom extends Component {
       isFeeling: false,
       hasAudio: false,
       audio: '',
+      isPlaying: false
     }
   }
-  createFineRoom = () => {
+  moveFineRoom = () => {
     fineBackgroundAnimation()
-    floatAnimation('#fineCircle1', 1)
-    floatAnimation('#fineCircle2', 1)
-    floatAnimation('#fineCircle3', 1)
-    floatAnimation('#fineCircle4', 1)
-    floatAnimation('#fineCircle5', 1)
-    floatAnimation('#fineCircle6', 1)
-    floatAnimation('#fineCircle7', 1)
-    floatAnimation('#fineCircle8', 1)
-    floatAnimation('#fineCircle9', 1)
-    floatAnimation('#fineCircle10', 1)
-    floatAnimation('#fineCircle11', 1)
-    floatAnimation('#fineCircle12', 1)
-    return (
-      <section className='fineRoom'>
-        <div className='fineCircles' id='fineCircle1'></div>
-        <div className='fineCircles' id='fineCircle2'></div>
-        <div className='fineCircles' id='fineCircle3'></div>
-        <div className='fineCircles' id='fineCircle4'></div>
-        <div className='fineCircles' id='fineCircle5'></div>
-        <div className='fineCircles' id='fineCircle6'></div>
-        <div className='fineCircles' id='fineCircle7'></div>
-        <div className='fineCircles' id='fineCircle8'></div>
-        <div className='fineCircles' id='fineCircle9'></div>
-        <div className='fineCircles' id='fineCircle10'></div>
-        <div className='fineCircles' id='fineCircle11'></div>
-        <div className='fineCircles' id='fineCircle12'></div>
-      </section>
-    )
+    for(let i = 0; i < 13; i++){
+      let target = `#fineCircle${i}`
+      floatAnimation(target)
+    }
   }
-  createAnxiousRoom = () => {
+  moveAnxiousRoom = () => {
     anxiousAnimation('#hex1', .74, 1, 1.8, .90)
     anxiousAnimation('#hex2', .5, 1, .7, .45)
     anxiousAnimation('#hex3', .6, .7, 3.4, 2)
@@ -91,6 +64,10 @@ class FeelingRoom extends Component {
     anxiousAnimation('#hex6', .74, 1, 1.8, .90)
     anxiousAnimation('#hex7', .86, 1, 1.8, .55)
     anxiousAnimation('#hex8', .8, .5, 2, 1.5)
+    anxiousAnimation('#hex9', .5, 1, .7, .45)
+    anxiousAnimation('#hex10', .7, 1, 2.5, 2.5)
+    anxiousAnimation('#hex11', .49, .5, .3, 2.5)
+
     return (
       <section className='anxiousRoom'>
         <img id='hex1' src={hexoutline1} />
@@ -107,88 +84,68 @@ class FeelingRoom extends Component {
       </section>
     )
   }
-  createSadRoom = () => {
+  moveSadRoom = () => {
     sadBGAnimation()
     sadDropAnimation()
-    let drops = []
-    for(let i=0; i<400; i++){
-      drops.push(i)
-    }
-    drops = drops.map(drop => {
-      if(!(drop % 2)){
-        return <DropIcon className='drop' />
-      } else {
-        return <DropIcon className='drop2' />
-      }
-    })
-    return (
-      <section className='sadRoom'>
-        {drops}
-      </section>
-    )
   }
-  createAngryRoom = () => {
-    const squareNums = Array.from(Array(13).keys())
-      angryBGAnimation()
-      angryFeelingAnimation()
-      angryFeelingAnimation2()
-      angryFeelingAnimation3()
-    const angrySquares = squareNums.map(num => {
-      return (
-        <div className={`square${num}`}>
-          <div className='childSquare' id='part1'></div>
-          <div className='childSquare' id='part3'></div>
-          <div className='childSquare' id='part2'></div>
-          <div className='childSquare' id='part4'></div>
-          <div className='childSquare' id='part5'></div>
-          <div className='childSquare' id='part6'></div>
-          <div className='childSquare' id='part7'></div>
-          <div className='childSquare' id='part8'></div>
-        </div>
-      )
-    })
-    return (
-      <section className='angryWrap'>
-        {angrySquares}
-      </section>
-    )
+  moveAngryRoom = () => {
+    angryBGAnimation()
+    angryBoxAnimation()
   }
   chooseRoomMood = () => {
     if(this.props.mood === 'Angry') {
-      return this.createAngryRoom()
+      return createAngryRoom()
     } else if(this.props.mood === 'Sad') {
-      return this.createSadRoom()
+      return createSadRoom()
     } else if(this.props.mood === 'Anxious'){
-      return this.createAnxiousRoom()
+      return createAnxiousRoom()
     } else {
-      return this.createFineRoom()
+      return createFineRoom()
     }
   }
+
+  startAnimations = () => {
+    if(this.props.mood === 'Angry') {
+      return this.moveAngryRoom()
+    } else if(this.props.mood === 'Sad') {
+      return this.moveSadRoom()
+    } else if(this.props.mood === 'Anxious'){
+      return this.moveAnxiousRoom()
+    } else {
+      return this.moveFineRoom()
+    }
+  }
+
   startFeeling = () => {
     this.setState({isFeeling: true})
+    this.startAnimations()
   }
+
   playSound = (e) => {
     if(!this.state.hasAudio){
       alert('Select a kind of audio')
-    } else if (e.target.id == 'svg'){
+    } else if (e.target.id === 'svg'){
       let audio = e.target.parentNode.parentNode.firstChild
       audio.play()
-    } else if (e.target.id === 'button'){
+      this.setState({isPlaying: true})
+    } else if (e.target.id === 'playButton'){
       let audio = e.target.parentNode.firstChild
       audio.play()
+      this.setState({isPlaying: true})
     }
   }
+
   pauseSound = (e) => {
     if(!this.state.hasAudio){
         alert('No audio to pause')
     } else if (e.target.id === 'svg'){
       let audio = e.target.parentNode.parentNode.firstChild
       audio.pause()
-      this.setState({hasAudio: false, audio:''})
-    } else if (e.target.id === 'button'){
+      this.setState({hasAudio: false, audio:'', isPlaying: false})
+    } else if (e.target.id === 'pauseButton'){
       let audio = e.target.parentNode.firstChild
       audio.pause()
-      this.setState({hasAudio: false, audio:''})
+      this.setState({hasAudio: false, audio:'', isPlaying: false})
     }
   }
   changeAudio = (e) => {
@@ -229,6 +186,11 @@ class FeelingRoom extends Component {
         specificAudio = fineAbstract
       }
     }
+    if (this.state.isPlaying) {
+      let audio = document.querySelector('.audio').parentNode
+      audio.load()
+      audio.play()
+    }
     this.setState({hasAudio: true, audio:specificAudio})
   }
   render(){
@@ -236,11 +198,15 @@ class FeelingRoom extends Component {
       <section className='directions'>
         <h1> Welcome to the feeling room </h1>
         <p>
-          First pick a kind of sound you want to listen to.
-          Then feel free to pause and play sound as you see fit.
-          Enjoy the sights and sounds of your feeling space.
+          This is a safe space to ruminate in your feelings.
+          <br/>
+          Click the start button to begin.
+          <br/>
+          Once the animation begins, select your audio of choice and click the play button.
+          <br/>
+          Then feel free to pause, play, and change audio as you see fit.
         </p>
-        <button data-testid="startButton" onClick={this.startFeeling} className='getStarted'> Get Started </button>
+        <NavButton data-testid="startButton" onClick={this.startFeeling}> Get Started </NavButton>
       </section>
     )
     let audio;
@@ -264,16 +230,12 @@ class FeelingRoom extends Component {
       <section className='FeelingRoom'>
         {!this.state.isFeeling && instructions}
         <section className="soundControlPanel">
-          <div className='chooseSound'>
-            <MusicButton onClick={this.changeAudio} id='music'><img id='music' src={music}/></MusicButton>
-            <MusicButton onClick={this.changeAudio} id='nature'><img id='nature' src={nature}/></MusicButton>
-            <MusicButton onClick={this.changeAudio} id='abstract'><img id='abstract' src={abstract}/></MusicButton>
-          </div>
-          <div className='controlsound'>
             {this.state.hasAudio && audio}
-            <MusicButton onClick={this.playSound} id='button'><img id='svg' src={play}/></MusicButton>
-            <MusicButton onClick={this.pauseSound} id='button'><img id='svg' src={pause}/></MusicButton>
-          </div>
+            <MusicButton onClick={this.changeAudio} id='music'><img title="music" alt="music-based audio" id='music' src={music}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='nature'><img title="nature" alt="nature-based audio" id='nature' src={nature}/></MusicButton>
+            <MusicButton onClick={this.changeAudio} id='abstract'><img title="abstract" alt="abstract-based audio" id='abstract' src={abstract}/></MusicButton>
+            <MusicButton onClick={this.playSound} id='playButton'><img title="play audio" alt="play audio button" id='svg' src={play}/></MusicButton>
+            <MusicButton onClick={this.pauseSound} id='pauseButton'><img title="stop audio" alt="stop audio button" id='svg' src={pause}/></MusicButton>
         </section>
         {this.chooseRoomMood()}
       </section>

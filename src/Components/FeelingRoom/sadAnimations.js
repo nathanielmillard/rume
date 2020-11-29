@@ -40,22 +40,26 @@ export const sadDropAnimation = () => {
     duration: 8,
     y: '90vh',
     ease: 'slow',
+    scale: .5,
+    height: '.01vw',
     boxShadow: '0 0 0',
     backgroundColor: 'hsla(0 0% 0% 0)'
   })
   .to('.drop2', {
-    delay: 'random(.001, 600)',
+    delay: 'random(.001, 100)',
     duration: 8,
     y: '90vh',
     ease: 'slow',
     boxShadow: '0 0 0',
+    scale: .5,
     backgroundColor: 'hsla(0 0% 0% 0)'
+
   })
 }
 
 export const createSadRoom = () => {
   let drops = []
-  for(let i=0; i<400; i++){
+  for(let i=0; i<250; i++){
     drops.push(i)
   }
   drops = drops.map((drop, index) => {

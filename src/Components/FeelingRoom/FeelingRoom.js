@@ -16,7 +16,10 @@ import abstract from '../../Assets/abstract.svg'
 import play from '../../Assets/play.svg'
 import pause from '../../Assets/pause.svg'
 
+// import angryNature from '../../Assets/angryNature.wav' ;
+
 import angryNature from '../../Assets/angryNature.mp3' ;
+
 import fineNature from '../../Assets/fineNature.wav' ;
 import anxiousNature from '../../Assets/anxiousNature.wav';
 import sadNature from '../../Assets/sadNature.wav' ;

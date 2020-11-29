@@ -16,11 +16,11 @@ import abstract from '../../Assets/abstract.svg'
 import play from '../../Assets/play.svg'
 import pause from '../../Assets/pause.svg'
 
-import angryNature from '../../Assets/angryNature.wav' ;
+import angryNature from '../../Assets/angryNature.mp3' ;
 import fineNature from '../../Assets/fineNature.wav' ;
 import anxiousNature from '../../Assets/anxiousNature.wav';
 import sadNature from '../../Assets/sadNature.wav' ;
-import angryAbstract from '../../Assets/angryAbstract.wav' ;
+import angryAbstract from '../../Assets/angryAbstract.mp3' ;
 import anxiousAbstract from '../../Assets/anxiousAbstract.wav' ;
 import sadAbstract from '../../Assets/sadAbstract.wav' ;
 import fineAbstract from '../../Assets/fineAbstract.wav' ;

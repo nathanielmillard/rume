@@ -114,7 +114,7 @@ export const createAngryRoom = () => {
     if(index % 3 === 0) {
       color = 'hsl(225, 10%, 8%)'
     } else if(index % 2 === 0) {
-      color = 'hsl(329, 57%, 25%)'
+      color = 'hsl(340, 100%, 17%)'
     } else {
       color = 'hsl(200, 14%, 96%)'
     }

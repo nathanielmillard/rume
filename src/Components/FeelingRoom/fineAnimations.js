@@ -12,7 +12,6 @@ export const fineBackgroundAnimation = () => {
     background: 'linear-gradient(180deg, hsl(164, 73%, 80%) 0%, hsl(118, 32%, 64%) 50%, hsl(33, 29%, 68%) 100%)',
   })
 }
-
 export const floatAnimation = (element, scale) => {
   let floatTl = gsap.timeline({repeat: 200, yoyo:true});
   floatTl.to(element, {

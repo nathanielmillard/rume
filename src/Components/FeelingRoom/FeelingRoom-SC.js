@@ -17,3 +17,20 @@ export const FineBubble = styled.div`
   z-index: ${props => props.zIndex};
   align-self: center;
 `
+export const AngryBox = styled.div`
+  height: ${props => props.size};
+  width: ${props => props.size};
+  display: flex;
+  position: absolute;
+  top: -30vh;
+  left: ${props => props.position};
+  background-color: ${props => props.color};
+`
+export const AngryChild = styled.div`
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: ${props => props.size};
+  width: ${props => props.size};
+  background-color: ${props => props.color};
+`

@@ -16,16 +16,10 @@ import abstract from '../../Assets/abstract.svg'
 import play from '../../Assets/play.svg'
 import pause from '../../Assets/pause.svg'
 
-import hexoutline1 from '../../Assets/hexoutline1.png';
-import hexoutline2 from '../../Assets/hexoutline2.png';
-import hexoutline3 from '../../Assets/hexoutline3.png';
-import hexoutlineblur1 from '../../Assets/hexoutlineblur1.png';
-import hexoutlineblur2 from '../../Assets/hexoutlineblur2.png';
-import hexoutlineblur3 from '../../Assets/hexoutlineblur3.png';
-import hexsolid1 from '../../Assets/hexsolid1.png';
-import hexsolid2 from '../../Assets/hexsolid2.png';
+// import angryNature from '../../Assets/angryNature.wav' ;
 
-import angryNature from '../../Assets/angryNature.wav' ;
+import angryNature from '../../Assets/angryNature.mp3' ;
+
 import fineNature from '../../Assets/fineNature.wav' ;
 import anxiousNature from '../../Assets/anxiousNature.wav';
 import sadNature from '../../Assets/sadNature.wav' ;
@@ -56,6 +50,7 @@ class FeelingRoom extends Component {
     }
   }
   moveAnxiousRoom = () => {
+    createAnxiousRoom()
     anxiousAnimation('#hex1', .74, 1, 1.8, .90)
     anxiousAnimation('#hex2', .5, 1, .7, .45)
     anxiousAnimation('#hex3', .6, .7, 3.4, 2)
@@ -67,22 +62,6 @@ class FeelingRoom extends Component {
     anxiousAnimation('#hex9', .5, 1, .7, .45)
     anxiousAnimation('#hex10', .7, 1, 2.5, 2.5)
     anxiousAnimation('#hex11', .49, .5, .3, 2.5)
-
-    return (
-      <section className='anxiousRoom'>
-        <img id='hex1' src={hexoutline1} />
-        <img id='hex2' src={hexoutlineblur2} />
-        <img id='hex3' src={hexoutlineblur1} />
-        <img id='hex4' src={hexoutline2} />
-        <img id='hex5' src={hexoutline3} />
-        <img id='hex6' src={hexoutlineblur1} />
-        <img id='hex7' src={hexoutlineblur2} />
-        <img id='hex8' src={hexoutlineblur3} />
-        <img id='hex9' src={hexoutline2} />
-        <img id='hex10' src={hexoutlineblur1} />
-        <img id='hex11' src={hexoutline3} />
-      </section>
-    )
   }
   moveSadRoom = () => {
     sadBGAnimation()

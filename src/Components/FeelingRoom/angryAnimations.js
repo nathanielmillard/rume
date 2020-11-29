@@ -37,7 +37,11 @@ export const angryBoxAnimation = () => {
   let angryTimeline = gsap.timeline({repeat: 20})
   for(let i = 0; i < 13; i++) {
     let square = `#angryBox${i}`
-    angryTimeline.to(square, {
+    angryTimeline.to(`${square} .angryBoxChild`, {
+      x:0,
+      y:0
+    })
+    .to(square, {
       duration: .75,
       y: '100vh',
       ease: 'none'
